@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import GoogleAd from './GoogleAd';
+import { ADSENSE_SLOTS } from '../config/adsense';
 
 const AdSidebar = () => {
   return (
@@ -12,26 +14,48 @@ const AdSidebar = () => {
         {/* Ad Container */}
         <div className="space-y-4">
           {/* Advertisement 1 */}
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center min-h-[300px] flex flex-col items-center justify-center">
-            <div className="text-gray-400 mb-2">
-              <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
+          {ADSENSE_SLOTS.rectangleTop ? (
+            <div className="bg-white border border-black/5 rounded-lg p-3">
+              <GoogleAd
+                adSlot={ADSENSE_SLOTS.rectangleTop}
+                className="mx-auto"
+                style={{ width: '100%', minHeight: '250px' }}
+                format="auto"
+              />
             </div>
-            <p className="text-sm text-gray-500 font-medium">Advertisement Space</p>
-            <p className="text-xs text-gray-400 mt-2">300x250</p>
-          </div>
+          ) : (
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center min-h-[300px] flex flex-col items-center justify-center">
+              <div className="text-gray-400 mb-2">
+                <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <p className="text-sm text-gray-500 font-medium">Advertisement Space</p>
+              <p className="text-xs text-gray-400 mt-2">300x250</p>
+            </div>
+          )}
 
           {/* Advertisement 2 */}
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center min-h-[250px] flex flex-col items-center justify-center">
-            <div className="text-gray-400 mb-2">
-              <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
+          {ADSENSE_SLOTS.rectangleBottom ? (
+            <div className="bg-white border border-black/5 rounded-lg p-3">
+              <GoogleAd
+                adSlot={ADSENSE_SLOTS.rectangleBottom}
+                className="mx-auto"
+                style={{ width: '100%', minHeight: '250px' }}
+                format="auto"
+              />
             </div>
-            <p className="text-sm text-gray-500 font-medium">Advertisement Space</p>
-            <p className="text-xs text-gray-400 mt-2">300x250</p>
-          </div>
+          ) : (
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center min-h-[250px] flex flex-col items-center justify-center">
+              <div className="text-gray-400 mb-2">
+                <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <p className="text-sm text-gray-500 font-medium">Advertisement Space</p>
+              <p className="text-xs text-gray-400 mt-2">300x250</p>
+            </div>
+          )}
 
           {/* Quick Links */}
           <div className="bg-white border border-black/10 rounded-lg p-4">
@@ -56,4 +80,3 @@ const AdSidebar = () => {
 };
 
 export default AdSidebar;
-
