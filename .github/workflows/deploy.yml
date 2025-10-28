@@ -1,4 +1,4 @@
-name: Deploy static site to GitHub Pages
+name: Deploy CRA to GitHub Pages
 on:
   push:
     branches: [ main ]
@@ -11,12 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # We’re deploying the current repo root as a static site.
-      # If you later restore your React source and want to build,
-      # replace this with npm ci && npm run build and set path: build
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci
+      - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: build
   deploy:
     needs: build
     runs-on: ubuntu-latest
