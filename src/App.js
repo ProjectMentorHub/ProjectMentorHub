@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
@@ -32,6 +32,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
             <Route path="/journals" element={<JournalServices />} />
+            <Route path="/journal-services" element={<Navigate to="/journals" replace />} />
+            <Route path="/journalservices" element={<Navigate to="/journals" replace />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/project/:id" element={<ProjectDetails />} />
             <Route

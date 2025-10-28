@@ -43,8 +43,8 @@ const JournalServices = () => {
   ];
 
   const contactInfo = {
-    email: 'dontfear166@gmail.com',
-    phone: '+91 7095070166',
+    email: 'projectmentorhub166@gmail.com',
+    phone: '+91 9392400166',
     workingHours: 'Mon-Sat: 9AM - 6PM IST'
   };
 

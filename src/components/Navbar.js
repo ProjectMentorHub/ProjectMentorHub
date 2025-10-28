@@ -1,239 +1,152 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
-import { useAuth } from '../context/AuthContext';
-import { motion, AnimatePresence } from 'framer-motion';
+// src/components/Navbar.js
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { HiOutlineShoppingCart, HiMenu, HiX } from "react-icons/hi";
+import { useAuth } from "../context/AuthContext";
+import { useCart } from "../context/CartContext";
 
-const Navbar = () => {
-  const { setIsOpen, getCartItemCount } = useCart();
+const NavItem = ({ to, children, onClick }) => (
+  <NavLink
+    to={to}
+    onClick={onClick}
+    className={({ isActive }) =>
+      [
+        "px-3 py-2 rounded-xl text-sm font-medium transition",
+        "hover:bg-gray-100 hover:text-gray-900",
+        isActive ? "bg-gray-900 text-white hover:bg-gray-900" : "text-gray-700",
+      ].join(" ")
+    }
+  >
+    {children}
+  </NavLink>
+);
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
   const { user, logOut } = useAuth();
+  const { cartItems = [] } = useCart?.() || { cartItems: [] };
   const navigate = useNavigate();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const firstName = user?.displayName?.split(' ')[0] || user?.email?.split('@')[0] || '';
-  const userInitial = firstName?.charAt(0)?.toUpperCase() || user?.email?.charAt(0)?.toUpperCase() || 'U';
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const handleSignOut = async () => {
+    await logOut();
+    navigate("/");
+    setOpen(false);
+  };
 
-  const isActive = (path) => location.pathname === path;
-
-  const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/catalog', label: 'Catalog' },
-    { to: '/about', label: 'About' },
-    { to: '/journals', label: 'Journal Services' },
-    { to: '/dashboard', label: 'Dashboard' }
-  ];
+  const avatarLetter = user?.displayName?.[0]?.toUpperCase() || "U";
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`sticky top-0 z-50 bg-white backdrop-blur-md transition-all duration-300 ${
-        isScrolled ? 'border-b border-black/20 shadow-sm' : 'border-b border-black/10'
-      }`}
-    >
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
-            </motion.div>
-            <span className="text-2xl font-serif font-bold group-hover:text-gray-600 transition-colors">
+    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-200">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Bar */}
+        <div className="flex h-16 items-center justify-between gap-4">
+          {/* Left: Logo */}
+          <div className="flex items-center gap-3">
+            <div className="h-9 w-9 rounded-xl bg-black text-white grid place-items-center font-semibold">
+              P
+            </div>
+            <NavLink to="/" className="text-lg sm:text-xl font-semibold tracking-tight">
               ProjectMentorHub
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            {navLinks.map((link, idx) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="relative px-4 py-2 rounded-lg transition-colors group"
-              >
-                <motion.span
-                  initial={false}
-                  animate={{
-                    color: isActive(link.to) ? '#000' : '#666',
-                    fontWeight: isActive(link.to) ? '600' : '400'
-                  }}
-                  className="relative z-10"
-                >
-                  {link.label}
-                </motion.span>
-                {isActive(link.to) && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute inset-0 bg-gray-100 rounded-lg"
-                    transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-                  />
-                )}
-              </Link>
-            ))}
+            </NavLink>
           </div>
 
-          {/* Cart Button & Auth */}
-          <div className="flex items-center space-x-4">
-            {user && (
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-sm font-semibold">
-                  {userInitial}
-                </div>
-                <span className="mt-1 text-xs font-medium text-gray-700">{firstName}</span>
-              </div>
-            )}
-            {user && (
-              <button
-                onClick={logOut}
-                className="hidden md:block text-sm text-gray-600 hover:text-black transition-colors"
-              >
-                Sign Out
-              </button>
-            )}
-            {!user && (
-              <button
-                onClick={() => navigate('/login')}
-                className="hidden md:block text-sm text-gray-600 hover:text-black transition-colors"
-              >
-                Login
-              </button>
-            )}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setIsOpen(true)}
-              className="relative p-3 hover:bg-gray-100 rounded-full transition-colors group"
-              aria-label="Shopping cart"
-            >
-              <svg className="w-6 h-6 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              {getCartItemCount() > 0 && (
-                <motion.span
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  className="absolute -top-1 -right-1 bg-black text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold"
-                >
-                  {getCartItemCount()}
-                </motion.span>
-              )}
-            </motion.button>
+          {/* Center: Desktop links */}
+          <div className="hidden md:flex items-center gap-2">
+            <NavItem to="/">Home</NavItem>
+            <NavItem to="/catalog">Catalog</NavItem>
+            <NavItem to="/about">About</NavItem>
+            <NavItem to="/journal-services">Journal Services</NavItem>
+            <NavItem to="/dashboard">Dashboard</NavItem>
+          </div>
 
-            {/* Mobile Menu Button */}
+          {/* Right: Actions */}
+          <div className="flex items-center gap-3">
+            {/* Cart */}
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
-              aria-label="Menu"
+              onClick={() => navigate("/checkout")}
+              className="relative p-2 rounded-xl hover:bg-gray-100 transition"
+              aria-label="Cart"
             >
-              <motion.div
-                animate={isMobileMenuOpen ? { rotate: 180 } : { rotate: 0 }}
-                transition={{ duration: 0.3 }}
+              <HiOutlineShoppingCart className="h-6 w-6" />
+              {cartItems.length > 0 && (
+                <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-gray-900 text-white text-[10px] grid place-items-center">
+                  {cartItems.length}
+                </span>
+              )}
+            </button>
+
+            {/* User / Auth */}
+            {user ? (
+              <div className="hidden sm:flex items-center gap-3">
+                <div
+                  className="h-9 w-9 rounded-full bg-black text-white grid place-items-center text-sm"
+                  title={user.displayName || user.email}
+                >
+                  {avatarLetter}
+                </div>
+                <button
+                  onClick={handleSignOut}
+                  className="px-4 py-2 rounded-xl border border-gray-300 hover:border-gray-400 text-sm font-medium transition"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => navigate("/login")}
+                className="hidden sm:inline-flex px-4 py-2 rounded-xl bg-gray-900 text-white hover:bg-black text-sm font-medium transition"
               >
-                {isMobileMenuOpen ? (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                ) : (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                )}
-              </motion.div>
+                Sign In
+              </button>
+            )}
+
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden p-2 rounded-xl hover:bg-gray-100 transition"
+              onClick={() => setOpen((s) => !s)}
+              aria-label="Toggle menu"
+            >
+              {open ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-black/10 bg-white overflow-hidden"
-          >
-            <div className="container mx-auto px-4 py-4 space-y-2">
-              {navLinks.map((link, idx) => (
-                <motion.div
-                  key={link.to}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                >
-                  <Link
-                    to={link.to}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block px-4 py-3 rounded-lg transition-colors ${
-                      isActive(link.to) 
-                        ? 'bg-black text-white font-semibold' 
-                        : 'hover:bg-gray-100'
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
-              
-              {/* Auth Button in Mobile Menu */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: navLinks.length * 0.1 }}
-                className="pt-2 border-t border-gray-200"
-              >
-                {user && (
-                  <div className="flex flex-col items-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-base font-semibold">
-                      {userInitial}
-                    </div>
-                    <span className="mt-2 text-sm font-medium text-gray-700">{firstName}</span>
-                  </div>
-                )}
+        {/* Mobile panel */}
+        {open && (
+          <div className="md:hidden pb-4 border-t border-gray-200">
+            <div className="pt-3 grid gap-2">
+              <NavItem to="/" onClick={() => setOpen(false)}>Home</NavItem>
+              <NavItem to="/catalog" onClick={() => setOpen(false)}>Catalog</NavItem>
+              <NavItem to="/about" onClick={() => setOpen(false)}>About</NavItem>
+              <NavItem to="/journal-services" onClick={() => setOpen(false)}>Journal Services</NavItem>
+              <NavItem to="/dashboard" onClick={() => setOpen(false)}>Dashboard</NavItem>
+
+              <div className="mt-2 flex items-center gap-3">
                 {user ? (
-                  <button
-                    onClick={() => {
-                      logOut();
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className="w-full text-left px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-700 font-medium"
-                  >
-                    Sign Out
-                  </button>
+                  <>
+                    <div className="h-8 w-8 rounded-full bg-black text-white grid place-items-center text-xs">
+                      {avatarLetter}
+                    </div>
+                    <button
+                      onClick={handleSignOut}
+                      className="px-3 py-2 rounded-xl border border-gray-300 text-sm font-medium w-full text-left"
+                    >
+                      Sign Out
+                    </button>
+                  </>
                 ) : (
                   <button
-                    onClick={() => {
-                      navigate('/login');
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className="w-full text-left px-4 py-3 rounded-lg hover:bg-gray-100 transition-colors text-gray-700 font-medium"
+                    onClick={() => { navigate("/login"); setOpen(false); }}
+                    className="px-3 py-2 rounded-xl bg-gray-900 text-white text-sm font-medium w-full text-left"
                   >
-                    Login
+                    Sign In
                   </button>
                 )}
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </motion.nav>
+      </nav>
+    </header>
   );
-};
-
-export default Navbar;
+}

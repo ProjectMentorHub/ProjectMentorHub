@@ -12,39 +12,65 @@ const Dashboard = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    const fetchOrders = async () => {
+    let isMounted = true;
+    const safeSetOrders = (data) => {
+      if (isMounted) {
+        setOrders(data);
+      }
+    };
+    const safeSetLoading = (value) => {
+      if (isMounted) {
+        setLoading(value);
+      }
+    };
+
+    const readLocalOrders = () => {
       try {
-        if (db && user) {
-          // Fetch from Firebase
+        return JSON.parse(localStorage.getItem('orders') || '[]');
+      } catch (storageError) {
+        console.warn('Failed to read orders from localStorage', storageError);
+        return [];
+      }
+    };
+
+    const fetchOrders = async () => {
+      if (!user) {
+        safeSetOrders(readLocalOrders());
+        safeSetLoading(false);
+        return;
+      }
+
+      try {
+        if (db) {
           const ordersQuery = query(
             collection(db, 'orders'),
             where('userId', '==', user.uid),
             orderBy('createdAt', 'desc')
           );
           const querySnapshot = await getDocs(ordersQuery);
-          const ordersData = querySnapshot.docs.map(doc => ({
+          const ordersData = querySnapshot.docs.map((doc) => ({
             id: doc.id,
             ...doc.data(),
             createdAt: doc.data().createdAt?.toDate() || new Date()
           }));
-          setOrders(ordersData);
+          safeSetOrders(ordersData.length ? ordersData : []);
         } else {
-          // Fallback to localStorage
-          const savedOrders = JSON.parse(localStorage.getItem('orders') || '[]');
-          setOrders(savedOrders);
+          safeSetOrders(readLocalOrders());
         }
       } catch (error) {
         console.error('Error fetching orders:', error);
         toast.error('Failed to load orders');
-        // Fallback to localStorage
-        const savedOrders = JSON.parse(localStorage.getItem('orders') || '[]');
-        setOrders(savedOrders);
+        safeSetOrders(readLocalOrders());
       } finally {
-        setLoading(false);
+        safeSetLoading(false);
       }
     };
 
+    safeSetLoading(true);
     fetchOrders();
+    return () => {
+      isMounted = false;
+    };
   }, [user]);
 
   const getStatusColor = (status) => {
