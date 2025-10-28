@@ -10,7 +10,11 @@ const DEFAULT_IMAGE = `${SITE_URL}/logo512.png`;
 const resolveCanonical = (canonical) => {
   if (canonical) return canonical;
   if (typeof window === 'undefined') return SITE_URL;
-  return `${SITE_URL}${window.location.pathname}${window.location.search}`;
+  const { pathname, search, hash } = window.location;
+  if (hash?.startsWith('#/')) {
+    return `${SITE_URL}${hash.slice(1)}`;
+  }
+  return `${SITE_URL}${pathname}${search}`;
 };
 
 const buildTitle = (title) => (title ? `${title} | ${SITE_NAME}` : DEFAULT_TITLE);
