@@ -1,12 +1,7 @@
-import { useState } from 'react';
-
 const FilterBar = ({ filters, onFilterChange }) => {
-  const [selectedCategory, setSelectedCategory] = useState(filters.category);
-
   const categories = ['All', 'CSE', 'EEE', 'MATLAB'];
 
   const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
     onFilterChange({ ...filters, category });
   };
 
@@ -23,7 +18,7 @@ const FilterBar = ({ filters, onFilterChange }) => {
                   key={cat}
                   onClick={() => handleCategoryChange(cat === 'All' ? '' : cat)}
                   className={`px-4 py-2 border transition-all ${
-                    selectedCategory === (cat === 'All' ? '' : cat)
+                    filters.category === (cat === 'All' ? '' : cat)
                       ? 'bg-black text-white border-black'
                       : 'border-black/20 text-black hover:bg-gray-50'
                   }`}
