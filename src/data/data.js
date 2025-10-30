@@ -2121,7 +2121,7 @@ image: '/images/matlab.png'},
       'Model comparison: Logistic Regression vs Random Forest',
       'Deployed Streamlit UI with animated results'
     ],
-    image: '/images/ui1.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI102',
@@ -2137,7 +2137,7 @@ image: '/images/matlab.png'},
       'Displays word importance visualization',
       'Heroku-ready Flask deployment'
     ],
-    image: '/images/ui2.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI103',
@@ -2153,7 +2153,7 @@ image: '/images/matlab.png'},
       'Built with TensorFlow + Keras + OpenCV',
       'Responsive UI layout and dark mode theme'
     ],
-    image: '/images/ui3.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI104',
@@ -2168,7 +2168,7 @@ image: '/images/matlab.png'},
       'Dynamic R² and MSE visualization',
       'CSV upload support for batch prediction'
     ],
-    image: '/images/ui4.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI105',
@@ -2184,7 +2184,7 @@ image: '/images/matlab.png'},
       'AI diagnosis + confidence scores',
       'Streamlit dashboard with tabbed layout'
     ],
-    image: '/images/ui5.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI106',
@@ -2199,7 +2199,7 @@ image: '/images/matlab.png'},
       'MFCC feature extraction display',
       'Interactive UI built with HTML + Bootstrap'
     ],
-    image: '/images/ui6.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI107',
@@ -2214,7 +2214,7 @@ image: '/images/matlab.png'},
       'Similarity score against job description',
       'Interactive bar chart for skill gap analysis'
     ],
-    image: '/images/ui7.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI108',
@@ -2229,7 +2229,7 @@ image: '/images/matlab.png'},
       'Algorithm comparison chart',
       'Interactive confusion matrix and ROC curves'
     ],
-    image: '/images/ui8.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI109',
@@ -2244,7 +2244,7 @@ image: '/images/matlab.png'},
       'LSTM model backend with Flask API',
       'Displays emojis and emotion graphs dynamically'
     ],
-    image: '/images/ui9.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI110',
@@ -2259,7 +2259,7 @@ image: '/images/matlab.png'},
       'TensorFlow Lite optimization for faster inference',
       'Streamlit UI with camera toggle'
     ],
-    image: '/images/ui10.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI111',
@@ -2274,7 +2274,7 @@ image: '/images/matlab.png'},
       'Switch between ARIMA and LSTM',
       'Dynamic matplotlib + Plotly visualization'
     ],
-    image: '/images/ui11.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI112',
@@ -2289,7 +2289,7 @@ image: '/images/matlab.png'},
       'Histogram and segmentation mask overlay',
       'Streamlit UI with multiple tabs'
     ],
-    image: '/images/ui12.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI113',
@@ -2304,7 +2304,7 @@ image: '/images/matlab.png'},
       'Real-time map marker updates with predicted prices',
       'Beautiful UI with Bootstrap and JS interactivity'
     ],
-    image: '/images/ui13.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI114',
@@ -2319,7 +2319,7 @@ image: '/images/matlab.png'},
       'Response time optimization with caching',
       'Export chat logs as text files'
     ],
-    image: '/images/ui14.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSUI115',
@@ -2334,7 +2334,7 @@ image: '/images/matlab.png'},
       'Trained on German Traffic Sign dataset',
       'Responsive and attractive Streamlit interface'
     ],
-    image: '/images/ui15.png'
+    image: '/images/cse.png'
   },
   {
     id: 'CSML106',
