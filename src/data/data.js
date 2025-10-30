@@ -2336,4 +2336,19 @@ image: '/images/matlab.png'},
     ],
     image: '/images/cse.png'
   },
+  {
+    id: 'CSML120',
+    title: 'AI Traffic Sign Recognition Web App',
+    description: 'An interactive CNN-based web app that classifies uploaded traffic signs using deep learning and displays label confidence.',
+    category: 'CSE',
+    price: 3999,
+    tags: ['CNN', 'Computer Vision', 'Streamlit', 'Python'],
+    features: [
+      'Upload and preview sign images',
+      'Confidence score chart visualization',
+      'Trained on German Traffic Sign dataset',
+      'Responsive and attractive Streamlit interface'
+    ],
+    image: '/images/cse.png'
+  },
 ];
