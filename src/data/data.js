@@ -2335,7 +2335,7 @@ image: '/images/circuit.png'},
       'Responsive and attractive Streamlit interface'
     ],
     image: '/images/ui15.png'
-  }
+  },
   {
     id: 'CSML106',
     title: 'Test',
@@ -2351,5 +2351,4 @@ image: '/images/circuit.png'},
     ],
     image: '/images/cse.png'
   }
-  
 ];
