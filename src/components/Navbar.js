@@ -24,8 +24,9 @@ const NavItem = ({ to, children, onClick }) => (
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { user, logOut } = useAuth();
-  const { cartItems = [] } = useCart?.() || { cartItems: [] };
+  const { getCartItemCount } = useCart();
   const navigate = useNavigate();
+  const cartCount = getCartItemCount();
 
   const handleSignOut = async () => {
     await logOut();
@@ -63,14 +64,14 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             {/* Cart */}
             <button
-              onClick={() => navigate("/checkout")}
+              onClick={() => navigate("/cart")}
               className="relative p-2 rounded-xl hover:bg-gray-100 transition"
               aria-label="Cart"
             >
               <HiOutlineShoppingCart className="h-6 w-6" />
-              {cartItems.length > 0 && (
+              {cartCount > 0 && (
                 <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-gray-900 text-white text-[10px] grid place-items-center">
-                  {cartItems.length}
+                  {cartCount}
                 </span>
               )}
             </button>
