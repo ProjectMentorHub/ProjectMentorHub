@@ -1,5 +1,3 @@
-export const CATALOG_VERSION = '2025-03-01';
-
 // Production dataset for catalog listings
 export const projects = [
   
@@ -2341,7 +2339,7 @@ image: '/images/matlab.png'},
     title: 'Test',
     description: 'Test.',
     category: 'CSE',
-    price: ,
+    price: 1,
     tags: ['CNN', 'Computer Vision', 'Streamlit', 'Python'],
     features: [
       'Upload and preview sign images',
