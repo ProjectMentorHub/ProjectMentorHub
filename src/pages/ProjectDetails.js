@@ -11,7 +11,7 @@ const ProjectDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const ProjectDetails = () => {
     const foundProject = catalogProjects.find(p => p.id === id);
     setProject(foundProject || null);
     setLoading(false);
-  }, [id]);
+  }, [id, catalogProjects]);
 
   const handleAddToCart = () => {
     addToCart(project);
