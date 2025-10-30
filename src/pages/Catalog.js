@@ -1,7 +1,6 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import FilterBar from '../components/FilterBar';
-import LoadingSkeleton from '../components/LoadingSkeleton';
 import AdSidebar from '../components/AdSidebar';
 import { motion } from 'framer-motion';
 import { projects as catalogProjects } from '../data/data';
@@ -9,34 +8,24 @@ import SEO from '../components/SEO';
 import { hasMatlabTag, getDisplayCategory } from '../utils/projectMetadata';
 
 const Catalog = () => {
-  const [projects, setProjects] = useState(catalogProjects);
-  const [filteredProjects, setFilteredProjects] = useState(catalogProjects);
-  const [loading, setLoading] = useState(false);
+  const projects = catalogProjects;
   const [filters, setFilters] = useState({
     category: ''
   });
 
-  useEffect(() => {
-    setProjects(catalogProjects);
-    setFilteredProjects(catalogProjects);
-  }, [catalogProjects]);
-
-  useEffect(() => {
-    let filtered = projects;
-
-    // Category filter
-    if (filters.category) {
-      if (filters.category === 'MATLAB') {
-        filtered = filtered.filter(
-          (project) => project.category === 'MATLAB' || hasMatlabTag(project)
-        );
-      } else {
-        filtered = filtered.filter(p => p.category === filters.category);
-      }
+  const filteredProjects = useMemo(() => {
+    if (!filters.category) {
+      return projects;
     }
 
-    setFilteredProjects(filtered);
-  }, [filters, projects]);
+    if (filters.category === 'MATLAB') {
+      return projects.filter(
+        (project) => project.category === 'MATLAB' || hasMatlabTag(project)
+      );
+    }
+
+    return projects.filter((project) => project.category === filters.category);
+  }, [projects, filters]);
 
   const itemListSchema = useMemo(() => {
     if (!filteredProjects.length) return null;
@@ -83,9 +72,7 @@ const Catalog = () => {
 
         <FilterBar filters={filters} onFilterChange={setFilters} />
 
-        {loading ? (
-          <LoadingSkeleton />
-        ) : filteredProjects.length === 0 ? (
+        {filteredProjects.length === 0 ? (
           <div className="text-center py-20">
             <p className="text-gray-500 text-lg">No projects found matching your filters</p>
           </div>
