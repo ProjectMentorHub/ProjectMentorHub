@@ -1,4 +1,4 @@
-export const CATALOG_VERSION = '2025-02-27';
+export const CATALOG_VERSION = '2025-03-01';
 
 // Production dataset for catalog listings
 export const projects = [
