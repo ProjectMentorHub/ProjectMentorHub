@@ -4,35 +4,22 @@ import FilterBar from '../components/FilterBar';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import AdSidebar from '../components/AdSidebar';
 import { motion } from 'framer-motion';
-import { projects as catalogProjects, CATALOG_VERSION } from '../data/data';
+import { projects as catalogProjects } from '../data/data';
 import SEO from '../components/SEO';
 import { hasMatlabTag, getDisplayCategory } from '../utils/projectMetadata';
 
 const Catalog = () => {
-  const [projects, setProjects] = useState([]);
-  const [filteredProjects, setFilteredProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState(catalogProjects);
+  const [filteredProjects, setFilteredProjects] = useState(catalogProjects);
+  const [loading, setLoading] = useState(false);
   const [filters, setFilters] = useState({
     category: ''
   });
 
   useEffect(() => {
-    // Load from localStorage if available
-    const savedProjects = localStorage.getItem('projects');
-    const savedVersion = localStorage.getItem('catalogVersion');
-
-    if (!savedProjects || savedVersion !== CATALOG_VERSION) {
-      localStorage.setItem('projects', JSON.stringify(catalogProjects));
-      localStorage.setItem('catalogVersion', CATALOG_VERSION);
-      setProjects(catalogProjects);
-      setFilteredProjects(catalogProjects);
-    } else {
-      const parsed = JSON.parse(savedProjects);
-      setProjects(parsed);
-      setFilteredProjects(parsed);
-    }
-    setLoading(false);
-  }, []);
+    setProjects(catalogProjects);
+    setFilteredProjects(catalogProjects);
+  }, [catalogProjects]);
 
   useEffect(() => {
     let filtered = projects;
