@@ -15,11 +15,10 @@ const ProjectDetails = () => {
   const { addToCart } = useCart();
 
   useEffect(() => {
-    setLoading(true);
     const foundProject = catalogProjects.find(p => p.id === id);
     setProject(foundProject || null);
     setLoading(false);
-  }, [id, catalogProjects]);
+  }, [id]);
 
   const handleAddToCart = () => {
     addToCart(project);
