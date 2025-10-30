@@ -21,7 +21,7 @@ const Catalog = () => {
     return projects.filter(
       (project) => getPrimaryCategory(project) === filters.category
     );
-  }, [projects, filters]);
+  }, [projects, filters.category]);
 
   const itemListSchema = useMemo(() => {
     if (!filteredProjects.length) return null;
