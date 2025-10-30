@@ -16,21 +16,3 @@ export const getDisplayCategory = (project = {}) => {
 
   return project?.category || 'General';
 };
-
-export const getPrimaryCategory = (project = {}) => {
-  if (!project || typeof project !== 'object') {
-    return 'CSE';
-  }
-
-  const category = isString(project.category) ? project.category.trim().toUpperCase() : '';
-
-  if (category === 'EEE') {
-    return 'EEE';
-  }
-
-  if (category === 'MATLAB' || hasMatlabTag(project)) {
-    return 'MATLAB';
-  }
-
-  return 'CSE';
-};
