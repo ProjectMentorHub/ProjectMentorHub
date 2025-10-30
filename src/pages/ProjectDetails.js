@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import AdSidebar from '../components/AdSidebar';
 import { motion } from 'framer-motion';
-import { projects as catalogProjects, CATALOG_VERSION } from '../data/data';
+import { projects as catalogProjects } from '../data/data';
 import SEO from '../components/SEO';
 import { getDisplayCategory } from '../utils/projectMetadata';
 
@@ -15,25 +15,10 @@ const ProjectDetails = () => {
   const { addToCart } = useCart();
 
   useEffect(() => {
-    const fetchProject = () => {
-      const savedProjects = JSON.parse(localStorage.getItem('projects') || '[]');
-      const savedVersion = localStorage.getItem('catalogVersion');
-
-      if (savedVersion !== CATALOG_VERSION) {
-        localStorage.setItem('projects', JSON.stringify(catalogProjects));
-        localStorage.setItem('catalogVersion', CATALOG_VERSION);
-      }
-
-      const foundProject = (savedVersion === CATALOG_VERSION ? savedProjects : catalogProjects).find(p => p.id === id)
-        || catalogProjects.find(p => p.id === id);
-      
-      if (foundProject) {
-        setProject(foundProject);
-      }
-      setLoading(false);
-    };
-
-    fetchProject();
+    setLoading(true);
+    const foundProject = catalogProjects.find(p => p.id === id);
+    setProject(foundProject || null);
+    setLoading(false);
   }, [id]);
 
   const handleAddToCart = () => {
