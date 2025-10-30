@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import SEO from '../components/SEO';
+import { getDisplayCategory } from '../utils/projectMetadata';
 
 const Admin = () => {
   const [projects, setProjects] = useState([]);
@@ -149,6 +150,7 @@ const Admin = () => {
                   >
                     <option value="CSE">CSE</option>
                     <option value="EEE">EEE</option>
+                    <option value="MATLAB">MATLAB</option>
                   </select>
                 </div>
 
@@ -216,7 +218,7 @@ const Admin = () => {
                   <div key={project.id} className="flex items-center justify-between border-b border-gray-100 pb-4">
                     <div>
                       <h3 className="font-medium">{project.title}</h3>
-                      <p className="text-sm text-gray-600">{project.category} - ₹{project.price}</p>
+                      <p className="text-sm text-gray-600">{getDisplayCategory(project)} - ₹{project.price}</p>
                     </div>
                     <button
                       onClick={() => handleDelete(project.id)}

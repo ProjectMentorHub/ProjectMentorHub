@@ -2,10 +2,12 @@
   "name": "projectmentorhub",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://projectmentorhub.com/",
+  "homepage": "https://projectmentorhub.github.io",
   "dependencies": {
     "firebase": "^12.4.0",
     "framer-motion": "^11.0.0",
+    "jspdf": "^3.0.3",
+    "jspdf-autotable": "^5.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet-async": "^1.3.0",

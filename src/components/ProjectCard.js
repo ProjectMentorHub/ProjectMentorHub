@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { motion } from 'framer-motion';
+import { getDisplayCategory } from '../utils/projectMetadata';
 
 const ProjectCard = ({ project }) => {
   const { addToCart } = useCart();
@@ -10,6 +11,8 @@ const ProjectCard = ({ project }) => {
     e.stopPropagation();
     addToCart(project);
   };
+
+  const displayCategory = getDisplayCategory(project);
 
   return (
     <motion.div
@@ -38,7 +41,7 @@ const ProjectCard = ({ project }) => {
                 {project.title}
               </h3>
               <span className="text-xs bg-black text-white px-2 py-1 ml-2 flex-shrink-0">
-                {project.category}
+                {displayCategory}
               </span>
             </div>
             
@@ -66,4 +69,3 @@ const ProjectCard = ({ project }) => {
 };
 
 export default ProjectCard;
-

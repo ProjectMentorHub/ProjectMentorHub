@@ -19,7 +19,7 @@ const Home = () => {
     <div className="min-h-screen">
       <SEO
         title="Premium BTech Project Kits & Documentation"
-        description="ProjectMentorHub delivers curated CSE and EEE project kits complete with documentation, source code, and implementation support."
+        description="ProjectMentorHub delivers curated CSE, EEE, and MATLAB project kits complete with documentation, source code, and implementation support."
         schema={schema}
       />
       {/* Hero Section */}
@@ -35,7 +35,7 @@ const Home = () => {
               ProjectMentorHub
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed">
-              Discover cutting-edge CSE & EEE project kits with complete documentation, code, and resources
+              Discover cutting-edge CSE, EEE & MATLAB project kits with complete documentation, code, and resources
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/catalog" className="btn-primary text-lg px-8 py-4">
@@ -118,7 +118,7 @@ const Home = () => {
               {
                 step: '01',
                 title: 'Browse Projects',
-                description: 'Explore our catalog of CSE and EEE projects'
+                description: 'Explore our catalog of CSE, EEE, and MATLAB projects'
               },
               {
                 step: '02',

@@ -3,7 +3,7 @@ import { useState } from 'react';
 const FilterBar = ({ filters, onFilterChange }) => {
   const [selectedCategory, setSelectedCategory] = useState(filters.category);
 
-  const categories = ['All', 'CSE', 'EEE'];
+  const categories = ['All', 'CSE', 'EEE', 'MATLAB'];
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -16,7 +16,7 @@ const FilterBar = ({ filters, onFilterChange }) => {
         <div>
           {/* Category Filter */}
           <div>
-            <h3 className="text-sm font-semibold mb-3">Category</h3>
+            <h3 className="text-sm font-semibold mb-3">Category / Domain</h3>
             <div className="flex flex-wrap gap-2">
               {categories.map((cat) => (
                 <button
@@ -40,4 +40,3 @@ const FilterBar = ({ filters, onFilterChange }) => {
 };
 
 export default FilterBar;
-

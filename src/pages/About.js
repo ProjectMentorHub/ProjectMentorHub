@@ -53,7 +53,7 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                At Projects, we believe that every student deserves access to high-quality project resources that can help them excel in their academic journey. Our mission is to provide comprehensive, well-documented project kits for CSE and EEE students that not only help them complete their assignments but also deepen their understanding of core concepts.
+                At Projects, we believe that every student deserves access to high-quality project resources that can help them excel in their academic journey. Our mission is to provide comprehensive, well-documented project kits for CSE, EEE, and MATLAB students that not only help them complete their assignments but also deepen their understanding of core concepts.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 We understand the challenges students face when working on BTech projects - from finding the right resources to understanding implementation details. That's why we've curated a collection of premium projects with complete documentation, source code, and step-by-step guides.

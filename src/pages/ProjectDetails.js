@@ -3,8 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import AdSidebar from '../components/AdSidebar';
 import { motion } from 'framer-motion';
-import { mockProjects } from '../data/mockData';
+import { projects as catalogProjects, CATALOG_VERSION } from '../data/data';
 import SEO from '../components/SEO';
+import { getDisplayCategory } from '../utils/projectMetadata';
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -16,7 +17,15 @@ const ProjectDetails = () => {
   useEffect(() => {
     const fetchProject = () => {
       const savedProjects = JSON.parse(localStorage.getItem('projects') || '[]');
-      const foundProject = savedProjects.find(p => p.id === id) || mockProjects.find(p => p.id === id);
+      const savedVersion = localStorage.getItem('catalogVersion');
+
+      if (savedVersion !== CATALOG_VERSION) {
+        localStorage.setItem('projects', JSON.stringify(catalogProjects));
+        localStorage.setItem('catalogVersion', CATALOG_VERSION);
+      }
+
+      const foundProject = (savedVersion === CATALOG_VERSION ? savedProjects : catalogProjects).find(p => p.id === id)
+        || catalogProjects.find(p => p.id === id);
       
       if (foundProject) {
         setProject(foundProject);
@@ -53,7 +62,7 @@ const ProjectDetails = () => {
       name: project.title,
       description: shortDescription,
       sku: project.id,
-      category: project.category,
+      category: getDisplayCategory(project),
       image: project.image || 'https://projectmentorhub.com/logo512.png',
       offers: {
         '@type': 'Offer',
@@ -64,6 +73,8 @@ const ProjectDetails = () => {
       }
     };
   }, [project, shortDescription]);
+
+  const displayCategory = getDisplayCategory(project);
 
   if (loading) {
     return (
@@ -102,15 +113,19 @@ const ProjectDetails = () => {
     <div className="min-h-screen py-12 bg-gray-50">
       <div className="container mx-auto px-4 max-w-7xl flex gap-8">
         <div className="flex-1 max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white border border-black/10"
+            className="flex justify-center"
           >
             {project.image ? (
-              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-auto object-contain max-h-[600px]"
+              />
             ) : (
               <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200" />
             )}
@@ -124,7 +139,7 @@ const ProjectDetails = () => {
           >
             <div>
               <span className="text-sm bg-black text-white px-3 py-1 inline-block mb-3">
-                {project.category}
+                {displayCategory}
               </span>
               <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
                 {project.title}

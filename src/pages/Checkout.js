@@ -14,7 +14,7 @@ const Checkout = () => {
     fullName: '',
     email: '',
     phone: '',
-    address: '',
+    college: '',
     city: '',
     state: '',
     zipCode: ''
@@ -28,7 +28,7 @@ const Checkout = () => {
       f.fullName.trim() &&
       f.email.trim() &&
       f.phone.trim() &&
-      f.address.trim() &&
+      f.college.trim() &&
       f.city.trim() &&
       f.state.trim() &&
       f.zipCode.trim()
@@ -106,11 +106,11 @@ const Checkout = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2">Address</label>
+                <label className="block text-sm font-medium mb-2">College Name</label>
                 <input
                   type="text"
-                  name="address"
-                  value={formData.address}
+                  name="college"
+                  value={formData.college}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-black/20 focus:outline-none focus:border-black transition-colors"

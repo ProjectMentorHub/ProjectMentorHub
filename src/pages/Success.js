@@ -1,12 +1,16 @@
 import { useEffect } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 
 const Success = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const orderId = searchParams.get('orderId');
+  const location = useLocation();
+  const navigationState = location.state || {};
+  const orderId = searchParams.get('orderId') || navigationState.paymentId || null;
+  const paymentTotal = navigationState.total || null;
+  const customerEmail = navigationState.email || null;
 
   useEffect(() => {
     // Clear cart or perform any cleanup
@@ -42,8 +46,20 @@ const Success = () => {
         <p className="text-gray-600 mb-6">
           Thank you for your purchase. Your order has been confirmed.
           {orderId && (
-            <span className="block mt-2 text-sm">Order ID: {orderId}</span>
+            <span className="block mt-2 text-sm">
+              Order ID: {orderId}
+            </span>
           )}
+          {paymentTotal ? (
+            <span className="block mt-1 text-sm">
+              Amount Paid: ₹{Number(paymentTotal).toLocaleString()}
+            </span>
+          ) : null}
+          {customerEmail ? (
+            <span className="block mt-1 text-sm text-gray-500">
+              Receipt sent to: {customerEmail}
+            </span>
+          ) : null}
         </p>
 
         <div className="space-y-3">

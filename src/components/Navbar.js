@@ -12,7 +12,7 @@ const NavItem = ({ to, children, onClick }) => (
     className={({ isActive }) =>
       [
         "px-3 py-2 rounded-xl text-sm font-medium transition",
-        "hover:bg-gray-100 hover:text-gray-900",
+        "hover:bg-gray-100",
         isActive ? "bg-gray-900 text-white hover:bg-gray-900" : "text-gray-700",
       ].join(" ")
     }
@@ -55,7 +55,7 @@ export default function Navbar() {
             <NavItem to="/">Home</NavItem>
             <NavItem to="/catalog">Catalog</NavItem>
             <NavItem to="/about">About</NavItem>
-            <NavItem to="/journal-services">Journal Services</NavItem>
+            <NavItem to="/journals">Journal Services</NavItem>
             <NavItem to="/dashboard">Dashboard</NavItem>
           </div>
 
@@ -118,7 +118,7 @@ export default function Navbar() {
               <NavItem to="/" onClick={() => setOpen(false)}>Home</NavItem>
               <NavItem to="/catalog" onClick={() => setOpen(false)}>Catalog</NavItem>
               <NavItem to="/about" onClick={() => setOpen(false)}>About</NavItem>
-              <NavItem to="/journal-services" onClick={() => setOpen(false)}>Journal Services</NavItem>
+              <NavItem to="/journals" onClick={() => setOpen(false)}>Journal Services</NavItem>
               <NavItem to="/dashboard" onClick={() => setOpen(false)}>Dashboard</NavItem>
 
               <div className="mt-2 flex items-center gap-3">

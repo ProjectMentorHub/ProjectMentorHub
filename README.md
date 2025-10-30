@@ -1,6 +1,6 @@
 # Projects - Premium BTech Project Kits Marketplace
 
-A minimal, premium black-and-white website to sell CSE & EEE BTech project kits with complete documentation, source code, and resources. Built with React, Tailwind CSS, and Framer Motion.
+A minimal, premium black-and-white website to sell CSE, EEE & MATLAB BTech project kits with complete documentation, source code, and resources. Built with React, Tailwind CSS, and Framer Motion.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
@@ -9,7 +9,7 @@ A minimal, premium black-and-white website to sell CSE & EEE BTech project kits 
 - 🛒 **Shopping Cart**: Add/remove items, update quantities, persistent cart with localStorage
 - 📱 **Responsive Design**: Fully responsive, mobile-first approach
 - 🎨 **Premium UI**: Monochrome palette (#000, #111, #fff), elegant typography, smooth animations
-- 🏷️ **Smart Filtering**: Filter by category (CSE/EEE), tags, and price range
+- 🏷️ **Smart Filtering**: Filter by category (CSE/EEE/MATLAB), tags, and price range
 - 👨‍💼 **Admin Panel**: Add/delete projects via localStorage
 - 💾 **Local Storage**: All data stored locally in browser
 - ♿ **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation
@@ -17,7 +17,7 @@ A minimal, premium black-and-white website to sell CSE & EEE BTech project kits 
 
 ## Tech Stack
 
-- **Frontend**: React 19, React Router DOM
+- **Frontend**: React 18, React Router DOM
 - **Styling**: Tailwind CSS 3
 - **Animations**: Framer Motion
 - **State Management**: React Context API, localStorage
@@ -46,7 +46,7 @@ src/
 ├── context/          # React Context providers
 │   └── CartContext.js
 ├── data/             # Data and utilities
-│   └── mockData.js
+│   └── data.js
 └── App.js            # Main app component
 ```
 

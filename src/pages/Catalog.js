@@ -4,8 +4,9 @@ import FilterBar from '../components/FilterBar';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import AdSidebar from '../components/AdSidebar';
 import { motion } from 'framer-motion';
-import { mockProjects as defaultProjects } from '../data/mockData';
+import { projects as catalogProjects, CATALOG_VERSION } from '../data/data';
 import SEO from '../components/SEO';
+import { hasMatlabTag, getDisplayCategory } from '../utils/projectMetadata';
 
 const Catalog = () => {
   const [projects, setProjects] = useState([]);
@@ -18,15 +19,17 @@ const Catalog = () => {
   useEffect(() => {
     // Load from localStorage if available
     const savedProjects = localStorage.getItem('projects');
-    if (savedProjects) {
+    const savedVersion = localStorage.getItem('catalogVersion');
+
+    if (!savedProjects || savedVersion !== CATALOG_VERSION) {
+      localStorage.setItem('projects', JSON.stringify(catalogProjects));
+      localStorage.setItem('catalogVersion', CATALOG_VERSION);
+      setProjects(catalogProjects);
+      setFilteredProjects(catalogProjects);
+    } else {
       const parsed = JSON.parse(savedProjects);
       setProjects(parsed);
       setFilteredProjects(parsed);
-    } else {
-      // Initialize with default projects
-      localStorage.setItem('projects', JSON.stringify(defaultProjects));
-      setProjects(defaultProjects);
-      setFilteredProjects(defaultProjects);
     }
     setLoading(false);
   }, []);
@@ -36,7 +39,13 @@ const Catalog = () => {
 
     // Category filter
     if (filters.category) {
-      filtered = filtered.filter(p => p.category === filters.category);
+      if (filters.category === 'MATLAB') {
+        filtered = filtered.filter(
+          (project) => project.category === 'MATLAB' || hasMatlabTag(project)
+        );
+      } else {
+        filtered = filtered.filter(p => p.category === filters.category);
+      }
     }
 
     setFilteredProjects(filtered);
@@ -53,6 +62,7 @@ const Catalog = () => {
         position: index + 1,
         name: project.title,
         description: project.description,
+        category: getDisplayCategory(project),
         url: `https://projectmentorhub.com/project/${project.id}`,
         offers: {
           '@type': 'Offer',
@@ -68,7 +78,7 @@ const Catalog = () => {
     <div className="min-h-screen bg-gray-50 py-12">
       <SEO
         title="Project Catalog"
-        description="Browse ready-to-submit CSE and EEE academic project kits complete with documentation, source code, and implementation guides."
+        description="Browse ready-to-submit CSE, EEE, and MATLAB academic project kits complete with documentation, source code, and implementation guides."
         canonical="https://projectmentorhub.com/catalog"
         type="website"
         schema={itemListSchema}

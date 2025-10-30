@@ -4,7 +4,7 @@ const SITE_NAME = 'ProjectMentorHub';
 const SITE_URL = 'https://projectmentorhub.com';
 const DEFAULT_TITLE = `${SITE_NAME} – Premium BTech Project Kits`;
 const DEFAULT_DESCRIPTION =
-  'Discover premium CSE & EEE project kits with complete documentation, source code, and mentorship-ready resources.';
+  'Discover premium CSE, EEE & MATLAB project kits with complete documentation, source code, and mentorship-ready resources.';
 const DEFAULT_IMAGE = `${SITE_URL}/logo512.png`;
 
 const resolveCanonical = (canonical) => {

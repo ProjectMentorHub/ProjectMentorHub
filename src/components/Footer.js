@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-serif font-bold mb-4">ProjectMentorHub</h3>
             <p className="text-gray-400 mb-4">
-              Premium BTech project kits and documentation for CSE and EEE students.
+              Premium BTech project kits and documentation for CSE, EEE, and MATLAB students.
             </p>
           </div>
 
@@ -52,6 +52,11 @@ const Footer = () => {
               <li>
                 <Link to="/catalog?category=EEE" className="text-gray-400 hover:text-white transition-colors">
                   EEE Projects
+                </Link>
+              </li>
+              <li>
+                <Link to="/catalog?category=MATLAB" className="text-gray-400 hover:text-white transition-colors">
+                  MATLAB Projects
                 </Link>
               </li>
               <li>
@@ -126,4 +131,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
