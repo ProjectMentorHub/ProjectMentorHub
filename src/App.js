@@ -13,6 +13,7 @@ import Catalog from './pages/Catalog';
 import JournalServices from './pages/JournalServices';
 import ProjectDetails from './pages/ProjectDetails';
 import Checkout from './pages/Checkout';
+import Cart from './pages/Cart';
 import Dashboard from './pages/Dashboard';
 import Admin from './pages/Admin';
 import Success from './pages/Success';
@@ -36,6 +37,7 @@ function App() {
             <Route path="/journalservices" element={<Navigate to="/journals" replace />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/project/:id" element={<ProjectDetails />} />
+            <Route path="/cart" element={<Cart />} />
             <Route
               path="/checkout"
               element={
