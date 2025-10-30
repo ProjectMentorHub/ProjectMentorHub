@@ -2341,7 +2341,7 @@ image: '/images/matlab.png'},
     title: 'Test',
     description: 'Test.',
     category: 'CSE',
-    price: 3999,
+    price: ,
     tags: ['CNN', 'Computer Vision', 'Streamlit', 'Python'],
     features: [
       'Upload and preview sign images',
