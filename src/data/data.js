@@ -2108,6 +2108,235 @@ image: '/images/circuit.png'},
     image: '/images/cse.png'
   },
   {
+    id: 'CSUI101',
+    title: 'AI-Powered Health Risk Dashboard',
+    description: 'An interactive Streamlit web app that predicts heart disease, diabetes, and obesity risk using multiple ML models with visual dashboards.',
+    category: 'Healthcare AI',
+    price: 2999,
+    tags: ['Machine Learning', 'Streamlit', 'Healthcare', 'Visualization'],
+    features: [
+      'Multi-condition prediction (heart, diabetes, obesity)',
+      'Sliders for user health inputs (BMI, BP, glucose)',
+      'Live charts and probability gauges',
+      'Model comparison: Logistic Regression vs Random Forest',
+      'Deployed Streamlit UI with animated results'
+    ],
+    image: '/images/ui1.png'
+  },
+  {
+    id: 'CSUI102',
+    title: 'Fake News Detection Web App',
+    description: 'A Flask-based NLP web application that detects whether news headlines are fake or real in real time.',
+    category: 'NLP',
+    price: 2699,
+    tags: ['NLP', 'Flask', 'Text Classification', 'Python'],
+    features: [
+      'Text input box with live classification result',
+      'TF-IDF + Logistic Regression backend',
+      'Stylish Bootstrap dashboard UI',
+      'Displays word importance visualization',
+      'Heroku-ready Flask deployment'
+    ],
+    image: '/images/ui2.png'
+  },
+  {
+    id: 'CSUI103',
+    title: 'Plant Disease Detection Dashboard',
+    description: 'A CNN-powered Streamlit interface that allows users to upload plant leaf photos and get instant disease classification with explanation.',
+    category: 'Deep Learning',
+    price: 2999,
+    tags: ['CNN', 'TensorFlow', 'Streamlit', 'Computer Vision'],
+    features: [
+      'Upload image feature with real-time preview',
+      'Grad-CAM heatmap overlay for diseased regions',
+      'Beautiful result cards for each class',
+      'Built with TensorFlow + Keras + OpenCV',
+      'Responsive UI layout and dark mode theme'
+    ],
+    image: '/images/ui3.png'
+  },
+  {
+    id: 'CSUI104',
+    title: 'Student Performance Predictor with Charts',
+    description: 'A regression-based Streamlit dashboard predicting final grades and visualizing study patterns and outcomes.',
+    category: 'Education AI',
+    price: 2299,
+    tags: ['Regression', 'Streamlit', 'Visualization', 'Python'],
+    features: [
+      'Interactive sliders for attendance, study hours',
+      'Bar and line charts for predicted scores',
+      'Dynamic R² and MSE visualization',
+      'CSV upload support for batch prediction'
+    ],
+    image: '/images/ui4.png'
+  },
+  {
+    id: 'CSUI105',
+    title: 'Cervical Cancer Detection using Deep Learning',
+    description: 'A healthcare AI web app for classifying cervical images into normal and precancerous categories using EfficientNet-B0.',
+    category: 'Healthcare AI',
+    price: 3499,
+    tags: ['Healthcare', 'CNN', 'Streamlit', 'Explainable AI'],
+    features: [
+      'Upload cervix images with real-time predictions',
+      'CLAHE + Gabor preprocessing visualization',
+      'Explainable Grad-CAM overlay',
+      'AI diagnosis + confidence scores',
+      'Streamlit dashboard with tabbed layout'
+    ],
+    image: '/images/ui5.png'
+  },
+  {
+    id: 'CSUI106',
+    title: 'Speech Emotion Detector Web Interface',
+    description: 'A Flask + JS web app that records user voice and detects emotion using LSTM-based audio model.',
+    category: 'Audio AI',
+    price: 2999,
+    tags: ['Speech', 'Flask', 'Audio Processing', 'Deep Learning'],
+    features: [
+      'Voice recording directly from browser',
+      'Spectrogram visualization',
+      'MFCC feature extraction display',
+      'Interactive UI built with HTML + Bootstrap'
+    ],
+    image: '/images/ui6.png'
+  },
+  {
+    id: 'CSUI107',
+    title: 'AI Resume Analyzer & Job Match Portal',
+    description: 'A Streamlit-based AI system that parses resumes, extracts key skills, and matches with job descriptions using NLP.',
+    category: 'NLP',
+    price: 2799,
+    tags: ['NLP', 'Streamlit', 'Text Analysis', 'Python'],
+    features: [
+      'Upload resume (PDF/DOCX)',
+      'Skill extraction using spaCy + BERT embeddings',
+      'Similarity score against job description',
+      'Interactive bar chart for skill gap analysis'
+    ],
+    image: '/images/ui7.png'
+  },
+  {
+    id: 'CSUI108',
+    title: 'Credit Card Fraud Detection Dashboard',
+    description: 'A fraud detection visualization dashboard that allows uploading transaction CSVs and visualizing anomalies using PCA and Random Forest.',
+    category: 'Finance AI',
+    price: 2899,
+    tags: ['Anomaly Detection', 'Finance', 'Streamlit', 'Python'],
+    features: [
+      'Upload CSV to detect frauds live',
+      'PCA scatter plot for fraud visualization',
+      'Algorithm comparison chart',
+      'Interactive confusion matrix and ROC curves'
+    ],
+    image: '/images/ui8.png'
+  },
+  {
+    id: 'CSUI109',
+    title: 'Emotion Detection from Text Web App',
+    description: 'A React + Flask based web app that classifies text into emotional categories like joy, anger, or sadness.',
+    category: 'NLP',
+    price: 2899,
+    tags: ['NLP', 'Flask', 'React', 'Text Classification'],
+    features: [
+      'Real-time text classification via REST API',
+      'Frontend built in React with animations',
+      'LSTM model backend with Flask API',
+      'Displays emojis and emotion graphs dynamically'
+    ],
+    image: '/images/ui9.png'
+  },
+  {
+    id: 'CSUI110',
+    title: 'Face Mask Detection App',
+    description: 'A real-time mask detection app built using OpenCV and TensorFlow with live webcam feed integration.',
+    category: 'Computer Vision',
+    price: 2799,
+    tags: ['CNN', 'OpenCV', 'Streamlit', 'Image Detection'],
+    features: [
+      'Live webcam detection of mask vs no mask',
+      'Real-time bounding boxes and label overlay',
+      'TensorFlow Lite optimization for faster inference',
+      'Streamlit UI with camera toggle'
+    ],
+    image: '/images/ui10.png'
+  },
+  {
+    id: 'CSUI111',
+    title: 'COVID-19 Data Visualization and Forecasting Dashboard',
+    description: 'A time-series forecasting dashboard showing daily COVID-19 trends and predictions using ARIMA and LSTM.',
+    category: 'Data Science',
+    price: 2699,
+    tags: ['Time Series', 'Streamlit', 'Forecasting', 'Visualization'],
+    features: [
+      'Global dataset with auto-update',
+      'Trend, growth, and forecast charts',
+      'Switch between ARIMA and LSTM',
+      'Dynamic matplotlib + Plotly visualization'
+    ],
+    image: '/images/ui11.png'
+  },
+  {
+    id: 'CSUI112',
+    title: 'Brain Tumor Detection Interactive UI',
+    description: 'A medical imaging web app using CNN to detect brain tumors from MRI images with clear UI visualization.',
+    category: 'Healthcare AI',
+    price: 3299,
+    tags: ['CNN', 'TensorFlow', 'Streamlit', 'Explainable AI'],
+    features: [
+      'Upload MRI image and visualize Grad-CAM output',
+      'Confidence bars for each tumor class',
+      'Histogram and segmentation mask overlay',
+      'Streamlit UI with multiple tabs'
+    ],
+    image: '/images/ui12.png'
+  },
+  {
+    id: 'CSUI113',
+    title: 'House Price Predictor with Interactive Maps',
+    description: 'A Flask + Leaflet.js app that predicts house prices based on input location and displays results on a live map.',
+    category: 'Regression',
+    price: 2699,
+    tags: ['Regression', 'Flask', 'Map Visualization', 'Python'],
+    features: [
+      'Google Maps-style UI integration',
+      'Linear Regression backend model',
+      'Real-time map marker updates with predicted prices',
+      'Beautiful UI with Bootstrap and JS interactivity'
+    ],
+    image: '/images/ui13.png'
+  },
+  {
+    id: 'CSUI114',
+    title: 'AI Chatbot using NLP and Streamlit',
+    description: 'A conversational AI chatbot built using transformer models (DistilBERT) and deployed in Streamlit.',
+    category: 'NLP',
+    price: 2899,
+    tags: ['Chatbot', 'Transformers', 'Streamlit', 'NLP'],
+    features: [
+      'Interactive chat interface with avatars',
+      'Backend NLP using Hugging Face Transformers',
+      'Response time optimization with caching',
+      'Export chat logs as text files'
+    ],
+    image: '/images/ui14.png'
+  },
+  {
+    id: 'CSUI115',
+    title: 'AI Traffic Sign Recognition Web App',
+    description: 'An interactive CNN-based web app that classifies uploaded traffic signs using deep learning and displays label confidence.',
+    category: 'Computer Vision',
+    price: 2899,
+    tags: ['CNN', 'Computer Vision', 'Streamlit', 'Python'],
+    features: [
+      'Upload and preview sign images',
+      'Confidence score chart visualization',
+      'Trained on German Traffic Sign dataset',
+      'Responsive and attractive Streamlit interface'
+    ],
+    image: '/images/ui15.png'
+  }
+  {
     id: 'CSML106',
     title: 'Test',
     description: 'test dataset.',
