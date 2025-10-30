@@ -922,7 +922,7 @@ export const projects = [
     'Switching strategy and waveform results',
     'Project report and IEEE paper reference'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA0262',
   title: 'A High Power Interleaved Parallel Topology Full-Bridge LLC Converter for Off-Board Charger',
@@ -936,7 +936,7 @@ image: '/images/eee.png'},
     'Efficiency and frequency control simulation',
     'Technical documentation and schematics'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA0363',
   title: 'A Low-harmonic Control Method of Bi-directional Three-phase Z-source Converters for Vehicle-to-Grid Applications',
@@ -950,7 +950,7 @@ image: '/images/eee.png'},
     'V2G mode verification and performance graphs',
     'Simulation files and detailed explanation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA0464',
   title: 'Microgrid Based on Wind Driven DFIG, DG and Solar PV Array for Optimal Fuel Consumption',
@@ -964,7 +964,7 @@ image: '/images/eee.png'},
     'Load balancing and scheduling logic',
     'Performance plots and detailed report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA0565',
   title: 'A New Multi-Output DC-DC Converter for Electric Vehicle Application',
@@ -978,7 +978,7 @@ image: '/images/eee.png'},
     'Control loop and switching design',
     'Schematic and project report files'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA0666',
   title: 'A New Proposal for the Design of Hybrid AC/DC Microgrids Toward High Power Quality',
@@ -992,7 +992,7 @@ image: '/images/eee.png'},
     'Voltage and current waveform analysis',
     'Graphs, report, and simulation guide'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA0767',
   title: 'A New Step-Up Switched-Capacitor Voltage Balancing Converter for NPC Multilevel Inverter-Based Solar PV System',
@@ -1006,7 +1006,7 @@ image: '/images/eee.png'},
     'MPPT integrated solar system model',
     'Full documentation and test results'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA0868',
   title: 'A New Topology of Asymmetrical Multilevel Inverter with Reduced Switch Count for Electric Drive Applications',
@@ -1020,7 +1020,7 @@ image: '/images/eee.png'},
     'Motor drive test and efficiency results',
     'Simulation files and full report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA0969',
   title: 'A New Wave Energy Converter for Marine Data Buoy',
@@ -1034,7 +1034,7 @@ image: '/images/eee.png'},
     'Power capture efficiency tests',
     'Graphs, report, and mechanical model'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1070',
   title: 'A Novel Control Scheme for Wind Turbine Driven DFIG Interfaced to Utility Grid',
@@ -1048,7 +1048,7 @@ image: '/images/eee.png'},
     'Reactive power and MPPT implementation',
     'Simulation outputs and project report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1171',
   title: 'A Novel Controlled Frequency Band Impedance Measurement Approach for Single-Phase Railway Traction Power System',
@@ -1062,7 +1062,7 @@ image: '/images/eee.png'},
     'Stability and resonance analysis',
     'Simulation data and report documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1272',
   title: 'A Novel Fault Ride Through Scheme for Hybrid Wind/PV Power Generation Systems',
@@ -1076,7 +1076,7 @@ image: '/images/eee.png'},
     'Grid voltage and current monitoring blocks',
     'IEEE-based technical report and results'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1373',
   title: 'A Single Input Variable FLC for DFIG Based WPGS in Standalone Mode',
@@ -1090,7 +1090,7 @@ image: '/images/eee.png'},
     'Voltage/frequency stability analysis',
     'Simulation plots and documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1474',
   title: 'A Switch-Source Cell-Based Cascaded Multilevel Inverter Topology with Minimum Number of Power Electronics Components',
@@ -1104,7 +1104,7 @@ image: '/images/eee.png'},
     'THD and efficiency evaluation in Simulink',
     'Circuit diagram and full documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1575',
   title: 'Adaptive Control of Voltage Source Converter Based Scheme for Power Quality Improved Grid-Interactive Solar PV-Battery System',
@@ -1118,7 +1118,7 @@ image: '/images/eee.png'},
     'Power factor and THD analysis',
     'Performance graphs and project report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1676',
   title: 'Advanced Control Strategy of DFIG Based Wind Turbine using Combined Artificial Neural Network and PSO Algorithm',
@@ -1132,7 +1132,7 @@ image: '/images/eee.png'},
     'Performance optimization and MPPT testing',
     'Technical report with comparative analysis'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1777',
   title: 'An Adaptive D-FACTS for Power Quality Enhancement in an Isolated Microgrid',
@@ -1146,7 +1146,7 @@ image: '/images/eee.png'},
     'Isolated microgrid case study',
     'Simulation results and documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1878',
   title: 'An Efficient Inductive Power Transfer Topology for Electric Vehicle Battery Charging',
@@ -1160,7 +1160,7 @@ image: '/images/eee.png'},
     'Soft-switching performance graphs',
     'Documentation and efficiency results'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA1979',
   title: 'Cascaded Multilevel Inverter Based Power and Signal Multiplex Transmission for Electric Vehicles',
@@ -1174,7 +1174,7 @@ image: '/images/eee.png'},
     'Synchronization and harmonic study',
     'Waveforms, graphs, and project files'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2080',
   title: 'Cascaded Multilevel PV Inverter with Improved Harmonic Performance During Power Imbalance Between Power Cells',
@@ -1188,7 +1188,7 @@ image: '/images/eee.png'},
     'Control algorithm implementation',
     'Simulation plots and performance analysis'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2181',
   title: 'Combining Electric Vehicle Battery Charging and Battery Cell Equalization in One Circuit',
@@ -1202,7 +1202,7 @@ image: '/images/eee.png'},
     'Efficiency and charging time analysis',
     'Technical report and complete documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2282',
   title: 'Comparison of Different Control Methods for Maximum Power Point Tracking of Solar and Wind Energy',
@@ -1216,7 +1216,7 @@ image: '/images/eee.png'},
     'Power output comparison under variable conditions',
     'Performance graphs and summary report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2383',
   title: 'Cost-Efficient Strategy for High Renewable Energy Penetration in Isolated Power Systems',
@@ -1230,7 +1230,7 @@ image: '/images/eee.png'},
     'Load dispatch and generation scheduling analysis',
     'Simulation results and cost comparison charts'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2484',
   title: 'Coupled Wireless Charging System for Electric Vehicles',
@@ -1244,7 +1244,7 @@ image: '/images/eee.png'},
     'Coil and resonant tank design parameters',
     'Simulation results and documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2585',
   title: 'A Two-Stage Kalman Filter for Cyber-Attack Detection in Automatic Generation Control System',
@@ -1258,7 +1258,7 @@ image: '/images/eee.png'},
     'Error detection and correction analysis',
     'Comprehensive technical report and graphs'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2686',
   title: 'Delta-Bar-Delta Neural Network Based Control Approach for Power Quality Improvement of Solar PV Interfaced Distribution System',
@@ -1272,7 +1272,7 @@ image: '/images/eee.png'},
     'Training data and adaptive learning results',
     'Simulation report and waveform outputs'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2787',
   title: 'Design and Control of Magnetic Levitation System by Optimizing Fractional Order PID Controller Using Ant Colony Optimization Algorithm',
@@ -1286,7 +1286,7 @@ image: '/images/eee.png'},
     'ACO optimization routine and convergence plots',
     'Simulation data and documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2888',
   title: 'Design and Implementation of Multilevel Inverters for Electric Vehicles',
@@ -1300,7 +1300,7 @@ image: '/images/eee.png'},
     'Simulink model and waveform results',
     'Report with comparison tables and notes'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA2989',
   title: 'Development of an Adaptive Neuro-Fuzzy Inference System–Based Equivalent Consumption Minimisation Strategy to Improve Fuel Economy in Hybrid Electric Vehicles',
@@ -1314,7 +1314,7 @@ image: '/images/eee.png'},
     'Comparison with traditional ECMS control',
     'Simulation report and algorithm flowchart'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3090',
   title: 'Distance Protection Scheme for DC Distribution Systems Based on the High Frequency Characteristics of Faults',
@@ -1328,7 +1328,7 @@ image: '/images/eee.png'},
     'Distance protection algorithm implementation',
     'Simulation results and graphs for relay response'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3191',
   title: 'Dynamic Current Sharing, Voltage and SOC Regulation for HESS Based DC Microgrid Using CPISMC Technique',
@@ -1342,7 +1342,7 @@ image: '/images/eee.png'},
     'SOC balancing and dynamic response plots',
     'Technical documentation and controller tuning guide'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3292',
   title: 'Dynamic Voltage Support for Low-Voltage Ride-Through Operation in Single-Phase Grid-Connected Photovoltaic Systems',
@@ -1356,7 +1356,7 @@ image: '/images/eee.png'},
     'Voltage sag compensation and current control',
     'Comprehensive report with waveform analysis'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3393',
   title: 'Electric Vehicle Recharge Strategies for Frequency Control in Electrical Power Systems with High Wind Power Generation',
@@ -1370,7 +1370,7 @@ image: '/images/eee.png'},
     'Wind generation simulation and stability tests',
     'Performance evaluation and report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3494',
   title: 'Enabling Utility-Scale Solar PV Plants for Electromechanical Oscillation Damping',
@@ -1384,7 +1384,7 @@ image: '/images/eee.png'},
     'Eigenvalue and modal analysis results',
     'Simulation files and detailed report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3595',
   title: 'Energy Efficiency Enhancement in Full-Bridge PV Inverters with Advanced Modulations',
@@ -1398,7 +1398,7 @@ image: '/images/eee.png'},
     'Efficiency and THD performance graphs',
     'Documentation and test results'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3696',
   title: 'Energy Management System for Small-Scale Hybrid Wind-Solar-Battery Based Microgrid',
@@ -1412,7 +1412,7 @@ image: '/images/eee.png'},
     'Load-demand and SOC graphs',
     'Simulation results and report file'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3797',
   title: 'Fuzzy Logic Based Improvement of UPFC Performance in Power System',
@@ -1426,7 +1426,7 @@ image: '/images/eee.png'},
     'Dynamic response plots and comparison',
     'Simulation report with fuzzy rule base'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3898',
   title: 'Grid Connected PV System Using Multilevel Inverter',
@@ -1440,7 +1440,7 @@ image: '/images/eee.png'},
     'Power quality improvement graphs',
     'Full documentation and model files'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA3999',
   title: 'Grid Synchronization of WEC-PV-BES Based Distributed Generation System Using Robust Control Strategy',
@@ -1454,7 +1454,7 @@ image: '/images/eee.png'},
     'Voltage and frequency stability evaluation',
     'Simulation outputs and report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA4090',
   title: 'Grid-Connected Wind-Photovoltaic Cogeneration Using Back-to-Back Voltage Source Converters',
@@ -1468,7 +1468,7 @@ image: '/images/eee.png'},
     'Power sharing and efficiency tests',
     'Graphs, report, and reference data'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 
 {
   id: 'PEEMA4191',
@@ -1483,7 +1483,7 @@ image: '/images/eee.png'},
     'Training data and confusion matrix results',
     'Documentation and performance analysis report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA4292',
   title: 'Implementation of Solar PV-Battery and Diesel Generator Based Electric Vehicle Charging Station',
@@ -1497,7 +1497,7 @@ image: '/images/eee.png'},
     'Diesel generator backup simulation',
     'Performance graphs and system design report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA4393',
   title: 'Improved Power Quality in a Solar PV Plant Integrated Utility Grid by Employing a Novel Adaptive Current Regulator',
@@ -1511,7 +1511,7 @@ image: '/images/eee.png'},
     'Adaptive algorithm MATLAB implementation',
     'Simulation report with waveform analysis'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA4494',
   title: 'Improvement of Power Quality Using Fuzzy Based Unified Power Flow Controller',
@@ -1525,7 +1525,7 @@ image: '/images/eee.png'},
     'Dynamic response analysis and THD evaluation',
     'Graphs, documentation, and test results'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA4595',
   title: 'Integration of Solar PV into Grid Using a New UPQC with Differential Inverter Control',
@@ -1539,7 +1539,7 @@ image: '/images/eee.png'},
     'Grid synchronization and waveform plots',
     'Project documentation and report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA4696',
   title: 'Local Fault Location in Meshed DC Microgrids Based on Parameter Estimation Technique',
@@ -1553,7 +1553,7 @@ image: '/images/eee.png'},
     'Accuracy and delay performance tests',
     'Report with comparative analysis graphs'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA4797',
   title: 'Maximum Power Point Tracking for Wind Turbine Using Integrated Generator–Rectifier Systems',
@@ -1567,7 +1567,7 @@ image: '/images/eee.png'},
     'Efficiency and transient response plots',
     'Full report and simulation files'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA4898',
   title: 'MCPWM Based 21 Level Inverter Design for Grid Connected PV System',
@@ -1581,7 +1581,7 @@ image: '/images/eee.png'},
     'Simulink model and grid performance plots',
     'Documentation and efficiency report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA4999',
   title: 'Mitigating Power Fluctuations for Energy Storage in Wind Energy Conversion System Using Supercapacitors',
@@ -1595,7 +1595,7 @@ image: '/images/eee.png'},
     'Power quality improvement graphs',
     'Full report and technical details'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA50100',
   title: 'Mitigation of Transient Overvoltages in Microgrid Including PV Arrays',
@@ -1609,7 +1609,7 @@ image: '/images/eee.png'},
     'Transient waveform and THD analysis',
     'Complete report and simulation data'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA51101',
   title: 'Novel Symmetric Modular Hybrid Multilevel Inverter with Reduced Number of Semiconductors and Low Voltage Stress Across Switches',
@@ -1623,7 +1623,7 @@ image: '/images/eee.png'},
     'Harmonic and switching performance results',
     'Comprehensive documentation and graphs'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA52102',
   title: 'Off-Board Electric Vehicle Battery Charger Using PV Array',
@@ -1637,7 +1637,7 @@ image: '/images/eee.png'},
     'MPPT simulation and efficiency plots',
     'Technical documentation with graphs'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA53103',
   title: 'On-Board Single-Phase Integrated Electric Vehicle Charger with V2G Functionality',
@@ -1651,7 +1651,7 @@ image: '/images/eee.png'},
     'Charging and discharging efficiency results',
     'Project report and simulation files'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA54104',
   title: 'Optimal Design of Fractional Order PID Controller Based Automatic Voltage Regulator System Using Gradient-Based Optimization Algorithm',
@@ -1665,7 +1665,7 @@ image: '/images/eee.png'},
     'Frequency response and transient plots',
     'Simulation data and report files'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA55105',
   title: 'Performance Improvement of Hybrid Renewable Energy Sources Connected to the Grid Using Artificial Neural Network and Sliding Mode Control',
@@ -1679,7 +1679,7 @@ image: '/images/eee.png'},
     'Grid stability and response testing',
     'Complete project documentation and graphs'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA56106',
   title: 'Power Management Scheme for Grid-Connected PV Integrated with Hybrid Energy Storage System',
@@ -1693,7 +1693,7 @@ image: '/images/eee.png'},
     'Grid voltage and current monitoring',
     'Simulation results and design documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA57107',
   title: 'Power Optimisation Scheme of Induction Motor Using Fuzzy Logic Controller for Electric Vehicle',
@@ -1707,7 +1707,7 @@ image: '/images/eee.png'},
     'Efficiency comparison plots',
     'MATLAB scripts and detailed report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA58108',
   title: 'Power Quality Enhancement and Power Flow Analysis of a PV Integrated UPQC System in a Distribution Network',
@@ -1721,7 +1721,7 @@ image: '/images/eee.png'},
     'Voltage regulation performance',
     'Simulation report and waveform graphs'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA59109',
   title: 'Power Quality Improvement in Grid Connected Distribution Systems Using Artificial Intelligence Based Controller',
@@ -1735,7 +1735,7 @@ image: '/images/eee.png'},
     'Dynamic voltage regulation plots',
     'Documentation and test data'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA60110',
   title: 'Power Quality Improvement Using Dynamic Voltage Restorer',
@@ -1749,7 +1749,7 @@ image: '/images/eee.png'},
     'THD and sag/swell test results',
     'Complete simulation report and files'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA61111',
   title: 'Power-Linked Predictive Control Strategy for Power Electronic Traction Transformer',
@@ -1763,7 +1763,7 @@ image: '/images/eee.png'},
     'Dynamic response and error minimization plots',
     'Documentation and controller tuning data'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA62112',
   title: 'Protection of DC Bus Using Solid-State DC Breaker',
@@ -1777,7 +1777,7 @@ image: '/images/eee.png'},
     'Transient voltage/current waveform plots',
     'Simulation report and hardware concept overview'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA63113',
   title: 'PSO Optimized PIDF Controller for Load-Frequency Control of A.C Multi-Islanded Microgrid System',
@@ -1791,7 +1791,7 @@ image: '/images/eee.png'},
     'Frequency deviation and damping analysis',
     'Simulation results and documentation report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA64114',
   title: 'Quantitative Comparison and Analysis of Different Power Routing Methods for Single-Phase Cascaded H-Bridge Photovoltaic Grid-Connected Inverter',
@@ -1805,7 +1805,7 @@ image: '/images/eee.png'},
     'Power balance and grid current analysis',
     'Detailed results and technical documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA65115',
   title: 'Regenerative Braking of Electric Vehicle Using a Modified Direct Torque Control and Adaptive Control Theory',
@@ -1819,7 +1819,7 @@ image: '/images/eee.png'},
     'Adaptive controller design and tuning',
     'Documentation and simulation plots'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA66116',
   title: 'Sensorless SynRG Based Variable Speed Wind Generator and Single-Stage Solar PV Array Integrated Grid System with Maximum Power Extraction Capability',
@@ -1833,7 +1833,7 @@ image: '/images/eee.png'},
     'Grid-connected performance testing',
     'MPPT and synchronization analysis report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA67117',
   title: 'Single-Phase Boost DC-Link Integrated Cascaded Multilevel Inverter for PV Applications',
@@ -1847,7 +1847,7 @@ image: '/images/eee.png'},
     'PV power control algorithm in MATLAB',
     'Simulation and report documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA68118',
   title: 'Single-Phase Dual-Mode Interleaved Multilevel Inverter for PV Applications',
@@ -1861,7 +1861,7 @@ image: '/images/eee.png'},
     'THD comparison and efficiency plots',
     'Project report and control design explanation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA69119',
   title: 'Single-Stage PV-Grid Interactive Induction Motor Drive with Improved Flux Estimation Technique for Water Pumping with Reduced Sensors',
@@ -1875,7 +1875,7 @@ image: '/images/eee.png'},
     'Pump performance and power analysis',
     'Simulation results and documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA70120',
   title: 'Solar PV Integration to E-Rickshaw With Regenerative Braking and Sensorless Control',
@@ -1889,7 +1889,7 @@ image: '/images/eee.png'},
     'Sensorless control and motor efficiency plots',
     'Complete documentation and simulation data'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA71121',
   title: 'Trinary Hybrid Cascaded H-Bridge Multilevel Inverter-Based Grid-Connected Solar Power Transfer System Supporting Critical Load',
@@ -1903,7 +1903,7 @@ image: '/images/eee.png'},
     'Grid synchronization and THD analysis',
     'Documentation and waveform plots'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA72122',
   title: 'Unbiased Circular Leakage Centered Adaptive Filtering Control for Power Quality Improvement of Wind-Solar PV Energy Conversion System',
@@ -1917,7 +1917,7 @@ image: '/images/eee.png'},
     'Adaptive controller tuning plots',
     'Simulation graphs and final report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA73123',
   title: 'Unified Control Scheme of Grid-Connected Inverters for Autonomous and Smooth Transfer to Stand-Alone Mode',
@@ -1931,7 +1931,7 @@ image: '/images/eee.png'},
     'Dynamic performance and load sharing analysis',
     'Graphs and report documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA74124',
   title: 'UPQC Based Grid-Connected Photovoltaic System with Fuzzy Logic Controller',
@@ -1945,7 +1945,7 @@ image: '/images/eee.png'},
     'Power quality and harmonic compensation results',
     'Simulation data and full report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA75125',
   title: 'Vehicle-To-Grid Technology in a Micro-Grid Using DC Fast Charging Architecture',
@@ -1959,7 +1959,7 @@ image: '/images/eee.png'},
     'Grid stability and efficiency analysis',
     'Graphs, data logs, and report documentation'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA76126',
   title: 'Virtual Inertia Emulator-Based Model Predictive Control for Grid Frequency Regulation Considering High Penetration of Inverter-Based Energy Storage System',
@@ -1973,7 +1973,7 @@ image: '/images/eee.png'},
     'Inverter-based energy storage response plots',
     'Technical report and simulation results'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA77127',
   title: 'Voltage Sag Enhancement of Grid Connected Hybrid PV-Wind Power System Using Battery and SMES Based Dynamic Voltage Restorer',
@@ -1987,7 +1987,7 @@ image: '/images/eee.png'},
     'Voltage compensation and waveform plots',
     'Simulation report with control strategy details'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA78128',
   title: 'PV/WT Integrated System Using the Gray Wolf Optimization Technique for Power Quality Improvement',
@@ -2001,7 +2001,7 @@ image: '/images/eee.png'},
     'THD and efficiency improvement analysis',
     'Performance report and test results'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA79129',
   title: 'Multi-Winding Transformer Fed CHB Inverter with On-Line Switching Angle Calculation Based SHE Technique for Vector Controlled Induction Motor Drive',
@@ -2015,7 +2015,7 @@ image: '/images/eee.png'},
     'Vector control integration and waveform plots',
     'Simulation report and data analysis'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
 {
   id: 'PEEMA80130',
   title: 'Vector Controlled Induction Motor Drive Using PV Array with Adaptive DC-Link Control for Electric Vehicle Applications',
@@ -2029,7 +2029,7 @@ image: '/images/eee.png'},
     'Torque-speed and voltage stability graphs',
     'Detailed documentation and report'
   ],
-image: '/images/eee.png'},
+image: '/images/matlab.png'},
   {
     id: 'CSML101',
     title: 'Heart Disease Prediction using Machine Learning',
