@@ -1,5 +1,6 @@
 // src/pages/Checkout.js
 import { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import RazorpayButton from '../components/RazorpayButton';
 import { motion } from 'framer-motion';
 import { useCart } from '../context/CartContext';
@@ -178,6 +179,15 @@ const Checkout = () => {
           {/* Order Summary */}
           <div className="bg-white p-8 border border-black/10 h-fit">
             <h2 className="text-2xl font-semibold mb-6">Order Summary</h2>
+            {cart.length > 0 && (
+              <p className="text-sm text-gray-600 -mt-4 mb-6">
+                Need to update your cart?{' '}
+                <Link to="/cart" className="text-gray-900 underline">
+                  Go back to cart
+                </Link>
+                .
+              </p>
+            )}
 
             <div className="space-y-4 mb-6">
               {cart.map((item) => (
