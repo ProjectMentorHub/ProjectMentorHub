@@ -8,28 +8,40 @@ import AdSidebar from '../components/AdSidebar';
 import SEO from '../components/SEO';
 
 import { projects as catalogProjects } from '../data/data';
-import { getDisplayCategory, hasMatlabTag } from '../utils/projectMetadata';
+import { getDisplayCategory, getPrimaryCategory } from '../utils/projectMetadata';
 
 const Catalog = () => {
   // Source data
   const projects = catalogProjects;
 
-  // Filters (category values should be canonical: 'CSE' | 'EEE' | 'ECE' | 'MECH' | 'MATLAB' | 'GENERAL')
-  const [filters, setFilters] = useState({ category: '' });
+  // Filters (supports category + search query)
+  const [filters, setFilters] = useState({ category: '', query: '' });
 
-  // Derived list using the canonical category
+  // Derived list using the canonical category and search term
   const filteredProjects = useMemo(() => {
-    if (!filters.category) return projects;
+    let results = projects;
 
-    const wanted = String(filters.category).trim().toUpperCase();
-
-    // Special handling: MATLAB includes either explicit MATLAB category or MATLAB tag
-    if (wanted === 'MATLAB') {
-      return projects.filter((p) => getDisplayCategory(p) === 'MATLAB' || hasMatlabTag(p));
+    if (filters.category) {
+      const wanted = String(filters.category).trim().toUpperCase();
+      results = results.filter((project) => getPrimaryCategory(project) === wanted);
     }
 
-    return projects.filter((p) => getDisplayCategory(p) === wanted);
-  }, [projects, filters]);
+    if (filters.query) {
+      const search = filters.query.trim().toLowerCase();
+      if (search) {
+        results = results.filter((project) => {
+          const titleMatch = project.title?.toLowerCase().includes(search);
+          const descriptionMatch = project.description?.toLowerCase().includes(search);
+          const tagMatch = Array.isArray(project.tags)
+            ? project.tags.some((tag) => String(tag).toLowerCase().includes(search))
+            : false;
+          return titleMatch || descriptionMatch || tagMatch;
+        });
+      }
+    }
+
+    return results;
+  }, [projects, filters.category, filters.query]);
 
   // Schema.org (uses the SAME canonical category to avoid mismatch)
   const itemListSchema = useMemo(() => {
