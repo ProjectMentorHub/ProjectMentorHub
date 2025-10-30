@@ -2335,5 +2335,5 @@ image: '/images/matlab.png'},
       'Responsive and attractive Streamlit interface'
     ],
     image: '/images/cse.png'
-  }
+  },
 ];
