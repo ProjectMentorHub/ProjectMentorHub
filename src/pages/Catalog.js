@@ -5,7 +5,7 @@ import AdSidebar from '../components/AdSidebar';
 import { motion } from 'framer-motion';
 import { projects as catalogProjects } from '../data/data';
 import SEO from '../components/SEO';
-import { hasMatlabTag, getDisplayCategory } from '../utils/projectMetadata';
+import { getDisplayCategory, getPrimaryCategory } from '../utils/projectMetadata';
 
 const Catalog = () => {
   const projects = catalogProjects;
@@ -18,13 +18,9 @@ const Catalog = () => {
       return projects;
     }
 
-    if (filters.category === 'MATLAB') {
-      return projects.filter(
-        (project) => project.category === 'MATLAB' || hasMatlabTag(project)
-      );
-    }
-
-    return projects.filter((project) => project.category === filters.category);
+    return projects.filter(
+      (project) => getPrimaryCategory(project) === filters.category
+    );
   }, [projects, filters]);
 
   const itemListSchema = useMemo(() => {
