@@ -2339,7 +2339,7 @@ image: '/images/matlab.png'},
   {
     id: 'CSML120',
     title: 'Test',
-    description: '.',
+    description: 'Test.',
     category: 'CSE',
     price: 3999,
     tags: ['CNN', 'Computer Vision', 'Streamlit', 'Python'],
