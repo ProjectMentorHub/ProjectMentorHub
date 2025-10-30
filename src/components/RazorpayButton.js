@@ -13,7 +13,7 @@ const RAZORPAY_SCRIPT_URL = 'https://checkout.razorpay.com/v1/checkout.js';
 const getRazorpayKey = () =>
   (typeof window !== 'undefined' &&
     window._env_ &&
-    (window._env_.RACT_APP_RAZORPAY_KEY || window._env_.REACT_APP_RAZORPAY_KEY)) || // tolerate a common typo
+    (window._env_.RACT_APP_RAZORPAY_KEY || window._env_.REACT_APP_RAZORPAY_KEY)) ||
   (typeof window !== 'undefined' &&
     window.__ENV__ &&
     (window.__ENV__.RAZORPAY_KEY || window.__ENV__.REACT_APP_RAZORPAY_KEY)) ||
