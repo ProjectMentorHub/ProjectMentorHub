@@ -19,3 +19,19 @@ export const getDisplayCategory = (project = {}) => {
   if (['CSE', 'EEE', 'ECE', 'MECH', 'MATLAB'].includes(raw)) return raw;
   return 'GENERAL';
 };
+
+/**
+ * Returns the primary bucket we use for filtering in the catalog view.
+ * Falls back to CSE so mixed/unknown categories appear under a sensible tab.
+ */
+export const getPrimaryCategory = (project = {}) => {
+  const canonical = getDisplayCategory(project);
+
+  if (canonical === 'MATLAB') return 'MATLAB';
+  if (canonical === 'EEE') return 'EEE';
+  if (canonical === 'ECE') return 'ECE';
+  if (canonical === 'MECH') return 'MECH';
+
+  // Treat everything else (including GENERAL) as CSE to avoid an empty filter bucket.
+  return 'CSE';
+};
