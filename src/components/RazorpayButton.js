@@ -1,3 +1,4 @@
+// src/components/RazorpayButton.js
 import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
@@ -8,6 +9,18 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 
 const RAZORPAY_SCRIPT_URL = 'https://checkout.razorpay.com/v1/checkout.js';
 
+/* --------------------------- Runtime env helpers --------------------------- */
+const getRazorpayKey = () =>
+  (typeof window !== 'undefined' &&
+    window._env_ &&
+    (window._env_.RACT_APP_RAZORPAY_KEY || window._env_.REACT_APP_RAZORPAY_KEY)) || // tolerate a common typo
+  (typeof window !== 'undefined' &&
+    window.__ENV__ &&
+    (window.__ENV__.RAZORPAY_KEY || window.__ENV__.REACT_APP_RAZORPAY_KEY)) ||
+  process.env.REACT_APP_RAZORPAY_KEY ||
+  '';
+
+/* --------------------------- SDK load (idempotent) ------------------------- */
 const loadRazorpaySdk = () =>
   new Promise((resolve, reject) => {
     if (window.Razorpay) {
@@ -28,6 +41,7 @@ const loadRazorpaySdk = () =>
     document.body.appendChild(script);
   });
 
+/* --------------------------- Local order helpers --------------------------- */
 const getLocalOrderKey = (order) =>
   order?.id ||
   order?.localId ||
@@ -77,29 +91,49 @@ const prepareOrderPayload = ({ cart, amount, shippingInfo, user, paymentResponse
   };
 };
 
-// This is the snapshot we save to localStorage when Firestore isn't available/allowed.
-// We embed a synthetic id so the UI can always display an order id safely.
 const prepareOrderSnapshot = ({ cart, amount, shippingInfo, user, paymentResponse, syntheticId }) => {
   const payload = prepareOrderPayload({ cart, amount, shippingInfo, user, paymentResponse });
   return {
     ...payload,
-    id: syntheticId,       // <- crucial for Dashboard safety
-    localId: syntheticId,  // <- extra fallback
+    id: syntheticId,       // synthetic id for UI/lookup even if Firestore fails
+    localId: syntheticId,  // extra fallback
     createdAt: new Date().toISOString()
   };
 };
 
+/* ---------------------------- API convenience ----------------------------- */
+/** Try to create a secure backend order. Must return { keyId, orderId, amount, currency }. */
+const createServerOrder = async (body) => {
+  const res = await fetch('/api/create-order', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body || {})
+  });
+  if (!res.ok) throw new Error('create-order failed');
+  return res.json();
+};
+
+/** Try to verify payment signature on server. Must return { verified: boolean }. */
+const verifyServerPayment = async (payload) => {
+  const res = await fetch('/api/verify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload || {})
+  });
+  if (!res.ok) throw new Error('verify failed');
+  return res.json();
+};
+
+/* -------------------------------- Component -------------------------------- */
 export default function RazorpayButton({ amount, shippingInfo = {} }) {
   const { cart, clearCart } = useCart();
   const { user } = useAuth();
   const navigate = useNavigate();
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const key = process.env.REACT_APP_RAZORPAY_KEY;
-
   const handleSuccess = useCallback(
     async (paymentResponse) => {
-      // Always generate a stable id we can show in the dashboard even if Firestore fails.
+      // Always generate a stable id for UI even if Firestore fails.
       const syntheticId =
         paymentResponse?.razorpay_payment_id ||
         `local-${Date.now()}`;
@@ -116,8 +150,6 @@ export default function RazorpayButton({ amount, shippingInfo = {} }) {
 
       try {
         if (db) {
-          // Firestore document id will exist for Dashboard fetch via Firestore;
-          // but if rules deny this, we'll still save the local snapshot with syntheticId.
           const docRef = await addDoc(collection(db, 'orders'), orderData);
           saveOrderLocally({
             ...orderSnapshot,
@@ -129,7 +161,6 @@ export default function RazorpayButton({ amount, shippingInfo = {} }) {
         }
       } catch (error) {
         console.error('Failed to persist order in Firestore', error);
-        // Fallback to local to keep the UX consistent
         saveOrderLocally(orderSnapshot);
       } finally {
         clearCart();
@@ -164,13 +195,8 @@ export default function RazorpayButton({ amount, shippingInfo = {} }) {
       return;
     }
 
-    if (!key) {
-      toast.error('Razorpay key missing. Add REACT_APP_RAZORPAY_KEY to your .env file.');
-      return;
-    }
-
+    // Load SDK first
     setIsProcessing(true);
-
     try {
       await loadRazorpaySdk();
     } catch (error) {
@@ -180,11 +206,42 @@ export default function RazorpayButton({ amount, shippingInfo = {} }) {
       return;
     }
 
+    // Prefer secure server-created order (recommended).
+    // If the endpoint doesn’t exist, fall back to client-only flow using just the key & amount.
+    let keyId = '';
+    let orderId = '';
+    let amtPaise = Math.round(Number(amount) * 100);
+    let currency = 'INR';
+    let usingServerOrder = false;
+
+    try {
+      const serverOrder = await createServerOrder({
+        userId: user?.uid || null,
+        cart, // if your server uses it to compute amount
+      });
+      keyId = serverOrder?.keyId || '';
+      orderId = serverOrder?.orderId || '';
+      amtPaise = typeof serverOrder?.amount === 'number' ? serverOrder.amount : amtPaise;
+      currency = serverOrder?.currency || currency;
+      usingServerOrder = Boolean(orderId && keyId);
+    } catch {
+      // No server order available; use runtime/build-time key for client-only fallback
+      keyId = getRazorpayKey();
+    }
+
+    if (!keyId) {
+      toast.error(
+        'Razorpay key missing. Checked /api/create-order, window._env_.REACT_APP_RAZORPAY_KEY, and REACT_APP_RAZORPAY_KEY.'
+      );
+      setIsProcessing(false);
+      return;
+    }
+
     const s = shippingInfo || {};
-    const razorpay = new window.Razorpay({
-      key,
-      amount: Math.round(Number(amount) * 100),
-      currency: 'INR',
+    const options = {
+      key: keyId,
+      amount: amtPaise,
+      currency,
       name: 'ProjectMentorHub',
       description: 'Project purchase',
       prefill: {
@@ -200,14 +257,37 @@ export default function RazorpayButton({ amount, shippingInfo = {} }) {
         userId: user?.uid || ''
       },
       theme: { color: '#000000' },
-      handler: handleSuccess,
+      handler: async (paymentResponse) => {
+        try {
+          if (usingServerOrder) {
+            // Verify on server when we used a server-created order
+            const verifyRes = await verifyServerPayment(paymentResponse);
+            if (!verifyRes?.verified) {
+              toast.error('Payment verification failed. Please contact support.');
+              setIsProcessing(false);
+              return;
+            }
+          }
+          await handleSuccess(paymentResponse);
+        } catch (err) {
+          console.error('Verify/Success error', err);
+          toast.error('Something went wrong after payment. We are checking your transaction.');
+          setIsProcessing(false);
+        }
+      },
       modal: {
         ondismiss: () => {
           toast('Payment popup closed.');
           setIsProcessing(false);
         }
       }
-    });
+    };
+
+    if (usingServerOrder && orderId) {
+      options.order_id = orderId;
+    }
+
+    const razorpay = new window.Razorpay(options);
 
     razorpay.on('payment.failed', (response) => {
       console.error('Razorpay payment failed', response);
