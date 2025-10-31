@@ -3,13 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import AdSidebar from '../components/AdSidebar';
 import { motion } from 'framer-motion';
-import cseProjects from '../data/cse.json';
-import eeeProjects from '../data/eee.json';
-import matlabProjects from '../data/matlab.json';
+import catalogProjects from '../data/catalogProjects';
 import SEO from '../components/SEO';
 import { getDisplayCategory } from '../utils/projectMetadata';
-
-const catalogProjects = [...eeeProjects, ...matlabProjects, ...cseProjects];
 
 const ProjectDetails = () => {
   const { id } = useParams();
