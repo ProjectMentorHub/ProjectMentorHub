@@ -1,6 +1,6 @@
 // src/pages/Checkout.js
 import { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import RazorpayButton from '../components/RazorpayButton';
 import { motion } from 'framer-motion';
 import { useCart } from '../context/CartContext';
@@ -8,8 +8,20 @@ import { useAuth } from '../context/AuthContext';
 import SEO from '../components/SEO';
 
 const Checkout = () => {
+  const location = useLocation();
   const { cart, getTotalPrice } = useCart();
   const { user } = useAuth();
+  const [buyNowItems, setBuyNowItems] = useState(() => {
+    const incoming = Array.isArray(location.state?.buyNowItems) ? location.state.buyNowItems : null;
+    if (!incoming || incoming.length === 0) return null;
+    return incoming
+      .map((item) => {
+        if (!item) return null;
+        const quantity = Number(item.quantity) > 0 ? Number(item.quantity) : 1;
+        return { ...item, quantity };
+      })
+      .filter(Boolean);
+  });
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -21,7 +33,33 @@ const Checkout = () => {
     zipCode: ''
   });
 
-  const total = getTotalPrice();
+  useEffect(() => {
+    if (Array.isArray(location.state?.buyNowItems) && location.state.buyNowItems.length) {
+      setBuyNowItems(
+        location.state.buyNowItems
+          .map((item) => {
+            if (!item) return null;
+            const quantity = Number(item.quantity) > 0 ? Number(item.quantity) : 1;
+            return { ...item, quantity };
+          })
+          .filter(Boolean)
+      );
+    } else {
+      setBuyNowItems(null);
+    }
+  }, [location.state]);
+
+  const isBuyNow = Array.isArray(buyNowItems) && buyNowItems.length > 0;
+  const lineItems = isBuyNow ? buyNowItems : cart;
+  const cartTotal = getTotalPrice();
+  const buyNowTotal = isBuyNow
+    ? buyNowItems.reduce((sum, item) => {
+        const price = Number(item?.price) || 0;
+        const quantity = Number(item?.quantity) > 0 ? Number(item.quantity) : 1;
+        return sum + price * quantity;
+      }, 0)
+    : 0;
+  const total = isBuyNow ? buyNowTotal : cartTotal;
 
   const isFormValid = useMemo(() => {
     const f = formData;
@@ -157,16 +195,20 @@ const Checkout = () => {
 
               {/* Razorpay Payment Button (has its OWN <form>) */}
               <div className="pt-2">
-                {cart.length === 0 ? (
+                {lineItems.length === 0 ? (
                   <button type="button" disabled className="w-full btn-primary opacity-50 cursor-not-allowed">
-                    Cart is empty
+                    {isBuyNow ? 'No items selected' : 'Cart is empty'}
                   </button>
                 ) : !isFormValid ? (
                   <button type="button" disabled className="w-full btn-primary opacity-50 cursor-not-allowed">
                     Fill shipping details to continue
                   </button>
                 ) : (
-                  <RazorpayButton amount={total} shippingInfo={formData} />
+                  <RazorpayButton
+                    amount={total}
+                    shippingInfo={formData}
+                    itemsOverride={isBuyNow ? lineItems : null}
+                  />
                 )}
               </div>
 
@@ -179,7 +221,12 @@ const Checkout = () => {
           {/* Order Summary */}
           <div className="bg-white p-8 border border-black/10 h-fit">
             <h2 className="text-2xl font-semibold mb-6">Order Summary</h2>
-            {cart.length > 0 && (
+            {isBuyNow ? (
+              <p className="text-sm text-gray-600 -mt-4 mb-6">
+                This direct purchase only includes the selected item. Anything in your cart stays saved for later.
+              </p>
+            ) : (
+              cart.length > 0 && (
               <p className="text-sm text-gray-600 -mt-4 mb-6">
                 Need to update your cart?{' '}
                 <Link to="/cart" className="text-gray-900 underline">
@@ -187,10 +234,11 @@ const Checkout = () => {
                 </Link>
                 .
               </p>
+              )
             )}
 
             <div className="space-y-4 mb-6">
-              {cart.map((item) => (
+              {lineItems.map((item) => (
                 <div key={item.id} className="flex gap-4 pb-4 border-b border-gray-100">
                   <div className="w-16 h-16 bg-gray-200 flex-shrink-0">
                     {item.image ? (

@@ -1,15 +1,27 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { motion } from 'framer-motion';
 import { getDisplayCategory } from '../utils/projectMetadata';
 
 const ProjectCard = ({ project }) => {
   const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();
     addToCart(project);
+  };
+
+  const handleBuyNow = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigate('/checkout', {
+      state: {
+        buyNowItems: [{ ...project, quantity: 1 }],
+        source: 'buy-now'
+      }
+    });
   };
 
   const displayCategory = getDisplayCategory(project);
@@ -53,12 +65,18 @@ const ProjectCard = ({ project }) => {
               <span className="text-lg font-bold">₹{project.price.toLocaleString()}</span>
             </div>
             
-            <div className="mt-4 pt-4 border-t border-gray-100">
+            <div className="mt-4 pt-4 border-t border-gray-100 space-y-2">
               <button
                 onClick={handleAddToCart}
                 className="w-full btn-primary text-sm"
               >
                 Add to Cart
+              </button>
+              <button
+                onClick={handleBuyNow}
+                className="w-full btn-secondary text-sm"
+              >
+                Buy Now
               </button>
             </div>
           </div>

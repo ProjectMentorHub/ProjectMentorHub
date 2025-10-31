@@ -1,0 +1,428 @@
+[
+  {
+    "id": "CSML101",
+    "title": "Heart Disease Prediction using Machine Learning",
+    "description": "A predictive ML project that analyzes patient health parameters to determine the likelihood of heart disease using Logistic Regression and Random Forest algorithms.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Machine Learning",
+      "Healthcare",
+      "Classification",
+      "Python"
+    ],
+    "features": [
+      "End-to-end Jupyter Notebook implementation",
+      "Uses UCI Heart Disease dataset",
+      "Algorithms: Logistic Regression, Random Forest, SVM",
+      "Accuracy visualization and confusion matrix analysis",
+      "Web app demo using Streamlit"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML102",
+    "title": "Fake News Detection using Natural Language Processing",
+    "description": "An NLP-based machine learning project that classifies news articles as real or fake using TF-IDF vectorization and Logistic Regression.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "NLP",
+      "Text Classification",
+      "Logistic Regression",
+      "Python"
+    ],
+    "features": [
+      "Implements TF-IDF and CountVectorizer preprocessing",
+      "Trains Logistic Regression and PassiveAggressive models",
+      "Includes full confusion matrix and ROC curve plots",
+      "Web app demo using Flask"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML103",
+    "title": "Breast Cancer Classification using Support Vector Machine",
+    "description": "An easy yet powerful ML project that classifies tumors as malignant or benign using Support Vector Machines on the Wisconsin dataset.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Classification",
+      "SVM",
+      "Healthcare",
+      "Python"
+    ],
+    "features": [
+      "Implements Support Vector Machine and Decision Tree",
+      "Uses scikit-learn built-in Breast Cancer dataset",
+      "Data visualization using Seaborn and Matplotlib",
+      "Accuracy >95% with confusion matrix",
+      "Streamlit GUI for real-time prediction"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML104",
+    "title": "Student Performance Prediction using Regression Models",
+    "description": "A simple regression-based ML project that predicts student grades using study hours, attendance, and past performance data.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Regression",
+      "Prediction",
+      "Python",
+      "Education"
+    ],
+    "features": [
+      "Dataset preprocessing using Pandas and NumPy",
+      "Multiple Linear Regression and Random Forest Regressor",
+      "R² score and MSE evaluation metrics",
+      "Data visualization with Plotly"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML105",
+    "title": "Plant Disease Detection using Convolutional Neural Networks",
+    "description": "A deep learning project that classifies plant leaf images into healthy or diseased categories using CNN architecture trained on PlantVillage dataset.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Deep Learning",
+      "CNN",
+      "Image Classification",
+      "TensorFlow"
+    ],
+    "features": [
+      "Implements CNN using TensorFlow and Keras",
+      "Model training notebook included",
+      "Real-time disease detection with webcam integration",
+      "Web app demo using Streamlit"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML106",
+    "title": "AI-Powered Health Risk Dashboard",
+    "description": "An interactive Streamlit web app that predicts heart disease, diabetes, and obesity risk using multiple ML models with visual dashboards.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Machine Learning",
+      "Streamlit",
+      "Healthcare",
+      "Visualization"
+    ],
+    "features": [
+      "Multi-condition prediction (heart, diabetes, obesity)",
+      "Sliders for user health inputs (BMI, BP, glucose)",
+      "Live charts and probability gauges",
+      "Model comparison: Logistic Regression vs Random Forest",
+      "Deployed Streamlit UI with animated results"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML107",
+    "title": "Fake News Detection Web App",
+    "description": "A Flask-based NLP web application that detects whether news headlines are fake or real in real time.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "NLP",
+      "Flask",
+      "Text Classification",
+      "Python"
+    ],
+    "features": [
+      "Text input box with live classification result",
+      "TF-IDF + Logistic Regression backend",
+      "Stylish Bootstrap dashboard UI",
+      "Displays word importance visualization",
+      "Heroku-ready Flask deployment"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML108",
+    "title": "Plant Disease Detection Dashboard",
+    "description": "A CNN-powered Streamlit interface that allows users to upload plant leaf photos and get instant disease classification with explanation.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "CNN",
+      "TensorFlow",
+      "Streamlit",
+      "Computer Vision"
+    ],
+    "features": [
+      "Upload image feature with real-time preview",
+      "Grad-CAM heatmap overlay for diseased regions",
+      "Beautiful result cards for each class",
+      "Built with TensorFlow + Keras + OpenCV",
+      "Responsive UI layout and dark mode theme"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML109",
+    "title": "Student Performance Predictor with Charts",
+    "description": "A regression-based Streamlit dashboard predicting final grades and visualizing study patterns and outcomes.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Regression",
+      "Streamlit",
+      "Visualization",
+      "Python"
+    ],
+    "features": [
+      "Interactive sliders for attendance, study hours",
+      "Bar and line charts for predicted scores",
+      "Dynamic R² and MSE visualization",
+      "CSV upload support for batch prediction"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML110",
+    "title": "Cervical Cancer Detection using Deep Learning",
+    "description": "A healthcare AI web app for classifying cervical images into normal and precancerous categories using EfficientNet-B0.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Healthcare",
+      "CNN",
+      "Streamlit",
+      "Explainable AI"
+    ],
+    "features": [
+      "Upload cervix images with real-time predictions",
+      "CLAHE + Gabor preprocessing visualization",
+      "Explainable Grad-CAM overlay",
+      "AI diagnosis + confidence scores",
+      "Streamlit dashboard with tabbed layout"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML111",
+    "title": "Speech Emotion Detector Web Interface",
+    "description": "A Flask + JS web app that records user voice and detects emotion using LSTM-based audio model.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Speech",
+      "Flask",
+      "Audio Processing",
+      "Deep Learning"
+    ],
+    "features": [
+      "Voice recording directly from browser",
+      "Spectrogram visualization",
+      "MFCC feature extraction display",
+      "Interactive UI built with HTML + Bootstrap"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML112",
+    "title": "AI Resume Analyzer & Job Match Portal",
+    "description": "A Streamlit-based AI system that parses resumes, extracts key skills, and matches with job descriptions using NLP.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "NLP",
+      "Streamlit",
+      "Text Analysis",
+      "Python"
+    ],
+    "features": [
+      "Upload resume (PDF/DOCX)",
+      "Skill extraction using spaCy + BERT embeddings",
+      "Similarity score against job description",
+      "Interactive bar chart for skill gap analysis"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML113",
+    "title": "Credit Card Fraud Detection Dashboard",
+    "description": "A fraud detection visualization dashboard that allows uploading transaction CSVs and visualizing anomalies using PCA and Random Forest.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Anomaly Detection",
+      "Finance",
+      "Streamlit",
+      "Python"
+    ],
+    "features": [
+      "Upload CSV to detect frauds live",
+      "PCA scatter plot for fraud visualization",
+      "Algorithm comparison chart",
+      "Interactive confusion matrix and ROC curves"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML114",
+    "title": "Emotion Detection from Text Web App",
+    "description": "A React + Flask based web app that classifies text into emotional categories like joy, anger, or sadness.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "NLP",
+      "Flask",
+      "React",
+      "Text Classification"
+    ],
+    "features": [
+      "Real-time text classification via REST API",
+      "Frontend built in React with animations",
+      "LSTM model backend with Flask API",
+      "Displays emojis and emotion graphs dynamically"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML115",
+    "title": "Face Mask Detection App",
+    "description": "A real-time mask detection app built using OpenCV and TensorFlow with live webcam feed integration.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "CNN",
+      "OpenCV",
+      "Streamlit",
+      "Image Detection"
+    ],
+    "features": [
+      "Live webcam detection of mask vs no mask",
+      "Real-time bounding boxes and label overlay",
+      "TensorFlow Lite optimization for faster inference",
+      "Streamlit UI with camera toggle"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML116",
+    "title": "COVID-19 Data Visualization and Forecasting Dashboard",
+    "description": "A time-series forecasting dashboard showing daily COVID-19 trends and predictions using ARIMA and LSTM.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Time Series",
+      "Streamlit",
+      "Forecasting",
+      "Visualization"
+    ],
+    "features": [
+      "Global dataset with auto-update",
+      "Trend, growth, and forecast charts",
+      "Switch between ARIMA and LSTM",
+      "Dynamic matplotlib + Plotly visualization"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML117",
+    "title": "Brain Tumor Detection Interactive UI",
+    "description": "A medical imaging web app using CNN to detect brain tumors from MRI images with clear UI visualization.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "CNN",
+      "TensorFlow",
+      "Streamlit",
+      "Explainable AI"
+    ],
+    "features": [
+      "Upload MRI image and visualize Grad-CAM output",
+      "Confidence bars for each tumor class",
+      "Histogram and segmentation mask overlay",
+      "Streamlit UI with multiple tabs"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML118",
+    "title": "House Price Predictor with Interactive Maps",
+    "description": "A Flask + Leaflet.js app that predicts house prices based on input location and displays results on a live map.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Regression",
+      "Flask",
+      "Map Visualization",
+      "Python"
+    ],
+    "features": [
+      "Google Maps-style UI integration",
+      "Linear Regression backend model",
+      "Real-time map marker updates with predicted prices",
+      "Beautiful UI with Bootstrap and JS interactivity"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML119",
+    "title": "AI Chatbot using NLP and Streamlit",
+    "description": "A conversational AI chatbot built using transformer models (DistilBERT) and deployed in Streamlit.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "Chatbot",
+      "Transformers",
+      "Streamlit",
+      "NLP"
+    ],
+    "features": [
+      "Interactive chat interface with avatars",
+      "Backend NLP using Hugging Face Transformers",
+      "Response time optimization with caching",
+      "Export chat logs as text files"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML120",
+    "title": "AI Traffic Sign Recognition Web App",
+    "description": "An interactive CNN-based web app that classifies uploaded traffic signs using deep learning and displays label confidence.",
+    "category": "CSE",
+    "price": 3999,
+    "tags": [
+      "CNN",
+      "Computer Vision",
+      "Streamlit",
+      "Python"
+    ],
+    "features": [
+      "Upload and preview sign images",
+      "Confidence score chart visualization",
+      "Trained on German Traffic Sign dataset",
+      "Responsive and attractive Streamlit interface"
+    ],
+    "image": "/images/cse.png"
+  },
+  {
+    "id": "CSML120",
+    "title": "Test",
+    "description": "Test.",
+    "category": "CSE",
+    "price": 1,
+    "tags": [
+      "CNN",
+      "Computer Vision",
+      "Streamlit",
+      "Python"
+    ],
+    "features": [
+      "Upload and preview sign images",
+      "Confidence score chart visualization",
+      "Trained on German Traffic Sign dataset",
+      "Responsive and attractive Streamlit interface"
+    ],
+    "image": "/images/cse.png"
+  }
+]

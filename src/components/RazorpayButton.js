@@ -1,5 +1,5 @@
 // src/components/RazorpayButton.js
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useCart } from '../context/CartContext';
@@ -125,11 +125,17 @@ const verifyServerPayment = async (payload) => {
 };
 
 /* -------------------------------- Component -------------------------------- */
-export default function RazorpayButton({ amount, shippingInfo = {} }) {
+export default function RazorpayButton({ amount, shippingInfo = {}, itemsOverride = null }) {
   const { cart, clearCart } = useCart();
   const { user } = useAuth();
   const navigate = useNavigate();
   const [isProcessing, setIsProcessing] = useState(false);
+  const hasOverrideItems = Array.isArray(itemsOverride) && itemsOverride.length > 0;
+  const orderItems = useMemo(
+    () => (hasOverrideItems ? itemsOverride : cart),
+    [cart, hasOverrideItems, itemsOverride]
+  );
+  const shouldClearCart = !hasOverrideItems;
 
   const handleSuccess = useCallback(
     async (paymentResponse) => {
@@ -138,9 +144,15 @@ export default function RazorpayButton({ amount, shippingInfo = {} }) {
         paymentResponse?.razorpay_payment_id ||
         `local-${Date.now()}`;
 
-      const orderData = prepareOrderPayload({ cart, amount, shippingInfo, user, paymentResponse });
+      const orderData = prepareOrderPayload({
+        cart: orderItems,
+        amount,
+        shippingInfo,
+        user,
+        paymentResponse
+      });
       const orderSnapshot = prepareOrderSnapshot({
-        cart,
+        cart: orderItems,
         amount,
         shippingInfo,
         user,
@@ -163,7 +175,9 @@ export default function RazorpayButton({ amount, shippingInfo = {} }) {
         console.error('Failed to persist order in Firestore', error);
         saveOrderLocally(orderSnapshot);
       } finally {
-        clearCart();
+        if (shouldClearCart) {
+          clearCart();
+        }
         setIsProcessing(false);
       }
 
@@ -179,14 +193,14 @@ export default function RazorpayButton({ amount, shippingInfo = {} }) {
         }
       });
     },
-    [amount, cart, clearCart, navigate, shippingInfo, user]
+    [amount, clearCart, navigate, orderItems, shippingInfo, shouldClearCart, user]
   );
 
   const handlePay = async () => {
     if (isProcessing) return;
 
-    if (!cart?.length) {
-      toast.error('Your cart is empty.');
+    if (!orderItems?.length) {
+      toast.error(hasOverrideItems ? 'No items selected for purchase.' : 'Your cart is empty.');
       return;
     }
 
@@ -217,7 +231,7 @@ export default function RazorpayButton({ amount, shippingInfo = {} }) {
     try {
       const serverOrder = await createServerOrder({
         userId: user?.uid || null,
-        cart, // if your server uses it to compute amount
+        cart: orderItems, // if your server uses it to compute amount
       });
       keyId = serverOrder?.keyId || '';
       orderId = serverOrder?.orderId || '';

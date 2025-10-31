@@ -1,21 +1,84 @@
 // src/pages/Catalog.jsx
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import ProjectCard from '../components/ProjectCard';
 import FilterBar from '../components/FilterBar';
 import AdSidebar from '../components/AdSidebar';
 import SEO from '../components/SEO';
 
-import { projects as catalogProjects } from '../data/data';
+import cseProjects from '../data/cse.json';
+import eeeProjects from '../data/eee.json';
+import matlabProjects from '../data/matlab.json';
 import { getDisplayCategory, getPrimaryCategory } from '../utils/projectMetadata';
+
+const catalogProjects = [...eeeProjects, ...matlabProjects, ...cseProjects];
+const VALID_CATEGORIES = new Set(['CSE', 'EEE', 'ECE', 'MECH', 'MATLAB']);
+
+const normalizeFilters = (next = {}) => {
+  const rawCategory = next?.category ? String(next.category).trim().toUpperCase() : '';
+  const category = VALID_CATEGORIES.has(rawCategory) ? rawCategory : '';
+  const query = next?.query ? String(next.query).trim() : '';
+
+  return { category, query };
+};
+
+const parseFiltersFromSearch = (search = '') => {
+  const params = new URLSearchParams(search);
+  const categoryParam = params.get('category');
+  const queryParam = params.get('query') ?? params.get('q');
+
+  return normalizeFilters({
+    category: categoryParam,
+    query: queryParam
+  });
+};
 
 const Catalog = () => {
   // Source data
   const projects = catalogProjects;
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   // Filters (supports category + search query)
-  const [filters, setFilters] = useState({ category: '', query: '' });
+  const [filters, setFilters] = useState(() => parseFiltersFromSearch(location.search));
+
+  useEffect(() => {
+    const next = parseFiltersFromSearch(location.search);
+    setFilters((prev) =>
+      prev.category === next.category && prev.query === next.query ? prev : next
+    );
+  }, [location.search]);
+
+  const handleFilterChange = (next) => {
+    const normalized = normalizeFilters(next);
+    setFilters((prev) =>
+      prev.category === normalized.category && prev.query === normalized.query
+        ? prev
+        : normalized
+    );
+
+    const params = new URLSearchParams();
+    if (normalized.category) params.set('category', normalized.category);
+    if (normalized.query) params.set('query', normalized.query);
+
+    const nextSearch = params.toString();
+    const currentSearch = location.search.startsWith('?')
+      ? location.search.slice(1)
+      : location.search;
+
+    if (currentSearch !== nextSearch) {
+      navigate(
+        {
+          pathname: location.pathname,
+          search: nextSearch ? `?${nextSearch}` : ''
+        },
+        { replace: true }
+      );
+    }
+  };
 
   // Derived list using the canonical category and search term
   const filteredProjects = useMemo(() => {
@@ -92,14 +155,7 @@ const Catalog = () => {
           </motion.div>
 
           {/* Pass through without changing your FilterBar API */}
-          <FilterBar
-            filters={filters}
-            onFilterChange={(next) => {
-              // normalize category to uppercase for consistent comparisons
-              const category = next?.category ? String(next.category).toUpperCase() : '';
-              setFilters({ ...next, category });
-            }}
-          />
+          <FilterBar filters={filters} onFilterChange={handleFilterChange} />
 
           {filteredProjects.length === 0 ? (
             <div className="text-center py-20">

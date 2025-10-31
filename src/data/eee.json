@@ -1,0 +1,1152 @@
+[
+  {
+    "id": "PECEM0101",
+    "title": "Authentication of Helmet & Alcohol Sensing for Rider’s Safety using Arduino UNO",
+    "description": "A safety-based embedded system that ensures vehicle ignition only when the rider is wearing a helmet and is not under the influence of alcohol. The system employs an MQ-3 alcohol sensor and helmet detection module interfaced with Arduino UNO to enhance rider safety.",
+    "category": "EEE",
+    "price": 1999,
+    "tags": [
+      "Arduino",
+      "Safety",
+      "MQ3",
+      "Embedded",
+      "Helmet Detection"
+    ],
+    "features": [
+      "Arduino UNO-based control system",
+      "MQ-3 alcohol detection sensor",
+      "Helmet authentication using IR/pressure sensor",
+      "Relay module for ignition control",
+      "Buzzer alert for unsafe conditions",
+      "16x2 I2C LCD display for real-time monitoring"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM0202",
+    "title": "Wireless Health Monitoring System Based on Android",
+    "description": "A wireless health monitoring system that continuously tracks patient parameters like temperature, pulse, and heart rate, transmitting them via Bluetooth to an Android application for real-time monitoring and alerts.",
+    "category": "EEE",
+    "price": 2299,
+    "tags": [
+      "Arduino",
+      "Health",
+      "Bluetooth",
+      "Android",
+      "Wireless"
+    ],
+    "features": [
+      "Arduino UNO microcontroller",
+      "Temperature and heartbeat sensors",
+      "Bluetooth communication with Android app",
+      "Android interface for live monitoring",
+      "Buzzer alert for abnormal readings",
+      "Rechargeable power supply integration"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM0303",
+    "title": "Advanced Embedded Automatic Car Parking System",
+    "description": "An automated parking system that detects available parking slots using ultrasonic sensors and guides vehicles into them with LED indicators. The system is controlled by Arduino for intelligent space management.",
+    "category": "EEE",
+    "price": 2399,
+    "tags": [
+      "Arduino",
+      "Automation",
+      "Ultrasonic",
+      "Parking",
+      "Sensors"
+    ],
+    "features": [
+      "Ultrasonic sensors for slot detection",
+      "Arduino-based decision system",
+      "LED indicators for parking availability",
+      "LCD display for slot status",
+      "Automatic gate control mechanism",
+      "Low power consumption system design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM0404",
+    "title": "Automated Energy Saving and Safety System Using ESP32 and IoT",
+    "description": "An ESP32-based automation system that manages lighting and electrical devices based on human presence and ambient light levels. It also detects fire or gas leakage and sends real-time alerts via IoT.",
+    "category": "EEE",
+    "price": 2499,
+    "tags": [
+      "ESP32",
+      "IoT",
+      "Automation",
+      "Energy Saving",
+      "Safety"
+    ],
+    "features": [
+      "ESP32 microcontroller with Wi-Fi connectivity",
+      "PIR and LDR sensors for automation",
+      "MQ-2 gas sensor for safety detection",
+      "IoT-based control through Blynk app",
+      "Real-time alert and monitoring system",
+      "Compact and efficient design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM0505",
+    "title": "Automatic Brake Failure and Engine Overheating Indication System using ESP32",
+    "description": "A vehicle safety system that continuously monitors brake condition and engine temperature using ESP32. It provides real-time alerts through buzzer, LEDs, and an LCD display when unsafe conditions are detected.",
+    "category": "EEE",
+    "price": 2399,
+    "tags": [
+      "ESP32",
+      "Automotive",
+      "Safety",
+      "Temperature",
+      "Sensors"
+    ],
+    "features": [
+      "Brake failure detection module",
+      "Engine temperature monitoring sensor",
+      "ESP32 microcontroller for processing",
+      "LCD and LED-based alert system",
+      "Buzzer alarm for critical warnings",
+      "Low-cost safety enhancement system"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM0606",
+    "title": "SMS Based Home Security System using Arduino UNO and GSM Module",
+    "description": "An Arduino-based home security system that detects motion, gas leaks, and fire, sending instant SMS alerts via GSM module. It also provides buzzer alarms and real-time status on an LCD display.",
+    "category": "EEE",
+    "price": 2299,
+    "tags": [
+      "Arduino",
+      "GSM",
+      "Security",
+      "Home Automation",
+      "Sensors"
+    ],
+    "features": [
+      "PIR, MQ-2, and flame sensors for detection",
+      "GSM module for SMS notifications",
+      "LCD display for live system status",
+      "Buzzer alert for immediate warnings",
+      "Low-cost home protection solution",
+      "Easy installation and expansion support"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM0707",
+    "title": "Accelerometer-Based Transportation Monitoring System Using ESP32, GSM, and GPS",
+    "description": "A smart transportation monitoring system that detects abnormal vehicle motion using an accelerometer. On detecting collisions, the system sends the GPS location to registered contacts through GSM communication.",
+    "category": "EEE",
+    "price": 2599,
+    "tags": [
+      "ESP32",
+      "GPS",
+      "GSM",
+      "Accelerometer",
+      "Safety"
+    ],
+    "features": [
+      "3-axis accelerometer for motion detection",
+      "GPS module for location tracking",
+      "GSM module for SMS alerts",
+      "ESP32 microcontroller integration",
+      "LCD display for live updates",
+      "Emergency notification mechanism"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM0808",
+    "title": "Embedded System for Home Automation using SMS",
+    "description": "A GSM-based embedded system that allows users to control and monitor home appliances via SMS commands. It ensures easy automation even without internet connectivity.",
+    "category": "EEE",
+    "price": 2199,
+    "tags": [
+      "GSM",
+      "Home Automation",
+      "Embedded",
+      "SMS",
+      "Control"
+    ],
+    "features": [
+      "GSM900 module for SMS-based control",
+      "Relay modules for appliance switching",
+      "Arduino microcontroller-based design",
+      "Low power consumption",
+      "Secure command verification system",
+      "LCD display for status updates"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM0909",
+    "title": "Energy-Saving System for Classroom Based on Campus Card",
+    "description": "A smart energy-saving embedded system that activates or deactivates classroom lights and fans based on student ID card authentication using RFID technology.",
+    "category": "EEE",
+    "price": 2499,
+    "tags": [
+      "RFID",
+      "Energy Saving",
+      "Automation",
+      "Arduino",
+      "Smart Campus"
+    ],
+    "features": [
+      "RFID reader for card-based authentication",
+      "Relay module for electrical control",
+      "Arduino UNO microcontroller",
+      "Energy-efficient automation design",
+      "LCD interface for room status display",
+      "Automatic shutoff for idle conditions"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1010",
+    "title": "Fingerprint Based Identity Authentication for Examination System",
+    "description": "An identity verification system using fingerprint authentication to ensure only authorized students can appear for exams. The system enhances security and prevents impersonation.",
+    "category": "EEE",
+    "price": 2699,
+    "tags": [
+      "Fingerprint",
+      "Security",
+      "Arduino",
+      "Authentication",
+      "Biometric"
+    ],
+    "features": [
+      "Fingerprint sensor module integration",
+      "Arduino UNO-based processing",
+      "LCD display for identity verification",
+      "Buzzer for authentication feedback",
+      "Student data registration system",
+      "Secure and efficient identity check"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1111",
+    "title": "Fingerprint Based Access Control System",
+    "description": "An advanced access control system using fingerprint authentication to allow only authorized individuals to enter secured areas. The system enhances physical security in offices and laboratories.",
+    "category": "EEE",
+    "price": 2599,
+    "tags": [
+      "Fingerprint",
+      "Access Control",
+      "Security",
+      "Arduino",
+      "Biometric"
+    ],
+    "features": [
+      "Fingerprint sensor for authentication",
+      "Arduino UNO microcontroller",
+      "Relay-controlled door locking mechanism",
+      "LCD display for user feedback",
+      "Buzzer alert for unauthorized access",
+      "EEPROM-based data storage"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1212",
+    "title": "Friendly Assistive System for Home Automation and Talking Prototype",
+    "description": "A voice-assisted home automation system that controls household devices through voice commands, providing special assistance to elderly or differently-abled individuals.",
+    "category": "EEE",
+    "price": 2799,
+    "tags": [
+      "Voice Control",
+      "Home Automation",
+      "Assistive",
+      "Arduino",
+      "IoT"
+    ],
+    "features": [
+      "Voice command recognition system",
+      "Arduino UNO-based control circuit",
+      "Appliance control via relays",
+      "LCD status display",
+      "Buzzer for audio feedback",
+      "User-friendly interface for disabled users"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1313",
+    "title": "GSM Based Management System for Remote Access of Home Terminals",
+    "description": "A GSM-enabled embedded system allowing users to remotely manage and control home appliances through SMS commands, ensuring comfort and energy efficiency.",
+    "category": "EEE",
+    "price": 2299,
+    "tags": [
+      "GSM",
+      "Home Automation",
+      "Remote Control",
+      "Arduino",
+      "SMS"
+    ],
+    "features": [
+      "GSM module integration for SMS control",
+      "Relay-based appliance switching",
+      "Arduino microcontroller unit",
+      "Real-time SMS acknowledgment system",
+      "Low-cost and easy-to-install setup",
+      "Power-efficient design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1414",
+    "title": "Hybrid Driver Safety, Vigilance, and Security System for Vehicle",
+    "description": "A smart vehicle system that monitors driver alertness, detects drowsiness, and enhances safety through vibration and buzzer warnings. It integrates sensors for vigilance and collision prevention.",
+    "category": "EEE",
+    "price": 2799,
+    "tags": [
+      "Driver Safety",
+      "Vigilance",
+      "Vehicle",
+      "Sensors",
+      "ESP32"
+    ],
+    "features": [
+      "Eye blink and alcohol sensors",
+      "Vibration motor for drowsiness alert",
+      "Buzzer and LED for safety indication",
+      "ESP32 controller for smart processing",
+      "LCD for driver status display",
+      "Compact and reliable system design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1515",
+    "title": "Wireless-Based Automatic Irrigation System for Agriculture Using Sensors",
+    "description": "An intelligent irrigation system that uses soil moisture and humidity sensors to automatically water crops when needed, helping farmers save water and increase efficiency.",
+    "category": "EEE",
+    "price": 2499,
+    "tags": [
+      "Agriculture",
+      "Automation",
+      "Irrigation",
+      "Wireless",
+      "Sensors"
+    ],
+    "features": [
+      "Soil moisture and humidity sensing",
+      "Wireless control module for data transfer",
+      "Automatic motor control for irrigation",
+      "LCD display for live soil status",
+      "Power-efficient embedded design",
+      "Arduino UNO-based control system"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1616",
+    "title": "Wireless Sensor Network Application for Indoor Intrusion Detection",
+    "description": "A security system based on wireless sensor networks that detects unauthorized movements inside restricted areas using multiple PIR sensors and transceivers.",
+    "category": "EEE",
+    "price": 2599,
+    "tags": [
+      "Wireless",
+      "Security",
+      "Sensor Network",
+      "Intrusion",
+      "Automation"
+    ],
+    "features": [
+      "PIR sensors for motion detection",
+      "Wireless transceiver communication",
+      "Central control unit for data processing",
+      "Buzzer and light alert for intrusion",
+      "Low-cost and efficient design",
+      "Expandable architecture for large areas"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1717",
+    "title": "Water Level Indicator",
+    "description": "A simple and effective water level indication system that alerts users when the tank is full or empty, preventing water wastage and dry running of pumps.",
+    "category": "EEE",
+    "price": 1499,
+    "tags": [
+      "Water Level",
+      "Indicator",
+      "Arduino",
+      "Automation",
+      "Sensors"
+    ],
+    "features": [
+      "Water level sensing using float/sensor probes",
+      "LED and buzzer level indicators",
+      "Relay-based motor control",
+      "Low-cost Arduino system",
+      "Compact and efficient circuit design",
+      "Suitable for domestic and industrial tanks"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1818",
+    "title": "Temperature Monitoring of Conductors Based on GSM-SMS",
+    "description": "A temperature monitoring system for electrical conductors that transmits temperature data via GSM SMS alerts, ensuring early detection of overheating risks.",
+    "category": "EEE",
+    "price": 2399,
+    "tags": [
+      "Temperature",
+      "GSM",
+      "Monitoring",
+      "SMS",
+      "Arduino"
+    ],
+    "features": [
+      "Temperature sensor for conductor monitoring",
+      "Arduino-based control and data processing",
+      "GSM module for SMS transmission",
+      "LCD display for temperature values",
+      "Buzzer for overheat warning",
+      "Industrial-grade reliability"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM1919",
+    "title": "Student Administration Automation System",
+    "description": "An embedded-based automation system that simplifies student data management, attendance recording, and report generation, reducing manual work in institutions.",
+    "category": "EEE",
+    "price": 2699,
+    "tags": [
+      "Automation",
+      "Student Management",
+      "Embedded",
+      "Data Logging",
+      "System"
+    ],
+    "features": [
+      "Microcontroller-based control unit",
+      "Data storage and display module",
+      "Attendance and record management",
+      "User-friendly LCD interface",
+      "Customizable design for institutions",
+      "Efficient data handling"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2020",
+    "title": "Vehicle Accident Avoidance System",
+    "description": "A vehicle safety system that uses ultrasonic sensors to detect nearby obstacles and alert the driver to avoid collisions. It ensures safer driving, especially in low visibility conditions.",
+    "category": "EEE",
+    "price": 2599,
+    "tags": [
+      "Automotive",
+      "Safety",
+      "Ultrasonic",
+      "Accident Avoidance",
+      "Embedded"
+    ],
+    "features": [
+      "Ultrasonic obstacle detection sensors",
+      "Arduino-based vehicle control logic",
+      "Buzzer and LED alerts for driver warning",
+      "LCD display for obstacle distance",
+      "Low-latency response system",
+      "Compact and reliable circuit design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2121",
+    "title": "Secured Electronic Voting Machine Using Biometric",
+    "description": "A biometric-based electronic voting system that ensures one-person-one-vote authentication using fingerprint recognition technology. It enhances election transparency and prevents fraudulent voting.",
+    "category": "EEE",
+    "price": 2799,
+    "tags": [
+      "Biometric",
+      "Voting Machine",
+      "Fingerprint",
+      "Security",
+      "Embedded"
+    ],
+    "features": [
+      "Fingerprint module for voter authentication",
+      "Microcontroller-based control circuit",
+      "LCD display for voting status",
+      "Relay-controlled vote casting mechanism",
+      "Data storage and verification system",
+      "Tamper-proof hardware design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2222",
+    "title": "Optical Device Indicating a Safe Free Path for Blind People",
+    "description": "A wearable optical device that helps visually impaired individuals navigate obstacles using ultrasonic and IR sensors, providing vibration and audio feedback for safety.",
+    "category": "EEE",
+    "price": 2699,
+    "tags": [
+      "Blind Assistance",
+      "Ultrasonic",
+      "Sensor",
+      "Safety",
+      "Wearable"
+    ],
+    "features": [
+      "Ultrasonic obstacle detection sensor",
+      "IR sensor for proximity detection",
+      "Vibration motor for tactile feedback",
+      "Audio alert for close obstacles",
+      "Rechargeable power system",
+      "Compact wearable design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2323",
+    "title": "Password Operated Security Control by Android Application",
+    "description": "An Android-controlled security system that unlocks or controls doors and appliances using a password-protected mobile app via Bluetooth communication.",
+    "category": "EEE",
+    "price": 2399,
+    "tags": [
+      "Android",
+      "Bluetooth",
+      "Security",
+      "Password Control",
+      "Automation"
+    ],
+    "features": [
+      "Bluetooth module for wireless communication",
+      "Android app for password entry",
+      "Relay module for lock control",
+      "LCD for access confirmation",
+      "Buzzer alert for wrong password",
+      "Arduino UNO-based system design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2424",
+    "title": "Real-Time Monitoring and Control System for Greenhouse",
+    "description": "An automated greenhouse system that monitors temperature, humidity, and light intensity using sensors and controls fans, heaters, and lights for optimal plant growth.",
+    "category": "EEE",
+    "price": 2699,
+    "tags": [
+      "Greenhouse",
+      "Automation",
+      "Sensors",
+      "Monitoring",
+      "Embedded"
+    ],
+    "features": [
+      "DHT11 sensor for temperature and humidity",
+      "LDR sensor for light detection",
+      "Relay control for fans and heaters",
+      "LCD display for live environmental data",
+      "Arduino microcontroller-based control",
+      "Energy-efficient and reliable design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2525",
+    "title": "Vehicle Safety System with Ignition Security",
+    "description": "A safety system that prevents unauthorized vehicle usage by implementing ignition lock controlled through a password or RFID card. It improves vehicle security and anti-theft measures.",
+    "category": "EEE",
+    "price": 2599,
+    "tags": [
+      "Vehicle",
+      "Ignition Lock",
+      "Security",
+      "RFID",
+      "Arduino"
+    ],
+    "features": [
+      "RFID or keypad-based ignition control",
+      "Relay module for ignition cut-off",
+      "Buzzer for authentication feedback",
+      "LCD display for system status",
+      "Microcontroller-based control unit",
+      "Anti-theft design with secure authentication"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2626",
+    "title": "Real-Time Implementation of Low-Cost Zigbee-Based Motion Detection System",
+    "description": "A Zigbee-based wireless motion detection system that transmits intrusion alerts to a control station in real time. It is ideal for home and office security.",
+    "category": "EEE",
+    "price": 2499,
+    "tags": [
+      "Zigbee",
+      "Wireless",
+      "Motion Detection",
+      "Security",
+      "Embedded"
+    ],
+    "features": [
+      "PIR sensor for motion detection",
+      "Zigbee module for wireless data transfer",
+      "Receiver unit for centralized monitoring",
+      "Buzzer for local alert",
+      "Low-cost, low-power design",
+      "Scalable for multi-zone deployment"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2727",
+    "title": "Real-Time Multi-Patient Monitoring System Based on Wireless Sensor Network",
+    "description": "A wireless health monitoring system that continuously tracks multiple patients’ vital parameters and transmits them to a central unit for real-time supervision.",
+    "category": "EEE",
+    "price": 2899,
+    "tags": [
+      "Wireless",
+      "Health",
+      "Patient Monitoring",
+      "Sensor Network",
+      "IoT"
+    ],
+    "features": [
+      "Multiple sensor nodes for patient monitoring",
+      "Temperature and pulse sensors",
+      "Wireless data transmission via Zigbee/Wi-Fi",
+      "Central receiver for real-time data display",
+      "Buzzer and alert system for anomalies",
+      "Scalable architecture for hospitals"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2828",
+    "title": "Wi-Fi Based Advanced Industrial Automation",
+    "description": "An ESP32-based industrial automation system that allows users to control machines and monitor process parameters remotely via Wi-Fi through an IoT dashboard.",
+    "category": "EEE",
+    "price": 2799,
+    "tags": [
+      "Wi-Fi",
+      "Industrial Automation",
+      "ESP32",
+      "IoT",
+      "Control"
+    ],
+    "features": [
+      "ESP32 microcontroller with Wi-Fi support",
+      "IoT control via Blynk or Thingspeak",
+      "Real-time parameter monitoring",
+      "Relay-based control for machines",
+      "Buzzer alerts for abnormal conditions",
+      "Secure Wi-Fi-based communication"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM2929",
+    "title": "Remote Monitoring in Home Automation Using Low-Cost Microcontroller",
+    "description": "A cost-effective embedded system that enables remote control and monitoring of household devices using Wi-Fi-enabled microcontrollers and mobile applications.",
+    "category": "EEE",
+    "price": 2299,
+    "tags": [
+      "Home Automation",
+      "Wi-Fi",
+      "Remote Monitoring",
+      "Embedded",
+      "Control"
+    ],
+    "features": [
+      "Wi-Fi microcontroller-based control unit",
+      "Mobile app for remote device access",
+      "Relay switching for multiple appliances",
+      "Real-time status feedback system",
+      "Low-cost and scalable design",
+      "Energy-efficient operation"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3030",
+    "title": "Remote-Controllable and Energy-Saving Room Architecture Based on Zigbee Communication",
+    "description": "A Zigbee-based room automation system designed to control lighting and appliances remotely while reducing power consumption through smart energy management.",
+    "category": "EEE",
+    "price": 2499,
+    "tags": [
+      "Zigbee",
+      "Automation",
+      "Energy Saving",
+      "Wireless",
+      "Control"
+    ],
+    "features": [
+      "Zigbee transceivers for wireless communication",
+      "Relay modules for appliance control",
+      "Temperature and light sensors for optimization",
+      "LCD display for room status",
+      "Arduino-based control logic",
+      "Smart energy-saving algorithm"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3131",
+    "title": "Design of Bluetooth Based Low Energy Wireless Gateway for Remote Parameter Monitoring",
+    "description": "A Bluetooth Low Energy (BLE) based system designed to collect and transmit environmental or industrial parameters to a monitoring unit for data analysis and visualization.",
+    "category": "EEE",
+    "price": 2599,
+    "tags": [
+      "Bluetooth",
+      "Wireless",
+      "Monitoring",
+      "Low Energy",
+      "Embedded"
+    ],
+    "features": [
+      "BLE module for wireless data transfer",
+      "Arduino/ESP32 microcontroller for control",
+      "Sensor interface for environmental data",
+      "Real-time data display via mobile or PC",
+      "Low power consumption gateway design",
+      "Reliable short-range communication"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3232",
+    "title": "Android Based Invisible Broken Wire Detection Robot",
+    "description": "An intelligent robotic system controlled via Android application that detects broken electrical wires using sensors and communicates alerts wirelessly.",
+    "category": "EEE",
+    "price": 2899,
+    "tags": [
+      "Android",
+      "Robot",
+      "Broken Wire",
+      "Wireless",
+      "Detection"
+    ],
+    "features": [
+      "Android app-based control interface",
+      "Metal detection and continuity sensors",
+      "Wireless communication via Bluetooth module",
+      "Motor driver for robotic movement",
+      "Buzzer and LED for broken wire indication",
+      "Arduino UNO-based control system"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3333",
+    "title": "Bluetooth Device Based Access Control System",
+    "description": "A security system that allows door or device access only to authorized users through Bluetooth authentication from their smartphones.",
+    "category": "EEE",
+    "price": 2399,
+    "tags": [
+      "Bluetooth",
+      "Security",
+      "Access Control",
+      "Android",
+      "Automation"
+    ],
+    "features": [
+      "Bluetooth-based authentication system",
+      "Relay-controlled door lock mechanism",
+      "Mobile app for secure access control",
+      "LCD and LED indicators for status display",
+      "Arduino UNO microcontroller integration",
+      "Low power, secure, and scalable design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3434",
+    "title": "Mobile Based Vehicle Driving System",
+    "description": "A mobile-controlled vehicle prototype using Bluetooth technology, enabling wireless driving and control via an Android application.",
+    "category": "EEE",
+    "price": 2499,
+    "tags": [
+      "Bluetooth",
+      "Vehicle",
+      "Android",
+      "Wireless Control",
+      "Embedded"
+    ],
+    "features": [
+      "Android app for direction and speed control",
+      "Bluetooth communication with Arduino",
+      "Motor driver for vehicle movement",
+      "Obstacle detection using ultrasonic sensors",
+      "Battery-powered wireless operation",
+      "Simple and educational robotic system"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3535",
+    "title": "GSM Based Kitchen Monitoring System",
+    "description": "A safety-oriented embedded project that detects gas leakage, fire, and temperature variations in the kitchen, sending alerts to the user through GSM SMS notifications.",
+    "category": "EEE",
+    "price": 2499,
+    "tags": [
+      "GSM",
+      "Safety",
+      "Kitchen",
+      "Gas Sensor",
+      "Fire Detection"
+    ],
+    "features": [
+      "MQ-2 gas and flame sensors",
+      "GSM module for SMS alerts",
+      "Buzzer alarm for emergencies",
+      "LCD for live system status",
+      "Relay for automatic device cutoff",
+      "Compact Arduino UNO-based design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3636",
+    "title": "Portable Electronic System for Health Monitoring of Elderly People",
+    "description": "A portable device that continuously monitors vital parameters such as heart rate and temperature of elderly individuals and sends alerts to caregivers through wireless communication.",
+    "category": "EEE",
+    "price": 2799,
+    "tags": [
+      "Health",
+      "Wireless",
+      "Elderly Care",
+      "Monitoring",
+      "Arduino"
+    ],
+    "features": [
+      "Heartbeat and temperature sensors",
+      "Wireless transmission to a receiver unit",
+      "Battery-powered wearable system",
+      "Alert system for abnormal readings",
+      "Arduino-based processing circuit",
+      "Compact and lightweight design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3737",
+    "title": "Advance Security System and Automation in Metro Trains to Prevent Accidents",
+    "description": "An embedded system for metro trains that detects obstacle presence and ensures automatic braking or signaling to prevent collisions and accidents.",
+    "category": "EEE",
+    "price": 2899,
+    "tags": [
+      "Train Safety",
+      "Automation",
+      "Accident Prevention",
+      "Sensors",
+      "Embedded"
+    ],
+    "features": [
+      "Ultrasonic obstacle detection sensors",
+      "Automatic braking control system",
+      "LED and buzzer signaling alerts",
+      "Microcontroller-based safety logic",
+      "LCD display for train status",
+      "Improves safety and automation in rail systems"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3838",
+    "title": "Design of Remote Intelligent Home System Based on GSM Technology",
+    "description": "A GSM-based intelligent home system that allows users to monitor and control home appliances through SMS commands, ensuring convenience and safety.",
+    "category": "EEE",
+    "price": 2399,
+    "tags": [
+      "GSM",
+      "Home Automation",
+      "Intelligent System",
+      "Remote Control",
+      "Arduino"
+    ],
+    "features": [
+      "GSM module for bidirectional communication",
+      "Relay control for appliances",
+      "SMS-based on/off control interface",
+      "LCD display for system updates",
+      "Arduino microcontroller integration",
+      "Secure and user-friendly design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM3939",
+    "title": "ATM Security System with RFID",
+    "description": "A security enhancement system for ATMs that uses RFID cards to authenticate users before granting access, preventing unauthorized withdrawals and ATM misuse.",
+    "category": "EEE",
+    "price": 2599,
+    "tags": [
+      "RFID",
+      "ATM",
+      "Security",
+      "Authentication",
+      "Arduino"
+    ],
+    "features": [
+      "RFID reader for user identification",
+      "Arduino-controlled authentication process",
+      "Buzzer and LED for feedback",
+      "Relay control for secure access",
+      "LCD for transaction status display",
+      "Compact and reliable security system"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM4040",
+    "title": "Low Frequency RFID Based Object Identification System for Blind People",
+    "description": "An assistive technology system for visually impaired individuals that uses RFID tags to identify objects and provides audio output to help with daily tasks.",
+    "category": "EEE",
+    "price": 2699,
+    "tags": [
+      "RFID",
+      "Assistive Tech",
+      "Blind Aid",
+      "Object Detection",
+      "Embedded"
+    ],
+    "features": [
+      "Low-frequency RFID tag and reader system",
+      "Arduino-based processing unit",
+      "Audio module for object identification feedback",
+      "Portable and user-friendly design",
+      "Rechargeable battery support",
+      "Cost-effective assistive solution"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM5151",
+    "title": "Remote Metal Detecting Robot to Assist Bomb Detection and Rescue Team",
+    "description": "A remote-controlled robot designed for bomb detection and rescue missions using a metal detector sensor. It ensures safety by allowing operators to inspect hazardous zones from a distance.",
+    "category": "EEE",
+    "price": 2999,
+    "tags": [
+      "Robot",
+      "Metal Detection",
+      "Remote Control",
+      "Safety",
+      "Wireless"
+    ],
+    "features": [
+      "Wireless remote control system",
+      "Metal detection sensor integration",
+      "Motor driver for robot movement",
+      "Buzzer and LED indicators for alerts",
+      "Camera module integration (optional)",
+      "Strong chassis for field operation"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM5252",
+    "title": "RF Controlled Metal Detecting Robot",
+    "description": "An RF-based robot that detects metallic objects in its path and provides real-time alerts. The system is useful for security inspection and industrial metal detection.",
+    "category": "EEE",
+    "price": 2599,
+    "tags": [
+      "RF",
+      "Robot",
+      "Metal Detection",
+      "Wireless",
+      "Embedded"
+    ],
+    "features": [
+      "RF transmitter and receiver control units",
+      "Metal detection sensor",
+      "DC motors with motor driver circuit",
+      "Arduino-based controller logic",
+      "Buzzer alert for metal presence",
+      "Compact and portable robotic design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM5353",
+    "title": "Smart Host Microcontroller for Optimal Battery Charging in a Solar-Powered Robotic Vehicle",
+    "description": "A solar-powered robotic vehicle that uses a smart charging controller to optimize battery usage and ensure efficient solar energy management for continuous operation.",
+    "category": "EEE",
+    "price": 3199,
+    "tags": [
+      "Solar",
+      "Battery Charging",
+      "Robot",
+      "Automation",
+      "Embedded"
+    ],
+    "features": [
+      "Solar panel integration for charging",
+      "Charge controller for optimal battery use",
+      "Microcontroller for smart energy management",
+      "DC motor control for robotic motion",
+      "LCD display for voltage monitoring",
+      "Eco-friendly and efficient design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM5454",
+    "title": "Wireless Data Acquisition and Transmission System Design",
+    "description": "A wireless data acquisition system that collects sensor data such as temperature and humidity and transmits it to a remote monitoring unit using RF or Zigbee communication.",
+    "category": "EEE",
+    "price": 2699,
+    "tags": [
+      "Wireless",
+      "Data Acquisition",
+      "Zigbee",
+      "RF",
+      "Monitoring"
+    ],
+    "features": [
+      "Sensor interface for real-time data collection",
+      "Wireless data transmission module (RF/Zigbee)",
+      "LCD for local data display",
+      "Microcontroller-based processing unit",
+      "Receiver unit for remote monitoring",
+      "Reliable and low-cost design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM5555",
+    "title": "Zigbee Based Intelligent Road Traffic Control System",
+    "description": "An intelligent traffic management system that uses Zigbee-based communication between junctions to manage signal timing and reduce congestion automatically.",
+    "category": "EEE",
+    "price": 2899,
+    "tags": [
+      "Zigbee",
+      "Traffic Control",
+      "Automation",
+      "Wireless",
+      "Embedded"
+    ],
+    "features": [
+      "Zigbee modules for inter-junction communication",
+      "IR sensors for vehicle detection",
+      "Arduino for traffic signal control",
+      "LCD display for traffic information",
+      "Automatic light timing adjustment",
+      "Low-power intelligent traffic solution"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM5656",
+    "title": "Advanced Robot for Military Applications",
+    "description": "A wireless-controlled robot designed for defense operations such as surveillance, bomb detection, and terrain navigation in hazardous areas.",
+    "category": "EEE",
+    "price": 3399,
+    "tags": [
+      "Military",
+      "Robot",
+      "Wireless",
+      "Surveillance",
+      "Embedded"
+    ],
+    "features": [
+      "Wireless remote operation system",
+      "Camera integration for live video feed",
+      "Metal detection and obstacle sensors",
+      "DC motor control system",
+      "Arduino-based operation logic",
+      "Rugged design for military use"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM5757",
+    "title": "Energy Management with Zigbee Sensor Network",
+    "description": "A Zigbee-based energy management system that monitors power consumption across multiple devices and transmits data wirelessly to a central server for analysis.",
+    "category": "EEE",
+    "price": 2899,
+    "tags": [
+      "Zigbee",
+      "Energy Management",
+      "Wireless",
+      "IoT",
+      "Embedded"
+    ],
+    "features": [
+      "Zigbee sensor nodes for energy data collection",
+      "Microcontroller for power computation",
+      "Central receiver for data aggregation",
+      "LCD for real-time consumption display",
+      "Low energy communication network",
+      "Smart grid-compatible design"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM5858",
+    "title": "Zigbee Based Automatic Street Light Controlling System",
+    "description": "An automated street lighting system that uses Zigbee communication and LDR sensors to control street lights based on ambient light and motion detection.",
+    "category": "EEE",
+    "price": 2599,
+    "tags": [
+      "Zigbee",
+      "Street Light",
+      "Automation",
+      "Energy Saving",
+      "Sensors"
+    ],
+    "features": [
+      "LDR sensors for ambient light detection",
+      "Zigbee-based wireless coordination",
+      "Arduino microcontroller control logic",
+      "Relay modules for light control",
+      "Buzzer and LED indicators for maintenance alerts",
+      "Energy-efficient lighting automation"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM5959",
+    "title": "Wi-Fi Based Communication and Localization of an Autonomous Mobile Robot for Refinery Inspection",
+    "description": "An autonomous robot using Wi-Fi communication and sensors for navigation and inspection in refinery environments, capable of sending live data to a monitoring system.",
+    "category": "EEE",
+    "price": 3299,
+    "tags": [
+      "Wi-Fi",
+      "Robot",
+      "Autonomous",
+      "Localization",
+      "Inspection"
+    ],
+    "features": [
+      "Wi-Fi communication module",
+      "Ultrasonic and infrared sensors for navigation",
+      "Camera for live monitoring",
+      "Microcontroller-based motion control",
+      "Real-time data transmission system",
+      "Safe operation in hazardous zones"
+    ],
+    "image": "/images/eee.png"
+  },
+  {
+    "id": "PECEM6060",
+    "title": "Online Temperature Monitoring Based on Wireless Sensor Networks",
+    "description": "A wireless sensor network-based system for monitoring and recording temperature variations across multiple locations, transmitting real-time data to a central server.",
+    "category": "EEE",
+    "price": 2699,
+    "tags": [
+      "Wireless Sensor Network",
+      "Temperature",
+      "Monitoring",
+      "IoT",
+      "Embedded"
+    ],
+    "features": [
+      "Wireless temperature sensor nodes",
+      "Data transmission to central gateway",
+      "Microcontroller for sensor interfacing",
+      "LCD display for node data",
+      "Low-power wireless communication",
+      "Scalable and reliable architecture"
+    ],
+    "image": "/images/eee.png"
+  }
+]

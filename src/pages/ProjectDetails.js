@@ -3,9 +3,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import AdSidebar from '../components/AdSidebar';
 import { motion } from 'framer-motion';
-import { projects as catalogProjects } from '../data/data';
+import cseProjects from '../data/cse.json';
+import eeeProjects from '../data/eee.json';
+import matlabProjects from '../data/matlab.json';
 import SEO from '../components/SEO';
 import { getDisplayCategory } from '../utils/projectMetadata';
+
+const catalogProjects = [...eeeProjects, ...matlabProjects, ...cseProjects];
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -21,12 +25,18 @@ const ProjectDetails = () => {
   }, [id]);
 
   const handleAddToCart = () => {
+    if (!project) return;
     addToCart(project);
   };
 
   const handleBuyNow = () => {
-    addToCart(project);
-    navigate('/checkout');
+    if (!project) return;
+    navigate('/checkout', {
+      state: {
+        buyNowItems: [{ ...project, quantity: 1 }],
+        source: 'buy-now'
+      }
+    });
   };
 
   const shortDescription = useMemo(() => {
