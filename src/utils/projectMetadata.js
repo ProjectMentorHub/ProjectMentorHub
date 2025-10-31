@@ -1,4 +1,6 @@
 const isString = (v) => typeof v === 'string' && v.trim().length > 0;
+const normalizeCategory = (value) =>
+  isString(value) ? value.trim().toUpperCase() : '';
 
 export const hasMatlabTag = (project = {}) => {
   const tags = Array.isArray(project?.tags) ? project.tags : [];
@@ -13,9 +15,12 @@ export const hasMatlabTag = (project = {}) => {
  * Rule: If it has a MATLAB tag, it's MATLAB (even if category says EEE/CSE).
  */
 export const getDisplayCategory = (project = {}) => {
-  if (hasMatlabTag(project)) return 'MATLAB';
+  const source = normalizeCategory(project?._sourceCategory);
+  if (source === 'MATLAB' || hasMatlabTag(project)) return 'MATLAB';
 
-  const raw = isString(project?.category) ? project.category.trim().toUpperCase() : '';
+  if (['CSE', 'EEE', 'ECE', 'MECH'].includes(source)) return source;
+
+  const raw = normalizeCategory(project?.category);
   if (['CSE', 'EEE', 'ECE', 'MECH', 'MATLAB'].includes(raw)) return raw;
   return 'GENERAL';
 };
@@ -25,6 +30,11 @@ export const getDisplayCategory = (project = {}) => {
  * Falls back to CSE so mixed/unknown categories appear under a sensible tab.
  */
 export const getPrimaryCategory = (project = {}) => {
+  const source = normalizeCategory(project?._sourceCategory);
+  if (source === 'MATLAB' || hasMatlabTag(project)) return 'MATLAB';
+  if (['EEE', 'ECE', 'MECH'].includes(source)) return source;
+  if (source === 'CSE') return 'CSE';
+
   const canonical = getDisplayCategory(project);
 
   if (canonical === 'MATLAB') return 'MATLAB';
