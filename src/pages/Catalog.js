@@ -8,12 +8,8 @@ import FilterBar from '../components/FilterBar';
 import AdSidebar from '../components/AdSidebar';
 import SEO from '../components/SEO';
 
-import cseProjects from '../data/cse.json';
-import eeeProjects from '../data/eee.json';
-import matlabProjects from '../data/matlab.json';
+import catalogProjects from '../data/catalogProjects';
 import { getDisplayCategory, getPrimaryCategory } from '../utils/projectMetadata';
-
-const catalogProjects = [...eeeProjects, ...matlabProjects, ...cseProjects];
 const VALID_CATEGORIES = new Set(['CSE', 'EEE', 'ECE', 'MECH', 'MATLAB']);
 
 const normalizeFilters = (next = {}) => {
