@@ -3,7 +3,7 @@
     "id": "PEEMA0161",
     "title": "A Generalized Switched Inductor Cell Modular Multilevel Inverter",
     "description": "Design and simulation of a modular multilevel inverter using generalized switched-inductor cells to enhance voltage levels and minimize harmonic distortion. Developed and tested in MATLAB/Simulink with THD and efficiency evaluation.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -24,7 +24,7 @@
     "id": "PEEMA0262",
     "title": "A High Power Interleaved Parallel Topology Full-Bridge LLC Converter for Off-Board Charger",
     "description": "Simulation and performance study of a high-power interleaved parallel full-bridge LLC converter for off-board EV charging systems. Emphasis on soft-switching operation, reduced current ripple, and improved thermal balance.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -45,7 +45,7 @@
     "id": "PEEMA0363",
     "title": "A Low-harmonic Control Method of Bi-directional Three-phase Z-source Converters for Vehicle-to-Grid Applications",
     "description": "Implements a control algorithm for bidirectional Z-source converters enabling Vehicle-to-Grid power transfer with minimal harmonic distortion. MATLAB/Simulink used for modeling and control system validation.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -66,7 +66,7 @@
     "id": "PEEMA0464",
     "title": "Microgrid Based on Wind Driven DFIG, DG and Solar PV Array for Optimal Fuel Consumption",
     "description": "Design of a hybrid microgrid integrating DFIG-based wind, solar PV, and diesel generator units with an optimal energy management strategy for minimum fuel usage and high reliability, simulated in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -86,8 +86,8 @@
   {
     "id": "PEEMA0565",
     "title": "A New Multi-Output DC-DC Converter for Electric Vehicle Application",
-    "description": "Develops a high-efficiency multi-output DC–DC converter for electric vehicles providing multiple voltage levels with dynamic load regulation. MATLAB used to analyze efficiency and transient response.",
-    "category": "EEE",
+    "description": "Develops a high-efficiency multi-output DC\u2013DC converter for electric vehicles providing multiple voltage levels with dynamic load regulation. MATLAB used to analyze efficiency and transient response.",
+    "category": "MATLAB",
     "price": 4999,
     "tags": [
       "MATLAB",
@@ -107,7 +107,7 @@
     "id": "PEEMA0666",
     "title": "A New Proposal for the Design of Hybrid AC/DC Microgrids Toward High Power Quality",
     "description": "Presents a coordinated control and converter design for hybrid AC/DC microgrids improving power quality and reducing voltage imbalance under dynamic load conditions. Implemented and tested in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5399,
     "tags": [
       "MATLAB",
@@ -128,7 +128,7 @@
     "id": "PEEMA0767",
     "title": "A New Step-Up Switched-Capacitor Voltage Balancing Converter for NPC Multilevel Inverter-Based Solar PV System",
     "description": "Design of a switched-capacitor voltage balancing converter for NPC multilevel inverter systems using solar PV input. Ensures high voltage gain and reduced stress on switches. Modeled using MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4899,
     "tags": [
       "MATLAB",
@@ -148,7 +148,7 @@
     "id": "PEEMA0868",
     "title": "A New Topology of Asymmetrical Multilevel Inverter with Reduced Switch Count for Electric Drive Applications",
     "description": "Proposes an asymmetrical multilevel inverter topology with reduced switches, improving power density and drive performance. MATLAB simulation includes modulation and drive control strategy.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5199,
     "tags": [
       "MATLAB",
@@ -167,8 +167,8 @@
   {
     "id": "PEEMA0969",
     "title": "A New Wave Energy Converter for Marine Data Buoy",
-    "description": "Simulation of a compact wave energy converter to power marine buoys. Focuses on energy extraction from ocean waves using a mechanical–electrical model developed in MATLAB/Simulink.",
-    "category": "EEE",
+    "description": "Simulation of a compact wave energy converter to power marine buoys. Focuses on energy extraction from ocean waves using a mechanical\u2013electrical model developed in MATLAB/Simulink.",
+    "category": "MATLAB",
     "price": 4399,
     "tags": [
       "MATLAB",
@@ -188,7 +188,7 @@
     "id": "PEEMA1070",
     "title": "A Novel Control Scheme for Wind Turbine Driven DFIG Interfaced to Utility Grid",
     "description": "Implements an advanced control scheme for grid-connected DFIG wind turbines ensuring stable operation under varying wind speeds. Includes grid synchronization and reactive power control in MATLAB.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -209,7 +209,7 @@
     "id": "PEEMA1171",
     "title": "A Novel Controlled Frequency Band Impedance Measurement Approach for Single-Phase Railway Traction Power System",
     "description": "Develops a controlled frequency band impedance measurement technique for single-phase railway traction systems. MATLAB/Simulink is used to study resonance suppression and network stability under traction loads.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5699,
     "tags": [
       "MATLAB",
@@ -229,7 +229,7 @@
     "id": "PEEMA1272",
     "title": "A Novel Fault Ride Through Scheme for Hybrid Wind/PV Power Generation Systems",
     "description": "Implements a hybrid fault ride-through control for grid-connected wind-PV systems ensuring voltage stability during grid faults. Includes fault-tolerant control and grid-code compliance simulation.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -250,7 +250,7 @@
     "id": "PEEMA1373",
     "title": "A Single Input Variable FLC for DFIG Based WPGS in Standalone Mode",
     "description": "Design of a single-input fuzzy logic controller (FLC) for standalone DFIG-based wind power generation system (WPGS). MATLAB simulation focuses on efficient voltage and frequency regulation.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4799,
     "tags": [
       "MATLAB",
@@ -271,7 +271,7 @@
     "id": "PEEMA1474",
     "title": "A Switch-Source Cell-Based Cascaded Multilevel Inverter Topology with Minimum Number of Power Electronics Components",
     "description": "Proposes a new cascaded multilevel inverter using switch-source cells to reduce power electronic components and switching losses. MATLAB model validates harmonic performance and efficiency.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5099,
     "tags": [
       "MATLAB",
@@ -291,7 +291,7 @@
     "id": "PEEMA1575",
     "title": "Adaptive Control of Voltage Source Converter Based Scheme for Power Quality Improved Grid-Interactive Solar PV-Battery System",
     "description": "Implements adaptive control on a grid-interactive solar PV-battery system using a voltage source converter to improve power quality and reactive power compensation. Simulated in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -311,8 +311,8 @@
   {
     "id": "PEEMA1676",
     "title": "Advanced Control Strategy of DFIG Based Wind Turbine using Combined Artificial Neural Network and PSO Algorithm",
-    "description": "Designs an ANN–PSO based hybrid control system for DFIG wind turbines to improve dynamic response and power extraction efficiency under fluctuating wind conditions.",
-    "category": "EEE",
+    "description": "Designs an ANN\u2013PSO based hybrid control system for DFIG wind turbines to improve dynamic response and power extraction efficiency under fluctuating wind conditions.",
+    "category": "MATLAB",
     "price": 5999,
     "tags": [
       "MATLAB",
@@ -333,7 +333,7 @@
     "id": "PEEMA1777",
     "title": "An Adaptive D-FACTS for Power Quality Enhancement in an Isolated Microgrid",
     "description": "Develops an adaptive distributed FACTS controller for isolated microgrids to improve voltage regulation and power quality under varying load conditions.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5299,
     "tags": [
       "MATLAB",
@@ -354,7 +354,7 @@
     "id": "PEEMA1878",
     "title": "An Efficient Inductive Power Transfer Topology for Electric Vehicle Battery Charging",
     "description": "Simulates a contactless inductive power transfer system optimized for EV battery charging. Includes resonant compensation and coupling efficiency analysis using MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -374,7 +374,7 @@
     "id": "PEEMA1979",
     "title": "Cascaded Multilevel Inverter Based Power and Signal Multiplex Transmission for Electric Vehicles",
     "description": "Design of a cascaded multilevel inverter for simultaneous power and signal transmission in EV systems. MATLAB model validates harmonic performance and control synchronization.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5199,
     "tags": [
       "MATLAB",
@@ -394,7 +394,7 @@
     "id": "PEEMA2080",
     "title": "Cascaded Multilevel PV Inverter with Improved Harmonic Performance During Power Imbalance Between Power Cells",
     "description": "Proposes a cascaded PV inverter topology with harmonic mitigation under unequal power sharing among cells. MATLAB/Simulink used for harmonic and grid interaction analysis.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4899,
     "tags": [
       "MATLAB",
@@ -414,7 +414,7 @@
     "id": "PEEMA2181",
     "title": "Combining Electric Vehicle Battery Charging and Battery Cell Equalization in One Circuit",
     "description": "Integrates EV battery charging and cell equalization functions into a single converter topology to simplify circuitry and improve battery health. MATLAB/Simulink used for modeling and efficiency analysis.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -434,8 +434,8 @@
   {
     "id": "PEEMA2282",
     "title": "Comparison of Different Control Methods for Maximum Power Point Tracking of Solar and Wind Energy",
-    "description": "Compares popular MPPT algorithms for hybrid solar–wind energy systems including P&O, Incremental Conductance, and Fuzzy Logic methods. MATLAB used for detailed performance analysis.",
-    "category": "EEE",
+    "description": "Compares popular MPPT algorithms for hybrid solar\u2013wind energy systems including P&O, Incremental Conductance, and Fuzzy Logic methods. MATLAB used for detailed performance analysis.",
+    "category": "MATLAB",
     "price": 4999,
     "tags": [
       "MATLAB",
@@ -456,7 +456,7 @@
     "id": "PEEMA2383",
     "title": "Cost-Efficient Strategy for High Renewable Energy Penetration in Isolated Power Systems",
     "description": "Proposes an optimal energy management approach for isolated systems with high renewable penetration, minimizing cost and maintaining reliability using MATLAB-based optimization routines.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5399,
     "tags": [
       "MATLAB",
@@ -477,7 +477,7 @@
     "id": "PEEMA2484",
     "title": "Coupled Wireless Charging System for Electric Vehicles",
     "description": "Design and simulation of a coupled magnetic wireless charging system for electric vehicles using resonant inductive power transfer. Includes coil design and efficiency improvement study.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5699,
     "tags": [
       "MATLAB",
@@ -497,7 +497,7 @@
     "id": "PEEMA2585",
     "title": "A Two-Stage Kalman Filter for Cyber-Attack Detection in Automatic Generation Control System",
     "description": "Implements a dual-stage Kalman Filter for detecting cyber-attacks in automatic generation control systems. Simulates real-time disturbances and estimation errors in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -517,7 +517,7 @@
     "id": "PEEMA2686",
     "title": "Delta-Bar-Delta Neural Network Based Control Approach for Power Quality Improvement of Solar PV Interfaced Distribution System",
     "description": "Employs a Delta-Bar-Delta learning neural network to enhance the control of a solar PV integrated grid for improved voltage and current waveforms. Simulated in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -538,7 +538,7 @@
     "id": "PEEMA2787",
     "title": "Design and Control of Magnetic Levitation System by Optimizing Fractional Order PID Controller Using Ant Colony Optimization Algorithm",
     "description": "Designs a magnetic levitation control system using a fractional-order PID controller optimized through the Ant Colony Optimization algorithm in MATLAB.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -559,7 +559,7 @@
     "id": "PEEMA2888",
     "title": "Design and Implementation of Multilevel Inverters for Electric Vehicles",
     "description": "Simulates the performance of different multilevel inverter architectures for electric vehicle drives with focus on efficiency, THD, and control algorithms in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4999,
     "tags": [
       "MATLAB",
@@ -577,9 +577,9 @@
   },
   {
     "id": "PEEMA2989",
-    "title": "Development of an Adaptive Neuro-Fuzzy Inference System–Based Equivalent Consumption Minimisation Strategy to Improve Fuel Economy in Hybrid Electric Vehicles",
+    "title": "Development of an Adaptive Neuro-Fuzzy Inference System\u2013Based Equivalent Consumption Minimisation Strategy to Improve Fuel Economy in Hybrid Electric Vehicles",
     "description": "Proposes an ANFIS-based equivalent consumption minimization strategy (ECMS) to optimize fuel efficiency in hybrid electric vehicles. MATLAB used for hybrid drive cycle simulation.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5999,
     "tags": [
       "MATLAB",
@@ -600,7 +600,7 @@
     "id": "PEEMA3090",
     "title": "Distance Protection Scheme for DC Distribution Systems Based on the High Frequency Characteristics of Faults",
     "description": "Implements a high-frequency fault detection technique for distance protection in DC distribution networks. Includes analysis of transient features and relay operation in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5699,
     "tags": [
       "MATLAB",
@@ -619,8 +619,8 @@
   {
     "id": "PEEMA3191",
     "title": "Dynamic Current Sharing, Voltage and SOC Regulation for HESS Based DC Microgrid Using CPISMC Technique",
-    "description": "Implements a Composite Proportional–Integral Sliding Mode Controller (CPISMC) for hybrid energy storage systems in DC microgrids. Focuses on balanced current sharing and state-of-charge regulation between battery and supercapacitor.",
-    "category": "EEE",
+    "description": "Implements a Composite Proportional\u2013Integral Sliding Mode Controller (CPISMC) for hybrid energy storage systems in DC microgrids. Focuses on balanced current sharing and state-of-charge regulation between battery and supercapacitor.",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -641,7 +641,7 @@
     "id": "PEEMA3292",
     "title": "Dynamic Voltage Support for Low-Voltage Ride-Through Operation in Single-Phase Grid-Connected Photovoltaic Systems",
     "description": "Presents a voltage-support strategy for grid-connected PV systems to achieve Low-Voltage Ride-Through compliance during grid faults using MATLAB/Simulink modeling and dynamic control.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5199,
     "tags": [
       "MATLAB",
@@ -662,7 +662,7 @@
     "id": "PEEMA3393",
     "title": "Electric Vehicle Recharge Strategies for Frequency Control in Electrical Power Systems with High Wind Power Generation",
     "description": "Explores the use of electric vehicle charging and discharging to aid frequency regulation in wind-dominated grids. MATLAB used to analyze frequency deviation and vehicle aggregation control.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5699,
     "tags": [
       "MATLAB",
@@ -683,7 +683,7 @@
     "id": "PEEMA3494",
     "title": "Enabling Utility-Scale Solar PV Plants for Electromechanical Oscillation Damping",
     "description": "Implements a damping controller in utility-scale PV plants to suppress electromechanical oscillations in power systems. MATLAB/Simulink used for small-signal stability analysis.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5499,
     "tags": [
       "MATLAB",
@@ -703,7 +703,7 @@
     "id": "PEEMA3595",
     "title": "Energy Efficiency Enhancement in Full-Bridge PV Inverters with Advanced Modulations",
     "description": "Designs and compares advanced PWM strategies to improve the efficiency of full-bridge PV inverters. MATLAB simulation demonstrates harmonic and loss reduction.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5099,
     "tags": [
       "MATLAB",
@@ -724,7 +724,7 @@
     "id": "PEEMA3696",
     "title": "Energy Management System for Small-Scale Hybrid Wind-Solar-Battery Based Microgrid",
     "description": "Designs an energy management system for a small-scale hybrid microgrid integrating wind, solar, and battery storage. Includes scheduling, power balance, and cost optimization.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -745,7 +745,7 @@
     "id": "PEEMA3797",
     "title": "Fuzzy Logic Based Improvement of UPFC Performance in Power System",
     "description": "Implements a fuzzy logic controller to enhance Unified Power Flow Controller (UPFC) performance for voltage and power flow regulation. MATLAB/Simulink used for dynamic testing.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4999,
     "tags": [
       "MATLAB",
@@ -766,7 +766,7 @@
     "id": "PEEMA3898",
     "title": "Grid Connected PV System Using Multilevel Inverter",
     "description": "Design and simulation of a grid-connected solar PV system using a multilevel inverter for reduced harmonics and improved voltage quality.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4699,
     "tags": [
       "MATLAB",
@@ -786,7 +786,7 @@
     "id": "PEEMA3999",
     "title": "Grid Synchronization of WEC-PV-BES Based Distributed Generation System Using Robust Control Strategy",
     "description": "Simulates a hybrid distributed generation system combining wave, PV, and battery sources. Uses a robust controller for grid synchronization and stability maintenance.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -807,7 +807,7 @@
     "id": "PEEMA4090",
     "title": "Grid-Connected Wind-Photovoltaic Cogeneration Using Back-to-Back Voltage Source Converters",
     "description": "Designs a cogeneration model integrating wind and PV sources through back-to-back voltage source converters for seamless grid connection and efficient power sharing.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5499,
     "tags": [
       "MATLAB",
@@ -828,7 +828,7 @@
     "id": "PEEMA4191",
     "title": "Identification of Faults in Microgrid Using Artificial Neural Networks",
     "description": "Employs Artificial Neural Networks (ANN) for intelligent fault detection and classification in microgrids. MATLAB/Simulink model includes fault scenarios for voltage and current waveform analysis.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5299,
     "tags": [
       "MATLAB",
@@ -849,7 +849,7 @@
     "id": "PEEMA4292",
     "title": "Implementation of Solar PV-Battery and Diesel Generator Based Electric Vehicle Charging Station",
     "description": "Develops a hybrid EV charging station model integrating solar PV, battery storage, and diesel generator backup to ensure uninterrupted charging and power reliability.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -870,7 +870,7 @@
     "id": "PEEMA4393",
     "title": "Improved Power Quality in a Solar PV Plant Integrated Utility Grid by Employing a Novel Adaptive Current Regulator",
     "description": "Implements an adaptive current regulator to enhance power quality in grid-tied solar PV systems. MATLAB simulation includes THD, voltage sag, and current waveform studies.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -891,7 +891,7 @@
     "id": "PEEMA4494",
     "title": "Improvement of Power Quality Using Fuzzy Based Unified Power Flow Controller",
     "description": "Integrates fuzzy logic control into a Unified Power Flow Controller (UPFC) to improve voltage regulation and minimize harmonic distortion in a power grid.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4999,
     "tags": [
       "MATLAB",
@@ -912,7 +912,7 @@
     "id": "PEEMA4595",
     "title": "Integration of Solar PV into Grid Using a New UPQC with Differential Inverter Control",
     "description": "Designs a Unified Power Quality Conditioner (UPQC) with differential inverter control to integrate solar PV into the grid while maintaining voltage and current quality.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5699,
     "tags": [
       "MATLAB",
@@ -933,7 +933,7 @@
     "id": "PEEMA4696",
     "title": "Local Fault Location in Meshed DC Microgrids Based on Parameter Estimation Technique",
     "description": "Implements a parameter estimation method for fault location in meshed DC microgrids. MATLAB/Simulink used for transient signal analysis and fault distance estimation.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5299,
     "tags": [
       "MATLAB",
@@ -951,9 +951,9 @@
   },
   {
     "id": "PEEMA4797",
-    "title": "Maximum Power Point Tracking for Wind Turbine Using Integrated Generator–Rectifier Systems",
-    "description": "Simulates an integrated generator–rectifier system for wind turbines using MPPT control for maximum energy extraction. Focus on power optimization and converter efficiency.",
-    "category": "EEE",
+    "title": "Maximum Power Point Tracking for Wind Turbine Using Integrated Generator\u2013Rectifier Systems",
+    "description": "Simulates an integrated generator\u2013rectifier system for wind turbines using MPPT control for maximum energy extraction. Focus on power optimization and converter efficiency.",
+    "category": "MATLAB",
     "price": 4999,
     "tags": [
       "MATLAB",
@@ -974,7 +974,7 @@
     "id": "PEEMA4898",
     "title": "MCPWM Based 21 Level Inverter Design for Grid Connected PV System",
     "description": "Develops a 21-level inverter using Modified Carrier PWM (MCPWM) for grid-connected PV systems to minimize harmonics and improve voltage control.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5499,
     "tags": [
       "MATLAB",
@@ -995,7 +995,7 @@
     "id": "PEEMA4999",
     "title": "Mitigating Power Fluctuations for Energy Storage in Wind Energy Conversion System Using Supercapacitors",
     "description": "Implements a supercapacitor-based energy storage system to reduce power fluctuations in wind energy systems. MATLAB simulation includes dynamic response and SOC tracking.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -1016,7 +1016,7 @@
     "id": "PEEMA50100",
     "title": "Mitigation of Transient Overvoltages in Microgrid Including PV Arrays",
     "description": "Analyzes and mitigates transient overvoltages in PV-integrated microgrids using surge protection and control techniques modeled in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5399,
     "tags": [
       "MATLAB",
@@ -1037,7 +1037,7 @@
     "id": "PEEMA51101",
     "title": "Novel Symmetric Modular Hybrid Multilevel Inverter with Reduced Number of Semiconductors and Low Voltage Stress Across Switches",
     "description": "Designs and simulates a symmetric modular hybrid multilevel inverter topology that minimizes semiconductor usage and voltage stress, enhancing efficiency and reducing cost. MATLAB/Simulink used for performance analysis.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -1058,7 +1058,7 @@
     "id": "PEEMA52102",
     "title": "Off-Board Electric Vehicle Battery Charger Using PV Array",
     "description": "Develops a PV-fed off-board EV charger with DC-DC conversion and maximum power point tracking for efficient energy transfer. Designed and tested in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4999,
     "tags": [
       "MATLAB",
@@ -1079,7 +1079,7 @@
     "id": "PEEMA53103",
     "title": "On-Board Single-Phase Integrated Electric Vehicle Charger with V2G Functionality",
     "description": "Designs an integrated on-board EV charger capable of Vehicle-to-Grid operation. The model demonstrates bidirectional power transfer and grid synchronization using MATLAB.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5699,
     "tags": [
       "MATLAB",
@@ -1100,7 +1100,7 @@
     "id": "PEEMA54104",
     "title": "Optimal Design of Fractional Order PID Controller Based Automatic Voltage Regulator System Using Gradient-Based Optimization Algorithm",
     "description": "Implements a fractional-order PID controller for an AVR system, optimized through gradient-based algorithms for enhanced response and minimized overshoot.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -1120,8 +1120,8 @@
   {
     "id": "PEEMA55105",
     "title": "Performance Improvement of Hybrid Renewable Energy Sources Connected to the Grid Using Artificial Neural Network and Sliding Mode Control",
-    "description": "Develops a hybrid ANN–Sliding Mode controller for grid-connected renewable systems to ensure stable power injection and improved transient behavior.",
-    "category": "EEE",
+    "description": "Develops a hybrid ANN\u2013Sliding Mode controller for grid-connected renewable systems to ensure stable power injection and improved transient behavior.",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -1142,7 +1142,7 @@
     "id": "PEEMA56106",
     "title": "Power Management Scheme for Grid-Connected PV Integrated with Hybrid Energy Storage System",
     "description": "Proposes a power management system integrating PV with battery and supercapacitor storage to ensure smooth grid power and energy balance under dynamic loads.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -1163,7 +1163,7 @@
     "id": "PEEMA57107",
     "title": "Power Optimisation Scheme of Induction Motor Using Fuzzy Logic Controller for Electric Vehicle",
     "description": "Applies fuzzy logic control to improve the performance and power efficiency of an induction motor drive used in electric vehicles. MATLAB/Simulink used for control implementation.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4999,
     "tags": [
       "MATLAB",
@@ -1184,7 +1184,7 @@
     "id": "PEEMA58108",
     "title": "Power Quality Enhancement and Power Flow Analysis of a PV Integrated UPQC System in a Distribution Network",
     "description": "Analyzes the integration of a Unified Power Quality Conditioner (UPQC) with PV in a distribution grid for improved reactive power compensation and voltage regulation.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -1205,7 +1205,7 @@
     "id": "PEEMA59109",
     "title": "Power Quality Improvement in Grid Connected Distribution Systems Using Artificial Intelligence Based Controller",
     "description": "Implements an AI-driven control mechanism for harmonic mitigation and voltage stabilization in grid-connected distribution networks.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5999,
     "tags": [
       "MATLAB",
@@ -1226,7 +1226,7 @@
     "id": "PEEMA60110",
     "title": "Power Quality Improvement Using Dynamic Voltage Restorer",
     "description": "Design and simulation of a Dynamic Voltage Restorer (DVR) for mitigating voltage sag, swell, and harmonic disturbances in grid-connected systems.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4899,
     "tags": [
       "MATLAB",
@@ -1247,7 +1247,7 @@
     "id": "PEEMA61111",
     "title": "Power-Linked Predictive Control Strategy for Power Electronic Traction Transformer",
     "description": "Implements a power-linked predictive control scheme for traction transformers used in railway and EV applications to improve voltage regulation and transient response. Simulated using MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -1267,7 +1267,7 @@
     "id": "PEEMA62112",
     "title": "Protection of DC Bus Using Solid-State DC Breaker",
     "description": "Designs a fast solid-state DC circuit breaker for protection of DC bus systems. MATLAB model analyzes interruption speed, voltage overshoot, and current limiting characteristics.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5699,
     "tags": [
       "MATLAB",
@@ -1288,7 +1288,7 @@
     "id": "PEEMA63113",
     "title": "PSO Optimized PIDF Controller for Load-Frequency Control of A.C Multi-Islanded Microgrid System",
     "description": "Implements a Particle Swarm Optimization tuned PIDF controller for frequency regulation in multi-islanded AC microgrids, ensuring reduced overshoot and steady-state error.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -1309,7 +1309,7 @@
     "id": "PEEMA64114",
     "title": "Quantitative Comparison and Analysis of Different Power Routing Methods for Single-Phase Cascaded H-Bridge Photovoltaic Grid-Connected Inverter",
     "description": "Compares multiple power routing methods in single-phase CHB PV inverters using MATLAB/Simulink, evaluating efficiency, harmonic distortion, and power-sharing performance.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -1330,7 +1330,7 @@
     "id": "PEEMA65115",
     "title": "Regenerative Braking of Electric Vehicle Using a Modified Direct Torque Control and Adaptive Control Theory",
     "description": "Develops a regenerative braking system for electric vehicles using modified DTC and adaptive control algorithms to recover kinetic energy efficiently in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -1351,7 +1351,7 @@
     "id": "PEEMA66116",
     "title": "Sensorless SynRG Based Variable Speed Wind Generator and Single-Stage Solar PV Array Integrated Grid System with Maximum Power Extraction Capability",
     "description": "Integrates a sensorless synchronous reluctance generator with a PV array for grid-connected operation. MATLAB/Simulink model ensures maximum power tracking and smooth synchronization.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -1372,7 +1372,7 @@
     "id": "PEEMA67117",
     "title": "Single-Phase Boost DC-Link Integrated Cascaded Multilevel Inverter for PV Applications",
     "description": "Proposes a single-phase boost DC-link cascaded multilevel inverter to achieve high voltage gain and low harmonic distortion for PV applications.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5499,
     "tags": [
       "MATLAB",
@@ -1393,7 +1393,7 @@
     "id": "PEEMA68118",
     "title": "Single-Phase Dual-Mode Interleaved Multilevel Inverter for PV Applications",
     "description": "Designs a dual-mode interleaved inverter for solar PV systems to improve harmonic performance and power conversion efficiency under variable loads.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5199,
     "tags": [
       "MATLAB",
@@ -1413,7 +1413,7 @@
     "id": "PEEMA69119",
     "title": "Single-Stage PV-Grid Interactive Induction Motor Drive with Improved Flux Estimation Technique for Water Pumping with Reduced Sensors",
     "description": "Implements a single-stage PV grid-connected motor drive for water pumping applications using flux estimation with reduced sensors. Developed and tested in MATLAB.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5599,
     "tags": [
       "MATLAB",
@@ -1434,7 +1434,7 @@
     "id": "PEEMA70120",
     "title": "Solar PV Integration to E-Rickshaw With Regenerative Braking and Sensorless Control",
     "description": "Simulates a solar-powered e-rickshaw drive system with regenerative braking and sensorless motor control for efficient operation and extended battery life.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 4999,
     "tags": [
       "MATLAB",
@@ -1455,7 +1455,7 @@
     "id": "PEEMA71121",
     "title": "Trinary Hybrid Cascaded H-Bridge Multilevel Inverter-Based Grid-Connected Solar Power Transfer System Supporting Critical Load",
     "description": "Implements a trinary hybrid CHB multilevel inverter for solar power systems that ensures seamless power transfer to critical loads during grid interruptions. Simulated and verified in MATLAB/Simulink.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5699,
     "tags": [
       "MATLAB",
@@ -1476,7 +1476,7 @@
     "id": "PEEMA72122",
     "title": "Unbiased Circular Leakage Centered Adaptive Filtering Control for Power Quality Improvement of Wind-Solar PV Energy Conversion System",
     "description": "Designs an unbiased circular leakage adaptive filter to enhance power quality in hybrid wind-PV energy systems. MATLAB/Simulink used to analyze harmonics and reactive power compensation.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -1497,7 +1497,7 @@
     "id": "PEEMA73123",
     "title": "Unified Control Scheme of Grid-Connected Inverters for Autonomous and Smooth Transfer to Stand-Alone Mode",
     "description": "Implements a unified inverter control strategy to allow seamless transition between grid-connected and islanded operation in distributed generation systems.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5699,
     "tags": [
       "MATLAB",
@@ -1518,7 +1518,7 @@
     "id": "PEEMA74124",
     "title": "UPQC Based Grid-Connected Photovoltaic System with Fuzzy Logic Controller",
     "description": "Develops a Unified Power Quality Conditioner integrated with solar PV using fuzzy logic control to improve voltage and current quality in a grid system.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5499,
     "tags": [
       "MATLAB",
@@ -1539,7 +1539,7 @@
     "id": "PEEMA75125",
     "title": "Vehicle-To-Grid Technology in a Micro-Grid Using DC Fast Charging Architecture",
     "description": "Simulates a V2G-enabled DC fast charging architecture that supports bi-directional power exchange between EVs and a microgrid, improving load balance and grid stability.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -1560,7 +1560,7 @@
     "id": "PEEMA76126",
     "title": "Virtual Inertia Emulator-Based Model Predictive Control for Grid Frequency Regulation Considering High Penetration of Inverter-Based Energy Storage System",
     "description": "Implements a virtual inertia emulator combined with model predictive control for grid frequency support in inverter-based systems. Simulated using MATLAB for transient and steady-state responses.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5999,
     "tags": [
       "MATLAB",
@@ -1581,7 +1581,7 @@
     "id": "PEEMA77127",
     "title": "Voltage Sag Enhancement of Grid Connected Hybrid PV-Wind Power System Using Battery and SMES Based Dynamic Voltage Restorer",
     "description": "Designs a DVR using a combination of battery and superconducting magnetic energy storage (SMES) for mitigating voltage sags in hybrid PV-wind systems.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -1602,7 +1602,7 @@
     "id": "PEEMA78128",
     "title": "PV/WT Integrated System Using the Gray Wolf Optimization Technique for Power Quality Improvement",
     "description": "Applies the Gray Wolf Optimization algorithm to control a PV-wind hybrid system for improving power quality and reducing total harmonic distortion (THD).",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5799,
     "tags": [
       "MATLAB",
@@ -1623,7 +1623,7 @@
     "id": "PEEMA79129",
     "title": "Multi-Winding Transformer Fed CHB Inverter with On-Line Switching Angle Calculation Based SHE Technique for Vector Controlled Induction Motor Drive",
     "description": "Implements a multi-winding transformer-fed cascaded H-bridge inverter using selective harmonic elimination (SHE) for precise control of induction motor drives.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
@@ -1644,7 +1644,7 @@
     "id": "PEEMA80130",
     "title": "Vector Controlled Induction Motor Drive Using PV Array with Adaptive DC-Link Control for Electric Vehicle Applications",
     "description": "Designs a PV-based vector-controlled induction motor drive with adaptive DC-link voltage control for EV applications to enhance performance and reliability.",
-    "category": "EEE",
+    "category": "MATLAB",
     "price": 5899,
     "tags": [
       "MATLAB",
