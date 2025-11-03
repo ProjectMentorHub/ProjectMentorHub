@@ -64,7 +64,7 @@ const Success = () => {
 
         <div className="space-y-3">
           <button
-            onClick={() => navigate('/dashboard')}
+            onClick={() => navigate('/orders')}
             className="w-full btn-primary"
           >
             View My Orders
