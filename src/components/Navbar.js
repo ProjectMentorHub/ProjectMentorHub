@@ -57,7 +57,7 @@ export default function Navbar() {
             <NavItem to="/catalog">Catalog</NavItem>
             <NavItem to="/about">About</NavItem>
             <NavItem to="/journals">Journal Services</NavItem>
-            <NavItem to="/dashboard">Dashboard</NavItem>
+            <NavItem to="/orders">Orders</NavItem>
           </div>
 
           {/* Right: Actions */}
@@ -120,7 +120,7 @@ export default function Navbar() {
               <NavItem to="/catalog" onClick={() => setOpen(false)}>Catalog</NavItem>
               <NavItem to="/about" onClick={() => setOpen(false)}>About</NavItem>
               <NavItem to="/journals" onClick={() => setOpen(false)}>Journal Services</NavItem>
-              <NavItem to="/dashboard" onClick={() => setOpen(false)}>Dashboard</NavItem>
+              <NavItem to="/orders" onClick={() => setOpen(false)}>Orders</NavItem>
 
               <div className="mt-2 flex items-center gap-3">
                 {user ? (
