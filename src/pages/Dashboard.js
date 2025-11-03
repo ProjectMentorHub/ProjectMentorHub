@@ -148,8 +148,8 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <SEO
-        title="My Dashboard"
-        description="Review your ProjectMentorHub orders, download project resources, and manage your purchases in one place."
+        title="My Orders"
+        description="Review your ProjectMentorHub orders and transaction details. We will deliver your project via email within 24 hours of purchase."
         canonical="https://projectmentorhub.com/dashboard"
         noIndex
       />
@@ -159,8 +159,8 @@ const Dashboard = () => {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-serif font-bold mb-2">My Dashboard</h1>
-          <p className="text-gray-600">View your orders and downloads</p>
+          <h1 className="text-4xl font-serif font-bold mb-2">My Orders</h1>
+          <p className="text-gray-600">We will send your purchased projects to your email within 24 hours.</p>
         </motion.div>
 
         {orders.length === 0 ? (
@@ -224,14 +224,29 @@ const Dashboard = () => {
                   </div>
 
                   <div className="pt-4 border-t border-gray-100">
-                    <button
-                      onClick={() =>
-                        alert('Download functionality - files would be accessible here')
-                      }
-                      className="btn-secondary text-sm"
-                    >
-                      Download Files
-                    </button>
+                    <p className="text-sm text-gray-600">
+                      We will send your project files within 24 hours of purchase. If you need urgent access, please contact support.
+                    </p>
+                    <div className="mt-3 space-y-1 text-sm text-gray-500">
+                      {order?.razorpay?.paymentId && (
+                        <p>
+                          <span className="font-medium text-gray-700">Payment ID:</span> {order.razorpay.paymentId}
+                        </p>
+                      )}
+                      {order?.razorpay?.orderId && (
+                        <p>
+                          <span className="font-medium text-gray-700">Order Reference:</span> {order.razorpay.orderId}
+                        </p>
+                      )}
+                      {order?.razorpay?.signature && (
+                        <p>
+                          <span className="font-medium text-gray-700">Signature:</span> {order.razorpay.signature}
+                        </p>
+                      )}
+                      {!order?.razorpay?.paymentId && !order?.razorpay?.orderId && !order?.razorpay?.signature && (
+                        <p>No additional transaction details available.</p>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               );
