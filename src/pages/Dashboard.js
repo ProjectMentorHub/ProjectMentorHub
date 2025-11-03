@@ -56,7 +56,7 @@ const mergeOrders = (primary = [], secondary = []) => {
   return merged;
 };
 
-const Dashboard = () => {
+const OrdersPage = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const { user } = useAuth();
@@ -150,7 +150,7 @@ const Dashboard = () => {
       <SEO
         title="My Orders"
         description="Review your ProjectMentorHub orders and transaction details. We will deliver your project via email within 24 hours of purchase."
-        canonical="https://projectmentorhub.com/dashboard"
+        canonical="https://projectmentorhub.com/orders"
         noIndex
       />
       <div className="container mx-auto px-4 max-w-6xl">
@@ -258,4 +258,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default OrdersPage;
