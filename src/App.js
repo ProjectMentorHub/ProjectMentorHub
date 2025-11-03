@@ -14,7 +14,7 @@ import JournalServices from './pages/JournalServices';
 import ProjectDetails from './pages/ProjectDetails';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
-import Dashboard from './pages/Dashboard';
+import Orders from './pages/Dashboard';
 import Admin from './pages/Admin';
 import Success from './pages/Success';
 import Cancel from './pages/Cancel';
@@ -47,13 +47,14 @@ function App() {
               }
             />
             <Route
-              path="/dashboard"
+              path="/orders"
               element={
                 <RequireAuth>
-                  <Dashboard />
+                  <Orders />
                 </RequireAuth>
               }
             />
+            <Route path="/dashboard" element={<Navigate to="/orders" replace />} />
             <Route
               path="/admin"
               element={
