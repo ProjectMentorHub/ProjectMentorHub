@@ -25,7 +25,7 @@ const Success = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4">
       <SEO
         title="Order Successful"
-        description="Your ProjectMentorHub order has been confirmed. Download resources from your dashboard."
+        description="Your ProjectMentorHub order has been confirmed. We will deliver your project within 24 hours via email."
         canonical="https://projectmentorhub.com/success"
         noIndex
       />
@@ -44,7 +44,7 @@ const Success = () => {
 
         <h1 className="text-3xl font-serif font-bold mb-4">Order Successful!</h1>
         <p className="text-gray-600 mb-6">
-          Thank you for your purchase. Your order has been confirmed.
+          Thank you for your purchase. We are preparing your project and will send it to your email within 24 hours.
           {orderId && (
             <span className="block mt-2 text-sm">
               Order ID: {orderId}
@@ -57,7 +57,7 @@ const Success = () => {
           ) : null}
           {customerEmail ? (
             <span className="block mt-1 text-sm text-gray-500">
-              Receipt sent to: {customerEmail}
+              Delivery email: {customerEmail}
             </span>
           ) : null}
         </p>
