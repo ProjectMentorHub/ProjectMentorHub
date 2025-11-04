@@ -12,11 +12,10 @@ import catalogProjects from '../data/catalogProjects';
 import { getDisplayCategory, getPrimaryCategory, getCseSubCategory } from '../utils/projectMetadata';
 import { logCatalogSearch } from '../utils/localAnalytics';
 const VALID_CATEGORIES = new Set(['CSE', 'EEE', 'ECE', 'MECH', 'MATLAB']);
-const VALID_SUBCATEGORIES = new Set(['ML', 'WEB', 'OTHER']);
+const VALID_SUBCATEGORIES = new Set(['ML', 'WEB']);
 const CSE_SUBCATEGORY_OPTIONS = [
   { value: 'ML', label: 'Machine Learning' },
-  { value: 'WEB', label: 'Web Development' },
-  { value: 'OTHER', label: 'Other (Non-Android)' }
+  { value: 'WEB', label: 'Web Development' }
 ];
 
 const normalizeFilters = (next = {}) => {
