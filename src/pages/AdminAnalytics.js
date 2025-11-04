@@ -743,7 +743,13 @@ const SearchCategoryBreakdown = ({ categories }) => {
   );
 };
 
-const DataControlsCard = ({ onImport, onClearImported, importedCount }) => {
+const DataControlsCard = ({
+  onImport,
+  onClearImported,
+  importedCount,
+  onClearSearchEvents,
+  searchEventCount
+}) => {
   const inputRef = useRef(null);
 
   const handleClick = () => {
@@ -798,6 +804,15 @@ const DataControlsCard = ({ onImport, onClearImported, importedCount }) => {
             onClick={onClearImported}
           >
             Clear Imported Data
+          </button>
+        )}
+        {searchEventCount > 0 && (
+          <button
+            type="button"
+            className="px-4 py-2 rounded-2xl border border-black/10 text-sm font-medium text-gray-700 hover:border-black/30"
+            onClick={onClearSearchEvents}
+          >
+            Clear Search History
           </button>
         )}
       </div>
