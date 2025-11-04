@@ -16,7 +16,7 @@ const VALID_CATEGORIES = new Set(['CSE', 'EEE', 'ECE', 'MECH', 'MATLAB']);
 const normalizeFilters = (next = {}) => {
   const rawCategory = next?.category ? String(next.category).trim().toUpperCase() : '';
   const category = VALID_CATEGORIES.has(rawCategory) ? rawCategory : '';
-  const query = next?.query ? String(next.query).trim() : '';
+  const query = next?.query ? String(next.query).slice(0, 120) : '';
 
   return { category, query };
 };
@@ -30,6 +30,116 @@ const parseFiltersFromSearch = (search = '') => {
     category: categoryParam,
     query: queryParam
   });
+};
+
+const SEARCH_SYNONYMS = {
+  ai: ['artificial intelligence', 'machine learning', 'ml', 'deep learning'],
+  ml: ['machine learning', 'artificial intelligence', 'deep learning'],
+  'machine learning': ['ml', 'artificial intelligence', 'deep learning', 'neural networks'],
+  'deep learning': ['neural networks', 'cnn', 'rnn'],
+  iot: ['internet of things', 'embedded systems', 'smart devices'],
+  robotic: ['robotics', 'automation', 'mechatronics'],
+  robot: ['robotics', 'automation'],
+  blockchain: ['web3', 'distributed ledger'],
+  'web development': ['full stack', 'frontend', 'backend'],
+  cloud: ['aws', 'azure', 'gcp', 'cloud computing'],
+  'data science': ['analytics', 'machine learning', 'statistics'],
+  matlab: ['simulink', 'mathworks'],
+  'power systems': ['power', 'grid', 'electrical'],
+  'image processing': ['computer vision', 'opencv'],
+  vision: ['computer vision', 'image processing'],
+  automation: ['robotics', 'iot', 'control systems'],
+  biotech: ['bio technology', 'bioinformatics']
+};
+
+const tokenise = (value = '') =>
+  String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9+/.\s-]+/g, ' ')
+    .split(/[\s/,.+-]+/)
+    .map((token) => token.trim())
+    .filter((token) => token.length > 1);
+
+const buildKeywordIndex = (projects) => {
+  const keywordMap = new Map();
+
+  projects.forEach((project) => {
+    const tokens = new Set([
+      ...tokenise(project.title),
+      ...tokenise(project.shortDescription),
+      ...tokenise(project.description),
+      ...(Array.isArray(project.tags)
+        ? project.tags.flatMap((tag) => tokenise(tag))
+        : [])
+    ]);
+
+    tokens.forEach((token) => {
+      if (token.length < 3) return;
+      const entry = keywordMap.get(token) || { keyword: token, count: 0 };
+      entry.count += 1;
+      keywordMap.set(token, entry);
+    });
+  });
+
+  return keywordMap;
+};
+
+const expandTokensWithSynonyms = (tokens) => {
+  const expanded = new Set(tokens);
+
+  tokens.forEach((token) => {
+    const synonyms = SEARCH_SYNONYMS[token];
+    if (Array.isArray(synonyms)) {
+      synonyms.forEach((synonym) => {
+        expanded.add(synonym.toLowerCase());
+        tokenise(synonym).forEach((childToken) => expanded.add(childToken));
+      });
+    }
+  });
+
+  return expanded;
+};
+
+const computeSuggestions = (query, keywordIndex) => {
+  const suggestions = [];
+  const trimmed = (query || '').toLowerCase().trim();
+
+  const pushUnique = (label, source) => {
+    const normalizedLabel = label.toLowerCase();
+    if (
+      !normalizedLabel ||
+      suggestions.some((item) => item.label.toLowerCase() === normalizedLabel)
+    ) {
+      return;
+    }
+    suggestions.push({ label, source });
+  };
+
+  if (!trimmed) {
+    const popular = Array.from(keywordIndex.values())
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 6);
+    popular.forEach((entry) => pushUnique(entry.keyword, 'popular'));
+    return suggestions;
+  }
+
+  const queryTokens = trimmed.split(/\s+/);
+  const lastFragment = queryTokens[queryTokens.length - 1] || '';
+
+  Array.from(keywordIndex.values())
+    .filter((entry) => entry.keyword.startsWith(lastFragment) && entry.keyword !== lastFragment)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 6)
+    .forEach((entry) => pushUnique(entry.keyword, 'keyword'));
+
+  const expandedTokens = expandTokensWithSynonyms([trimmed, ...queryTokens]);
+  expandedTokens.forEach((token) => {
+    if (token !== trimmed && token !== lastFragment) {
+      pushUnique(token, 'synonym');
+    }
+  });
+
+  return suggestions.slice(0, 10);
 };
 
 const Catalog = () => {
@@ -79,40 +189,116 @@ const Catalog = () => {
   };
 
   // Derived list using the canonical category and search term
-  const filteredProjects = useMemo(() => {
-    let results = projects;
+  const keywordIndex = useMemo(() => buildKeywordIndex(projects), [projects]);
+  const suggestions = useMemo(
+    () => computeSuggestions(filters.query, keywordIndex),
+    [filters.query, keywordIndex]
+  );
+
+  const searchState = useMemo(() => {
+    let scopedProjects = projects;
 
     if (filters.category) {
       const wanted = String(filters.category).trim().toUpperCase();
-      results = results.filter((project) => getPrimaryCategory(project) === wanted);
+      scopedProjects = scopedProjects.filter(
+        (project) => getPrimaryCategory(project) === wanted
+      );
     }
 
-    if (filters.query) {
-      const search = filters.query.trim().toLowerCase();
-      if (search) {
-        results = results.filter((project) => {
-          const titleMatch = project.title?.toLowerCase().includes(search);
-          const descriptionMatch = project.description?.toLowerCase().includes(search);
-          const tagMatch = Array.isArray(project.tags)
-            ? project.tags.some((tag) => String(tag).toLowerCase().includes(search))
-            : false;
-          return titleMatch || descriptionMatch || tagMatch;
-        });
+    const normalizedQuery = (filters.query || '').toLowerCase();
+    const trimmedQuery = normalizedQuery.trim();
+
+    if (!trimmedQuery) {
+      return {
+        orderedProjects: scopedProjects,
+        topMatches: [],
+        matchingCount: 0,
+        normalizedQuery: '',
+        topMatchIds: [],
+        scores: scopedProjects.map((project) => ({
+          project,
+          score: 0
+        }))
+      };
+    }
+
+    const queryTokens = tokenise(trimmedQuery);
+    const expandedTokens = expandTokensWithSynonyms(queryTokens);
+    expandedTokens.add(trimmedQuery);
+
+    const scored = scopedProjects.map((project) => {
+      const searchableText = [
+        project.title,
+        project.shortDescription,
+        project.description,
+        project.category,
+        ...(Array.isArray(project.tags) ? project.tags : [])
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+
+      let score = 0;
+
+      if (searchableText.includes(trimmedQuery)) {
+        score += 12;
       }
-    }
 
-    return results;
+      const tags = Array.isArray(project.tags)
+        ? project.tags.map((tag) => String(tag).toLowerCase())
+        : [];
+
+      expandedTokens.forEach((token) => {
+        if (token.length < 2) return;
+        if (searchableText.includes(token)) {
+          score += 4;
+        }
+        if (tags.some((tag) => tag.includes(token))) {
+          score += 3;
+        }
+      });
+
+      return {
+        project,
+        score
+      };
+    });
+
+    const matches = scored.filter((entry) => entry.score > 0);
+    const nonMatches = scored.filter((entry) => entry.score <= 0);
+
+    matches.sort((a, b) => b.score - a.score);
+    nonMatches.sort((a, b) => {
+      if (a.project.title && b.project.title) {
+        return a.project.title.localeCompare(b.project.title);
+      }
+      return 0;
+    });
+
+    const ordered =
+      matches.length > 0 ? [...matches, ...nonMatches] : scored.sort((a, b) => b.score - a.score);
+
+    return {
+      orderedProjects: ordered.map((entry) => entry.project),
+      topMatches: matches.slice(0, 12),
+      matchingCount: matches.length,
+      normalizedQuery: trimmedQuery,
+      topMatchIds: matches.slice(0, 5).map((entry) => entry.project.id),
+      scores: ordered
+    };
   }, [projects, filters.category, filters.query]);
 
+  const filteredProjects = searchState.orderedProjects;
+
   useEffect(() => {
-    const trimmedQuery = (filters.query || '').trim();
+    const trimmedQuery = searchState.normalizedQuery;
     if (trimmedQuery.length < 2) {
       lastLoggedSearchRef.current = '';
       return;
     }
 
     const categoryKey = filters.category || 'All';
-    const fingerprint = filteredProjects.slice(0, 5).map((project) => project.id).join('|');
+    const fingerprint = searchState.topMatchIds.join('|');
     const cacheKey = `${categoryKey}::${trimmedQuery.toLowerCase()}::${fingerprint}::${filteredProjects.length}`;
 
     if (lastLoggedSearchRef.current === cacheKey) return;
@@ -121,14 +307,21 @@ const Catalog = () => {
     logCatalogSearch({
       query: trimmedQuery,
       category: categoryKey,
-      totalResults: filteredProjects.length,
-      results: filteredProjects.slice(0, 5).map((project) => ({
+      totalResults: searchState.topMatches.length,
+      results: searchState.topMatches.slice(0, 5).map(({ project }, index) => ({
         id: project.id,
         title: project.title,
-        category: getDisplayCategory(project)
+        category: getDisplayCategory(project),
+        rank: index + 1
       }))
     });
-  }, [filters.category, filters.query, filteredProjects]);
+  }, [
+    filters.category,
+    searchState.normalizedQuery,
+    filteredProjects.length,
+    searchState.topMatchIds,
+    searchState.topMatches
+  ]);
 
   // Schema.org (uses the SAME canonical category to avoid mismatch)
   const itemListSchema = useMemo(() => {
@@ -179,7 +372,22 @@ const Catalog = () => {
           </motion.div>
 
           {/* Pass through without changing your FilterBar API */}
-          <FilterBar filters={filters} onFilterChange={handleFilterChange} />
+          <FilterBar
+            filters={filters}
+            onFilterChange={handleFilterChange}
+            suggestions={suggestions}
+            onSuggestionSelect={(value) =>
+              handleFilterChange({
+                ...filters,
+                query: value
+              })
+            }
+            searchSummary={{
+              query: filters.query,
+              matching: searchState.matchingCount,
+              total: filteredProjects.length
+            }}
+          />
 
           {filteredProjects.length === 0 ? (
             <div className="text-center py-20">
