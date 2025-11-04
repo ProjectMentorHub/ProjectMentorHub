@@ -1,0 +1,59 @@
+name: Deploy React App to GitHub Pages (CRA)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# REQUIRED for Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # CRA is happiest on Node 18 (avoids many build/tooling issues)
+      - name: Use Node 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install
+        run: npm ci || npm i
+
+      - name: Build
+        env:
+          # Some CRA setups break in strict CI. This keeps build non-interactive but tolerant.
+          CI: false
+        run: npm run build
+
+      # Prepare GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
