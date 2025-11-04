@@ -31,11 +31,11 @@ const ProjectCard = ({ project }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -4 }}
-      className="group h-full w-full max-w-lg mx-auto"
+      className="group"
     >
-      <Link to={`/project/${project.id}`} className="block h-full">
-        <div className="bg-white border border-black/10 overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-          <div className="aspect-video bg-gray-200 relative overflow-hidden flex-shrink-0">
+      <Link to={`/project/${project.id}`} className="block">
+        <div className="bg-white border border-black/10 overflow-hidden hover:shadow-xl transition-all duration-300">
+          <div className="aspect-video bg-gray-200 relative overflow-hidden">
             {project.image ? (
               <img 
                 src={project.image} 
@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => {
             )}
           </div>
           
-          <div className="p-6 flex flex-col flex-1">
+          <div className="p-6">
             <div className="flex items-start justify-between mb-2">
               <h3 className="text-lg font-semibold group-hover:text-gray-600 transition-colors line-clamp-1">
                 {project.title}
@@ -57,7 +57,7 @@ const ProjectCard = ({ project }) => {
               </span>
             </div>
             
-            <p className="text-sm text-gray-600 mb-4 line-clamp-2 min-h-[40px]">
+            <p className="text-sm text-gray-600 mb-4 line-clamp-2 h-10">
               {project.description}
             </p>
             
