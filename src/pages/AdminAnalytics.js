@@ -654,6 +654,7 @@ const AdminAnalytics = () => {
   }, [hasAccess]);
 
   const summary = useMemo(() => buildSummary(orders), [orders]);
+  const searchInsights = useMemo(() => buildSearchInsights(searchEvents), [searchEvents]);
 
   const handleTrafficChange = (field, value) => {
     setTrafficMetrics((current) => {
