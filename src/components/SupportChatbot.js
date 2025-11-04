@@ -10,21 +10,46 @@ const normalize = (value = '') =>
     .replace(/\s+/g, ' ')
     .trim();
 
-const scoreMatch = (inputTokens, keywords = [], question = '') => {
-  const normalizedQuestion = normalize(question);
-  let score = 0;
-  keywords.forEach((keyword) => {
-    const normalizedKeyword = normalize(keyword);
-    if (!normalizedKeyword) return;
-    if (normalizedKeyword.split(' ').every((token) => inputTokens.has(token))) {
-      score += normalizedKeyword.length;
-    } else if (normalizedKeyword.length > 3 && normalizedKeyword.split(' ').some((token) => inputTokens.has(token))) {
-      score += normalizedKeyword.length / 2;
+const tokenize = (value = '') => {
+  const normalized = normalize(value);
+  if (!normalized) return new Set();
+  return new Set(normalized.split(' ').filter(Boolean));
+};
+
+const calculateSimilarity = (inputTokens, entryTokens) => {
+  if (!inputTokens.size || !entryTokens.size) return 0;
+  let intersection = 0;
+  entryTokens.forEach((token) => {
+    if (inputTokens.has(token)) {
+      intersection += 1;
     }
   });
-  if (normalizedQuestion && normalizedQuestion.split(' ').some((token) => inputTokens.has(token))) {
-    score += normalizedQuestion.length * 0.2;
+  const union = inputTokens.size + entryTokens.size - intersection;
+  return union === 0 ? 0 : intersection / union;
+};
+
+const scoreMatch = (inputTokens, entry) => {
+  let score = 0;
+  const similarity = calculateSimilarity(inputTokens, entry.tokens);
+  score += similarity * 50;
+
+  let bestKeywordBonus = 0;
+  entry.normalizedKeywords.forEach((keyword) => {
+    const keywordTokens = tokenize(keyword);
+    if (!keywordTokens.size) return;
+    const keywordSimilarity = calculateSimilarity(inputTokens, keywordTokens);
+    if (keywordSimilarity > bestKeywordBonus) {
+      bestKeywordBonus = keywordSimilarity;
+    }
+  });
+  score += bestKeywordBonus * 30;
+
+  if (entry.normalizedQuestion) {
+    const questionTokens = tokenize(entry.normalizedQuestion);
+    const questionSimilarity = calculateSimilarity(inputTokens, questionTokens);
+    score += questionSimilarity * 20;
   }
+
   return score;
 };
 
@@ -34,7 +59,8 @@ const useChatResponder = () => {
       chatbotFaqs.map((faq) => ({
         ...faq,
         normalizedKeywords: (faq.keywords || []).map(normalize),
-        normalizedQuestion: normalize(faq.question)
+        normalizedQuestion: normalize(faq.question),
+        tokens: tokenize([faq.question, ...(faq.keywords || [])].join(' '))
       })),
     []
   );
@@ -48,14 +74,14 @@ const useChatResponder = () => {
     let bestScore = 0;
 
     faqIndex.forEach((entry) => {
-      const score = scoreMatch(tokens, entry.normalizedKeywords, entry.normalizedQuestion);
+      const score = scoreMatch(tokens, entry);
       if (score > bestScore) {
         bestScore = score;
         bestMatch = entry;
       }
     });
 
-    if (bestScore < 4) return null;
+    if (bestScore < 8) return null;
     return bestMatch;
   };
 };
@@ -95,7 +121,7 @@ const SupportChatbot = () => {
       if (match) {
         next.push({
           from: 'bot',
-          text: match.answer
+          text: `${match.question}\n\n${match.answer}`
         });
       } else {
         next.push({
@@ -111,7 +137,7 @@ const SupportChatbot = () => {
     setMessages((prev) => [
       ...prev,
       { from: 'user', text: faq.question },
-      { from: 'bot', text: faq.answer }
+      { from: 'bot', text: `${faq.question}\n\n${faq.answer}` }
     ]);
     setIsOpen(true);
   };
@@ -149,7 +175,7 @@ const SupportChatbot = () => {
                   <div
                     key={`${message.from}-${index}-${message.text.slice(0, 6)}`}
                     className={[
-                      'px-3 py-2 rounded-2xl text-sm leading-relaxed',
+                      'px-3 py-2 rounded-2xl text-sm leading-relaxed whitespace-pre-line',
                       message.from === 'bot'
                         ? 'bg-gray-100 text-gray-800 max-w-[80%]'
                         : 'bg-gray-900 text-white ml-auto max-w-[80%]'
