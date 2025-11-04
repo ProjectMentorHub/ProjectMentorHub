@@ -69,6 +69,7 @@ function App() {
             <Route path="/success" element={<Success />} />
             <Route path="/cancel" element={<Cancel />} />
           </Routes>
+          <SupportChatbot />
           <CartDrawer />
           <AdBanner />
           <Footer />
