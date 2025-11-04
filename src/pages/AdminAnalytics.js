@@ -172,6 +172,24 @@ const formatDateLabel = (date) =>
     ? date.toLocaleDateString('en-IN', { month: 'short', day: 'numeric' })
     : 'Unknown';
 
+const formatRelativeTime = (date) => {
+  if (!date) return '—';
+  const now = Date.now();
+  const diffMs = now - date.getTime();
+  const diffMinutes = Math.round(diffMs / 60000);
+
+  if (diffMinutes < 1) return 'just now';
+  if (diffMinutes < 60) return `${diffMinutes} min${diffMinutes === 1 ? '' : 's'} ago`;
+
+  const diffHours = Math.round(diffMinutes / 60);
+  if (diffHours < 24) return `${diffHours} hr${diffHours === 1 ? '' : 's'} ago`;
+
+  const diffDays = Math.round(diffHours / 24);
+  if (diffDays < 7) return `${diffDays} day${diffDays === 1 ? '' : 's'} ago`;
+
+  return date.toLocaleDateString();
+};
+
 const buildSummary = (orders) => {
   const summary = {
     totalRevenue: 0,
@@ -273,6 +291,86 @@ const buildSummary = (orders) => {
 
   summary.categoryBreakdown = categoryMap;
   return summary;
+};
+
+const buildSearchInsights = (events) => {
+  const aggregates = {
+    totalSearches: 0,
+    topQueries: [],
+    topProjects: [],
+    categoryCounts: []
+  };
+
+  if (!events || events.length === 0) {
+    return aggregates;
+  }
+
+  const queries = new Map();
+  const projects = new Map();
+  const categories = new Map();
+
+  events.forEach((event) => {
+    const query = String(event?.query || '').trim();
+    if (!query) return;
+
+    aggregates.totalSearches += 1;
+    const category = event?.category || 'All';
+    const queryKey = `${category.toLowerCase()}::${query.toLowerCase()}`;
+    const when = toDate(event?.timestamp);
+
+    const queryEntry =
+      queries.get(queryKey) ||
+      {
+        query,
+        category,
+        count: 0,
+        lastSearchAt: when
+      };
+    queryEntry.count += 1;
+    if (when && (!queryEntry.lastSearchAt || when > queryEntry.lastSearchAt)) {
+      queryEntry.lastSearchAt = when;
+    }
+    queries.set(queryKey, queryEntry);
+
+    categories.set(category, (categories.get(category) || 0) + 1);
+
+    asArray(event?.results).forEach((result, index) => {
+      if (!result) return;
+      const id = result.id || result.title || `result-${index}`;
+      const weight = Math.max(1, 6 - (result.rank || index + 1));
+
+      const projectEntry =
+        projects.get(id) ||
+        {
+          id,
+          title: result.title || 'Untitled Project',
+          category: result.category || 'Uncategorised',
+          count: 0,
+          weight: 0
+        };
+
+      projectEntry.count += 1;
+      projectEntry.weight += weight;
+      projectEntry.category = result.category || projectEntry.category;
+
+      projects.set(id, projectEntry);
+    });
+  });
+
+  aggregates.topQueries = Array.from(queries.values())
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 10);
+
+  aggregates.topProjects = Array.from(projects.values())
+    .sort((a, b) => {
+      if (b.weight !== a.weight) return b.weight - a.weight;
+      return b.count - a.count;
+    })
+    .slice(0, 8);
+
+  aggregates.categoryCounts = Array.from(categories.entries()).sort((a, b) => b[1] - a[1]);
+
+  return aggregates;
 };
 
 const TrendChart = ({ data }) => {
