@@ -347,6 +347,7 @@ const Catalog = () => {
     });
   }, [
     filters.category,
+    filters.subCategory,
     searchState.normalizedQuery,
     filteredProjects.length,
     searchState.topMatchIds,
