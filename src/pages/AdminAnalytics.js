@@ -910,6 +910,13 @@ const AdminAnalytics = () => {
     );
   };
 
+  const handleClearSearchEvents = () => {
+    if (typeof window === 'undefined') return;
+    if (!window.confirm('Clear catalog search history stored on this device?')) return;
+    safeSetLocalStorage(SEARCH_EVENTS_KEY, []);
+    setSearchEvents([]);
+  };
+
   if (!hasAccess) {
     return (
       <AdminAccessGate
