@@ -1,5 +1,5 @@
 // src/pages/Catalog.jsx
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ import SEO from '../components/SEO';
 
 import catalogProjects from '../data/catalogProjects';
 import { getDisplayCategory, getPrimaryCategory } from '../utils/projectMetadata';
+import { logCatalogSearch } from '../utils/localAnalytics';
 const VALID_CATEGORIES = new Set(['CSE', 'EEE', 'ECE', 'MECH', 'MATLAB']);
 
 const normalizeFilters = (next = {}) => {
@@ -34,6 +35,7 @@ const parseFiltersFromSearch = (search = '') => {
 const Catalog = () => {
   // Source data
   const projects = catalogProjects;
+  const lastLoggedSearchRef = useRef('');
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -101,6 +103,32 @@ const Catalog = () => {
 
     return results;
   }, [projects, filters.category, filters.query]);
+
+  useEffect(() => {
+    const trimmedQuery = (filters.query || '').trim();
+    if (trimmedQuery.length < 2) {
+      lastLoggedSearchRef.current = '';
+      return;
+    }
+
+    const categoryKey = filters.category || 'All';
+    const fingerprint = filteredProjects.slice(0, 5).map((project) => project.id).join('|');
+    const cacheKey = `${categoryKey}::${trimmedQuery.toLowerCase()}::${fingerprint}::${filteredProjects.length}`;
+
+    if (lastLoggedSearchRef.current === cacheKey) return;
+    lastLoggedSearchRef.current = cacheKey;
+
+    logCatalogSearch({
+      query: trimmedQuery,
+      category: categoryKey,
+      totalResults: filteredProjects.length,
+      results: filteredProjects.slice(0, 5).map((project) => ({
+        id: project.id,
+        title: project.title,
+        category: getDisplayCategory(project)
+      }))
+    });
+  }, [filters.category, filters.query, filteredProjects]);
 
   // Schema.org (uses the SAME canonical category to avoid mismatch)
   const itemListSchema = useMemo(() => {
