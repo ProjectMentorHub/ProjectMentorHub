@@ -1,4 +1,10 @@
-const FilterBar = ({ filters, onFilterChange }) => {
+const FilterBar = ({
+  filters,
+  onFilterChange,
+  suggestions = [],
+  onSuggestionSelect = () => {},
+  searchSummary = null
+}) => {
   const categories = ['All', 'CSE', 'EEE', 'MATLAB'];
 
   const handleCategoryChange = (category) => {
@@ -25,6 +31,32 @@ const FilterBar = ({ filters, onFilterChange }) => {
               placeholder="Search by title, keywords, or description"
               className="w-full px-4 py-2 border border-black/20 focus:outline-none focus:border-black transition-colors"
             />
+            {searchSummary && searchSummary.query && (
+              <p className="mt-2 text-xs text-gray-500">
+                {searchSummary.matching > 0
+                  ? `Highlighting ${searchSummary.matching} relevant project${
+                      searchSummary.matching === 1 ? '' : 's'
+                    } out of ${searchSummary.total}.`
+                  : `No direct matches yet—showing all ${searchSummary.total} projects sorted by relevance.`}
+              </p>
+            )}
+            {Array.isArray(suggestions) && suggestions.length > 0 && (
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <span className="uppercase text-[10px] tracking-widest text-gray-400">
+                  Suggested:
+                </span>
+                {suggestions.slice(0, 8).map((suggestion) => (
+                  <button
+                    key={suggestion.label}
+                    type="button"
+                    onClick={() => onSuggestionSelect(suggestion.label)}
+                    className="px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200 text-xs font-medium text-gray-700 transition"
+                  >
+                    {suggestion.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="flex-1">
