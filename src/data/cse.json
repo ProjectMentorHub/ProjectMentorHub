@@ -406,33 +406,18 @@
     "image": "/images/cse.png"
   },
   {
-    "id": "CSML120",
-    "title": "Test",
-    "description": "Test.",
-    "category": "CSE",
-    "price": 1,
-    "tags": [
-      "CNN",
-      "Computer Vision",
-      "Streamlit",
-      "Python"
-    ],
-    "features": [
-      "Upload and preview sign images",
-      "Confidence score chart visualization",
-      "Trained on German Traffic Sign dataset",
-      "Responsive and attractive Streamlit interface"
-    ],
-    "image": "/images/cse.png"
-  }
-  [
-  {
-    "id": "scwd001",
+    "id": "SCWD001",
     "title": "Personal Portfolio Website",
     "description": "A responsive portfolio website built using HTML, CSS, JavaScript, and Bootstrap to showcase personal skills, achievements, and projects.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 2499,
-    "tags": ["Portfolio", "HTML", "CSS", "JavaScript", "Bootstrap"],
+    "tags": [
+      "Portfolio",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap"
+    ],
     "features": [
       "Fully responsive layout",
       "Animated skill bars and project gallery",
@@ -442,12 +427,18 @@
     "image": "/images/webdev.png"
   },
   {
-    "id": "scwd002",
+    "id": "SCWD002",
     "title": "E-Commerce Website",
     "description": "A complete shopping website built using React and Node.js featuring cart, wishlist, and payment gateway integration.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 4999,
-    "tags": ["E-Commerce", "React", "NodeJS", "Stripe", "MongoDB"],
+    "tags": [
+      "E-Commerce",
+      "React",
+      "NodeJS",
+      "Stripe",
+      "MongoDB"
+    ],
     "features": [
       "Product search and filtering",
       "Add to cart and checkout functionality",
@@ -457,12 +448,17 @@
     "image": "/images/webdev.png"
   },
   {
-    "id": "scwd003",
+    "id": "SCWD003",
     "title": "Restaurant Website with Online Ordering",
     "description": "A food ordering platform built with PHP and MySQL that allows customers to view menus, place orders, and track delivery.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 3999,
-    "tags": ["Restaurant", "PHP", "MySQL", "Bootstrap"],
+    "tags": [
+      "Restaurant",
+      "PHP",
+      "MySQL",
+      "Bootstrap"
+    ],
     "features": [
       "Dynamic food menu and categories",
       "Online order and payment system",
@@ -472,12 +468,17 @@
     "image": "/images/webdev.png"
   },
   {
-    "id": "scwd004",
+    "id": "SCWD004",
     "title": "Travel Agency Website",
     "description": "A visually appealing website built using Django that lets users browse tour packages, book trips, and make online payments.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 4299,
-    "tags": ["Travel", "Django", "Bootstrap", "SQLite"],
+    "tags": [
+      "Travel",
+      "Django",
+      "Bootstrap",
+      "SQLite"
+    ],
     "features": [
       "Tour package listing with details",
       "Online booking form with database storage",
@@ -487,12 +488,17 @@
     "image": "/images/webdev.png"
   },
   {
-    "id": "scwd005",
+    "id": "SCWD005",
     "title": "Online Course Selling Website",
     "description": "A learning management platform built using MERN stack that sells courses and projects to students with instant access links.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 5499,
-    "tags": ["MERN", "Courses", "Stripe", "JWT"],
+    "tags": [
+      "MERN",
+      "Courses",
+      "Stripe",
+      "JWT"
+    ],
     "features": [
       "User login and dashboard for students",
       "Course purchase and payment gateway",
@@ -502,12 +508,17 @@
     "image": "/images/webdev.png"
   },
   {
-    "id": "scwd006",
+    "id": "SCWD006",
     "title": "Event Management Website",
     "description": "A PHP + MySQL platform for scheduling and managing college or corporate events with registration and ticket generation.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 3799,
-    "tags": ["Event", "PHP", "MySQL", "Ticket"],
+    "tags": [
+      "Event",
+      "PHP",
+      "MySQL",
+      "Ticket"
+    ],
     "features": [
       "Event registration and attendee tracking",
       "QR code-based ticket system",
@@ -517,12 +528,17 @@
     "image": "/images/webdev.png"
   },
   {
-    "id": "scwd007",
+    "id": "SCWD007",
     "title": "Hotel Booking Website",
     "description": "A web portal built using Laravel for booking hotel rooms with availability check, reviews, and online payment.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 4599,
-    "tags": ["Laravel", "Hotel", "Booking", "Payment"],
+    "tags": [
+      "Laravel",
+      "Hotel",
+      "Booking",
+      "Payment"
+    ],
     "features": [
       "Room search and filters by price/rating",
       "Booking calendar integration",
@@ -532,12 +548,17 @@
     "image": "/images/webdev.png"
   },
   {
-    "id": "scwd008",
+    "id": "SCWD008",
     "title": "Online Portfolio Generator",
     "description": "A React + Firebase app that lets users design and publish their own portfolio websites using drag-and-drop templates.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 3999,
-    "tags": ["React", "Firebase", "Portfolio", "Hosting"],
+    "tags": [
+      "React",
+      "Firebase",
+      "Portfolio",
+      "Hosting"
+    ],
     "features": [
       "User authentication via Google",
       "Live preview and publish option",
@@ -547,12 +568,17 @@
     "image": "/images/webdev.png"
   },
   {
-    "id": "scwd009",
+    "id": "SCWD009",
     "title": "Blog Website with Admin Panel",
     "description": "A CMS-style blog platform built using Node.js and Express allowing users to write, edit, and comment on articles.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 3599,
-    "tags": ["Blog", "NodeJS", "Express", "MongoDB"],
+    "tags": [
+      "Blog",
+      "NodeJS",
+      "Express",
+      "MongoDB"
+    ],
     "features": [
       "Admin dashboard for managing posts",
       "User comment and like system",
@@ -562,12 +588,17 @@
     "image": "/images/webdev.png"
   },
   {
-    "id": "scwd010",
+    "id": "SCWD010",
     "title": "Real Estate Listing Website",
     "description": "A full-stack web app for property listings built using Django and Bootstrap with search and inquiry forms.",
-    "category": "Web Development",
+    "category": "CSE",
     "price": 4499,
-    "tags": ["Real Estate", "Django", "Bootstrap", "SQLite"],
+    "tags": [
+      "Real Estate",
+      "Django",
+      "Bootstrap",
+      "SQLite"
+    ],
     "features": [
       "Property listing with images and map",
       "Inquiry and contact forms",
@@ -576,6 +607,4 @@
     ],
     "image": "/images/webdev.png"
   }
-]
-
 ]
