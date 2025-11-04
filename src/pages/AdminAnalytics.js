@@ -859,7 +859,7 @@ const AdminAnalytics = () => {
   useEffect(() => {
     if (!hasAccess || typeof window === 'undefined') return;
     const handleStorage = (event) => {
-      if (![ADMIN_ORDERS_KEY, 'orders', TRAFFIC_METRICS_KEY].includes(event.key)) {
+      if (![ADMIN_ORDERS_KEY, 'orders', TRAFFIC_METRICS_KEY, SEARCH_EVENTS_KEY].includes(event.key)) {
         return;
       }
       setOrders(
