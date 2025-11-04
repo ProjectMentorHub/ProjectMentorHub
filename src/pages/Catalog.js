@@ -177,7 +177,9 @@ const Catalog = () => {
   const handleFilterChange = (next) => {
     const normalized = normalizeFilters(next);
     setFilters((prev) =>
-      prev.category === normalized.category && prev.query === normalized.query
+      prev.category === normalized.category &&
+      prev.query === normalized.query &&
+      prev.subCategory === normalized.subCategory
         ? prev
         : normalized
     );
@@ -185,6 +187,7 @@ const Catalog = () => {
     const params = new URLSearchParams();
     if (normalized.category) params.set('category', normalized.category);
     if (normalized.query) params.set('query', normalized.query);
+    if (normalized.subCategory) params.set('sub', normalized.subCategory);
 
     const nextSearch = params.toString();
     const currentSearch = location.search.startsWith('?')
@@ -217,6 +220,16 @@ const Catalog = () => {
       scopedProjects = scopedProjects.filter(
         (project) => getPrimaryCategory(project) === wanted
       );
+    }
+
+    if (filters.category === 'CSE' && filters.subCategory) {
+      scopedProjects = scopedProjects.filter((project) => {
+        const sub = getCseSubCategory(project);
+        if (filters.subCategory === 'ML') return sub === 'ML';
+        if (filters.subCategory === 'WEB') return sub === 'WEB';
+        if (filters.subCategory === 'OTHER') return sub === 'OTHER';
+        return true;
+      });
     }
 
     const normalizedQuery = (filters.query || '').toLowerCase();
@@ -300,7 +313,7 @@ const Catalog = () => {
       topMatchIds: matches.slice(0, 5).map((entry) => entry.project.id),
       scores: ordered
     };
-  }, [projects, filters.category, filters.query]);
+  }, [projects, filters.category, filters.subCategory, filters.query]);
 
   const filteredProjects = searchState.orderedProjects;
 
