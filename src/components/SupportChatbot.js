@@ -86,36 +86,25 @@ const SupportChatbot = () => {
     const trimmed = input.trim();
     if (!trimmed) return;
 
-    setMessages((prev) => [...prev, { from: 'user', text: trimmed }]);
     setInput('');
 
     const match = getResponse(trimmed);
 
-    if (match) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          from: 'user',
-          text: trimmed
-        },
-        {
+    setMessages((prev) => {
+      const next = [...prev, { from: 'user', text: trimmed }];
+      if (match) {
+        next.push({
           from: 'bot',
           text: match.answer
-        }
-      ]);
-    } else {
-      setMessages((prev) => [
-        ...prev,
-        {
-          from: 'user',
-          text: trimmed
-        },
-        {
+        });
+      } else {
+        next.push({
           from: 'bot',
           text: `I couldn't find a ready answer for that. Please drop us a message at ${CONTACT_EMAIL} and we'll help you within one business day.`
-        }
-      ]);
-    }
+        });
+      }
+      return next;
+    });
   };
 
   const handleQuickQuestion = (faq) => {
