@@ -433,7 +433,7 @@ const StatCard = ({ label, value, helper, tone = 'dark' }) => (
     ].join(' ')}
   >
     <p className="text-sm uppercase tracking-wide text-white/60">{label}</p>
-    <p className="mt-3 text-3xl font-semibold">{value}</p>
+    <p className="mt-3 text-3xl font-semibold text-white">{value}</p>
     {helper && <p className="mt-2 text-sm text-white/60">{helper}</p>}
   </div>
 );
