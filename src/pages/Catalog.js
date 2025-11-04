@@ -9,9 +9,15 @@ import AdSidebar from '../components/AdSidebar';
 import SEO from '../components/SEO';
 
 import catalogProjects from '../data/catalogProjects';
-import { getDisplayCategory, getPrimaryCategory } from '../utils/projectMetadata';
+import { getDisplayCategory, getPrimaryCategory, getCseSubCategory } from '../utils/projectMetadata';
 import { logCatalogSearch } from '../utils/localAnalytics';
 const VALID_CATEGORIES = new Set(['CSE', 'EEE', 'ECE', 'MECH', 'MATLAB']);
+const VALID_SUBCATEGORIES = new Set(['ML', 'WEB', 'OTHER']);
+const CSE_SUBCATEGORY_OPTIONS = [
+  { value: 'ML', label: 'Machine Learning' },
+  { value: 'WEB', label: 'Web Development' },
+  { value: 'OTHER', label: 'Other (Non-Android)' }
+];
 
 const normalizeFilters = (next = {}) => {
   const rawCategory = next?.category ? String(next.category).trim().toUpperCase() : '';
