@@ -634,6 +634,115 @@ const CategoryBreakdown = ({ categories }) => {
   );
 };
 
+const SearchQueriesTable = ({ queries, totalSearches }) => (
+  <div className="rounded-3xl border border-black/10 bg-white p-6">
+    <div className="flex items-start justify-between gap-3">
+      <div>
+        <h3 className="text-xl font-semibold text-gray-900">Top Search Queries</h3>
+        <p className="text-sm text-gray-500">
+          Unique combinations of query and category captured from catalog searches.
+        </p>
+      </div>
+      <span className="inline-flex items-center justify-center px-3 py-1 rounded-xl bg-gray-100 text-xs font-semibold text-gray-700 uppercase">
+        {formatNumber(totalSearches)} total
+      </span>
+    </div>
+    <div className="mt-4 space-y-3">
+      {queries.length === 0 && (
+        <p className="text-sm text-gray-500">
+          Start searching in the catalog to populate this list.
+        </p>
+      )}
+      {queries.map((entry, index) => (
+        <div
+          key={`${entry.category}-${entry.query}-${index}`}
+          className="flex items-center justify-between gap-4 rounded-2xl border border-black/5 px-4 py-3"
+        >
+          <div>
+            <p className="text-sm font-semibold text-gray-900">{entry.query}</p>
+            <p className="text-xs text-gray-500 uppercase tracking-wide">
+              {entry.category} • {formatRelativeTime(entry.lastSearchAt)}
+            </p>
+          </div>
+          <span className="text-sm font-semibold text-gray-900">
+            {formatNumber(entry.count)}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+const TopSearchedProjectsCard = ({ projects }) => (
+  <div className="rounded-3xl border border-black/10 bg-white p-6">
+    <h3 className="text-xl font-semibold text-gray-900 mb-4">Top Searched Projects</h3>
+    {projects.length === 0 ? (
+      <p className="text-sm text-gray-500">
+        Once users search the catalog, the most frequently surfaced projects appear here.
+      </p>
+    ) : (
+      <div className="space-y-4">
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            className="flex items-center justify-between gap-3 rounded-2xl border border-black/5 px-4 py-3"
+          >
+            <div>
+              <p className="text-sm font-semibold text-gray-900">
+                {index + 1}. {project.title}
+              </p>
+              <p className="text-xs text-gray-500 uppercase tracking-wide">
+                {project.category}
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-sm font-semibold text-gray-900">{formatNumber(project.count)} hits</p>
+              <p className="text-xs text-gray-500">Weight {project.weight.toFixed(1)}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+);
+
+const SearchCategoryBreakdown = ({ categories }) => {
+  if (!categories || categories.length === 0) {
+    return (
+      <div className="rounded-3xl border border-dashed border-black/10 bg-white p-6 text-sm text-gray-500">
+        We&apos;ll display category-level search interest once searches are recorded.
+      </div>
+    );
+  }
+
+  const total = categories.reduce((sum, [, value]) => sum + value, 0) || 1;
+
+  return (
+    <div className="rounded-3xl border border-black/10 bg-white p-6">
+      <h3 className="text-xl font-semibold text-gray-900 mb-4">Searches by Category</h3>
+      <div className="space-y-3">
+        {categories.map(([category, value]) => {
+          const percentage = (value / total) * 100;
+          return (
+            <div key={category}>
+              <div className="flex items-center justify-between text-sm font-medium text-gray-900">
+                <span>{category}</span>
+                <span>{formatNumber(value)} ({percentage.toFixed(1)}%)</span>
+              </div>
+              <div className="h-2 rounded-full bg-gray-100 overflow-hidden mt-1">
+                <div
+                  className="h-full bg-gray-900"
+                  style={{ width: `${Math.min(100, percentage)}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 const DataControlsCard = ({ onImport, onClearImported, importedCount }) => {
   const inputRef = useRef(null);
 
