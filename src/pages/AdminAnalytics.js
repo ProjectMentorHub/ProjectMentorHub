@@ -816,9 +816,10 @@ const DataControlsCard = ({
           </button>
         )}
       </div>
-      <p className="text-xs text-gray-400">
-        Imported records stored under `{ADMIN_ORDERS_KEY}`. Delete them anytime to reset.
-      </p>
+      <div className="text-xs text-gray-400 space-y-1">
+        <p>Imported records stored under `{ADMIN_ORDERS_KEY}`.</p>
+        <p>Search events stored under `{SEARCH_EVENTS_KEY}`.</p>
+      </div>
     </div>
   );
 };
