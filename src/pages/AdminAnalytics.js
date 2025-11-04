@@ -618,6 +618,7 @@ const AdminAnalytics = () => {
   const [trafficMetrics, setTrafficMetrics] = useState(defaultTrafficMetrics);
   const [importedOrdersCount, setImportedOrdersCount] = useState(0);
   const [analyticsEmbedUrl, setAnalyticsEmbedUrl] = useState('');
+  const [searchEvents, setSearchEvents] = useState([]);
 
   useEffect(() => {
     if (!hasAccess) return;
@@ -628,6 +629,7 @@ const AdminAnalytics = () => {
     setOrders(mergedOrders);
     setImportedOrdersCount(asArray(safeGetLocalStorage(ADMIN_ORDERS_KEY, [])).length);
     setTrafficMetrics(safeGetLocalStorage(TRAFFIC_METRICS_KEY, defaultTrafficMetrics));
+    setSearchEvents(asArray(safeGetLocalStorage(SEARCH_EVENTS_KEY, [])));
     setAnalyticsEmbedUrl(readAnalyticsEmbedUrl());
   }, [hasAccess]);
 
@@ -645,6 +647,7 @@ const AdminAnalytics = () => {
       );
       setImportedOrdersCount(asArray(safeGetLocalStorage(ADMIN_ORDERS_KEY, [])).length);
       setTrafficMetrics(safeGetLocalStorage(TRAFFIC_METRICS_KEY, defaultTrafficMetrics));
+      setSearchEvents(asArray(safeGetLocalStorage(SEARCH_EVENTS_KEY, [])));
     };
     window.addEventListener('storage', handleStorage);
     return () => window.removeEventListener('storage', handleStorage);
