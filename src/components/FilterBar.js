@@ -3,16 +3,27 @@ const FilterBar = ({
   onFilterChange,
   suggestions = [],
   onSuggestionSelect = () => {},
-  searchSummary = null
+  searchSummary = null,
+  subcategories = [],
+  onSubcategoryChange = () => {}
 }) => {
   const categories = ['All', 'CSE', 'EEE', 'MATLAB'];
 
   const handleCategoryChange = (category) => {
-    onFilterChange({ ...filters, category });
+    onFilterChange({
+      ...filters,
+      category,
+      subCategory: category === 'CSE' ? filters.subCategory : ''
+    });
   };
 
   const handleSearchChange = (event) => {
     onFilterChange({ ...filters, query: event.target.value });
+  };
+
+  const handleSubcategoryChange = (value) => {
+    const normalized = value === filters.subCategory ? '' : value;
+    onSubcategoryChange(normalized);
   };
 
   return (
@@ -55,6 +66,40 @@ const FilterBar = ({
                     {suggestion.label}
                   </button>
                 ))}
+              </div>
+            )}
+            {filters.category === 'CSE' && subcategories.length > 0 && (
+              <div className="mt-4">
+                <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">
+                  CSE Specialisations
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleSubcategoryChange('')}
+                    className={`px-3 py-1 rounded-full border text-xs font-medium transition ${
+                      !filters.subCategory
+                        ? 'bg-black text-white border-black'
+                        : 'border-black/30 text-gray-700 hover:bg-gray-100'
+                    }`}
+                  >
+                    All CSE
+                  </button>
+                  {subcategories.map((option) => (
+                    <button
+                      key={option.value}
+                      type="button"
+                      onClick={() => handleSubcategoryChange(option.value)}
+                      className={`px-3 py-1 rounded-full border text-xs font-medium transition ${
+                        filters.subCategory === option.value
+                          ? 'bg-black text-white border-black'
+                          : 'border-black/30 text-gray-700 hover:bg-gray-100'
+                      }`}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
           </div>
