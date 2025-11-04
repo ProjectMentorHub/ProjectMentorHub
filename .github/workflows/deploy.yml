@@ -1,18 +1,30 @@
+# .github/workflows/deploy.yml
 name: Deploy React App to GitHub Pages (CRA)
 
 on:
   push:
     branches: [ main ]
+    # Only redeploy when app/build-related files change
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'yarn.lock'
+      - 'postcss.config.js'
+      - 'tailwind.config.js'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
-# REQUIRED for Pages
+# Required for Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Ensure only one deploy runs at a time; cancel older runs
 concurrency:
-  group: "pages"
+  group: pages-deploy
   cancel-in-progress: true
 
 jobs:
@@ -22,23 +34,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # CRA is happiest on Node 18 (avoids many build/tooling issues)
-      - name: Use Node 18
+      # CRA is most stable on Node 18
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'npm'
 
-      - name: Install
+      - name: Install deps
         run: npm ci || npm i
 
       - name: Build
+        # Set CI:false if CRA warnings are failing the build
         env:
-          # Some CRA setups break in strict CI. This keeps build non-interactive but tolerant.
           CI: false
         run: npm run build
 
-      # Prepare GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
