@@ -46,8 +46,19 @@ export const getPrimaryCategory = (project = {}) => {
   return 'CSE';
 };
 
+const escapeRegExp = (value = '') =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 const keywordMatch = (text, terms = []) =>
-  terms.some((term) => text.includes(term));
+  terms.some((term) => {
+    const normalized = String(term || '').toLowerCase().trim();
+    if (!normalized) return false;
+    if (normalized.length <= 2) {
+      const pattern = new RegExp(`\\b${escapeRegExp(normalized)}\\b`, 'i');
+      return pattern.test(text);
+    }
+    return text.includes(normalized);
+  });
 
 const getProjectSearchText = (project = {}) => {
   const base = [
