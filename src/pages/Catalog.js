@@ -376,12 +376,23 @@ const Catalog = () => {
             filters={filters}
             onFilterChange={handleFilterChange}
             suggestions={suggestions}
-            onSuggestionSelect={(value) =>
+            onSuggestionSelect={(value) => {
+              const current = String(filters.query || '').replace(/\s+$/, '');
+              if (!current) {
+                handleFilterChange({
+                  ...filters,
+                  query: value
+                });
+                return;
+              }
+
+              const parts = current.split(/\s+/);
+              parts[parts.length - 1] = value;
               handleFilterChange({
                 ...filters,
-                query: value
-              })
-            }
+                query: parts.join(' ')
+              });
+            }}
             searchSummary={{
               query: filters.query,
               matching: searchState.matchingCount,
