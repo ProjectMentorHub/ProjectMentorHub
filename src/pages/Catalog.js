@@ -23,18 +23,22 @@ const normalizeFilters = (next = {}) => {
   const rawCategory = next?.category ? String(next.category).trim().toUpperCase() : '';
   const category = VALID_CATEGORIES.has(rawCategory) ? rawCategory : '';
   const query = next?.query ? String(next.query).slice(0, 120) : '';
+  const rawSub = next?.subCategory ? String(next.subCategory).trim().toUpperCase() : '';
+  const subCategory = category === 'CSE' && VALID_SUBCATEGORIES.has(rawSub) ? rawSub : '';
 
-  return { category, query };
+  return { category, query, subCategory };
 };
 
 const parseFiltersFromSearch = (search = '') => {
   const params = new URLSearchParams(search);
   const categoryParam = params.get('category');
   const queryParam = params.get('query') ?? params.get('q');
+  const subParam = params.get('sub') ?? params.get('subcategory');
 
   return normalizeFilters({
     category: categoryParam,
-    query: queryParam
+    query: queryParam,
+    subCategory: subParam
   });
 };
 
@@ -162,7 +166,11 @@ const Catalog = () => {
   useEffect(() => {
     const next = parseFiltersFromSearch(location.search);
     setFilters((prev) =>
-      prev.category === next.category && prev.query === next.query ? prev : next
+      prev.category === next.category &&
+      prev.query === next.query &&
+      prev.subCategory === next.subCategory
+        ? prev
+        : next
     );
   }, [location.search]);
 
