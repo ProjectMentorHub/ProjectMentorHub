@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import CartDrawer from './components/CartDrawer';
 import AdBanner from './components/AdBanner';
 import Footer from './components/Footer';
+import SupportChatbot from './components/SupportChatbot';
 import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
