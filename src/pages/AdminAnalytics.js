@@ -1031,12 +1031,35 @@ const AdminAnalytics = () => {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25, duration: 0.4 }}
+          transition={{ delay: 0.22, duration: 0.4 }}
+          className="grid gap-6 lg:grid-cols-[2fr,3fr]"
+        >
+          <SearchQueriesTable
+            queries={searchInsights.topQueries}
+            totalSearches={searchInsights.totalSearches}
+          />
+          <TopSearchedProjectsCard projects={searchInsights.topProjects} />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.24, duration: 0.4 }}
+        >
+          <SearchCategoryBreakdown categories={searchInsights.categoryCounts} />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.26, duration: 0.4 }}
         >
           <DataControlsCard
             onImport={handleImportOrders}
             onClearImported={handleClearImported}
             importedCount={importedOrdersCount}
+            onClearSearchEvents={handleClearSearchEvents}
+            searchEventCount={searchInsights.totalSearches}
           />
         </motion.div>
       </div>
