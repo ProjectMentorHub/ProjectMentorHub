@@ -3,9 +3,11 @@ import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import AdminAccessGate from '../components/AdminAccessGate';
 import useAdminAccess from '../hooks/useAdminAccess';
+import { ANALYTICS_STORAGE } from '../utils/localAnalytics';
 
 const ADMIN_ORDERS_KEY = 'pmh:admin:orders:v1';
 const TRAFFIC_METRICS_KEY = 'pmh:admin:traffic:v1';
+const { SEARCH_EVENTS_KEY } = ANALYTICS_STORAGE;
 
 const defaultTrafficMetrics = {
   visitors24h: 0,
