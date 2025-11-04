@@ -964,7 +964,7 @@ const AdminAnalytics = () => {
           transition={{ delay: 0.05, duration: 0.4 }}
           className="grid gap-4 md:grid-cols-2 lg:grid-cols-4"
         >
-          <StatCard
+          <LightStatCard
             label="Total Revenue"
             value={formatCurrency(summary.totalRevenue)}
             helper="Aggregated from imported orders."
