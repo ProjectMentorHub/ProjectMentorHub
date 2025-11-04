@@ -222,13 +222,9 @@ const Catalog = () => {
     }
 
     if (filters.category === 'CSE' && filters.subCategory) {
-      scopedProjects = scopedProjects.filter((project) => {
-        const sub = getCseSubCategory(project);
-        if (filters.subCategory === 'ML') return sub === 'ML';
-        if (filters.subCategory === 'WEB') return sub === 'WEB';
-        if (filters.subCategory === 'OTHER') return sub === 'OTHER';
-        return true;
-      });
+      scopedProjects = scopedProjects.filter(
+        (project) => getCseSubCategory(project) === filters.subCategory
+      );
     }
 
     const normalizedQuery = (filters.query || '').toLowerCase();
