@@ -45,3 +45,107 @@ export const getPrimaryCategory = (project = {}) => {
   // Treat everything else (including GENERAL) as CSE to avoid an empty filter bucket.
   return 'CSE';
 };
+
+const keywordMatch = (text, terms = []) =>
+  terms.some((term) => text.includes(term));
+
+const getProjectSearchText = (project = {}) => {
+  const base = [
+    project.title,
+    project.shortDescription,
+    project.description,
+    project.category,
+    ...(Array.isArray(project.tags) ? project.tags : [])
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+  return base;
+};
+
+const ANDROID_KEYWORDS = [
+  'android',
+  'apk',
+  'android studio',
+  'kotlin',
+  'java app',
+  'mobile app',
+  'mobile application',
+  'play store',
+  'flutter'
+];
+
+const ML_KEYWORDS = [
+  'machine learning',
+  'ml',
+  'deep learning',
+  'artificial intelligence',
+  'ai',
+  'neural network',
+  'neural-net',
+  'cnn',
+  'rnn',
+  'lstm',
+  'predict',
+  'prediction',
+  'predictive',
+  'classification',
+  'regression',
+  'svm',
+  'support vector',
+  'random forest',
+  'data science',
+  'data mining',
+  'nlp',
+  'natural language',
+  'sentiment analysis',
+  'k-means',
+  'logistic regression',
+  'decision tree'
+];
+
+const WEB_KEYWORDS = [
+  'web',
+  'website',
+  'webapp',
+  'web app',
+  'html',
+  'css',
+  'javascript',
+  'react',
+  'next.js',
+  'nextjs',
+  'vue',
+  'angular',
+  'frontend',
+  'front-end',
+  'backend',
+  'back-end',
+  'full stack',
+  'full-stack',
+  'mern',
+  'mean',
+  'django',
+  'flask',
+  'node',
+  'express',
+  'php',
+  'laravel',
+  'wordpress',
+  'tailwind',
+  'bootstrap'
+];
+
+export const getCseSubCategory = (project = {}) => {
+  const text = getProjectSearchText(project);
+  if (!text) return 'OTHER';
+
+  if (keywordMatch(text, ANDROID_KEYWORDS)) return 'ANDROID';
+  if (keywordMatch(text, ML_KEYWORDS)) return 'ML';
+  if (keywordMatch(text, WEB_KEYWORDS)) return 'WEB';
+
+  return 'OTHER';
+};
+
+export const isAndroidProject = (project = {}) =>
+  getCseSubCategory(project) === 'ANDROID';
