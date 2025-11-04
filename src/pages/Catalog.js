@@ -429,6 +429,14 @@ const Catalog = () => {
               matching: searchState.matchingCount,
               total: filteredProjects.length
             }}
+            subcategories={CSE_SUBCATEGORY_OPTIONS}
+            onSubcategoryChange={(value) =>
+              handleFilterChange({
+                ...filters,
+                category: 'CSE',
+                subCategory: value
+              })
+            }
           />
 
           {filteredProjects.length === 0 ? (
