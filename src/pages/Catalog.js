@@ -324,7 +324,10 @@ const Catalog = () => {
       return;
     }
 
-    const categoryKey = filters.category || 'All';
+    const categoryKey =
+      filters.category === 'CSE' && filters.subCategory
+        ? `CSE:${filters.subCategory}`
+        : filters.category || 'All';
     const fingerprint = searchState.topMatchIds.join('|');
     const cacheKey = `${categoryKey}::${trimmedQuery.toLowerCase()}::${fingerprint}::${filteredProjects.length}`;
 
