@@ -16,6 +16,7 @@ import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
 import Orders from './pages/Dashboard';
 import Admin from './pages/Admin';
+import AdminAnalytics from './pages/AdminAnalytics';
 import Success from './pages/Success';
 import Cancel from './pages/Cancel';
 import RequireAuth from './components/RequireAuth';
@@ -63,6 +64,7 @@ function App() {
                 </RequireAuth>
               }
             />
+            <Route path="/admin/dashboard" element={<AdminAnalytics />} />
             <Route path="/success" element={<Success />} />
             <Route path="/cancel" element={<Cancel />} />
           </Routes>
