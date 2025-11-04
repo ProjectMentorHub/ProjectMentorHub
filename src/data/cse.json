@@ -425,4 +425,157 @@
     ],
     "image": "/images/cse.png"
   }
+  [
+  {
+    "id": "scwd001",
+    "title": "Personal Portfolio Website",
+    "description": "A responsive portfolio website built using HTML, CSS, JavaScript, and Bootstrap to showcase personal skills, achievements, and projects.",
+    "category": "Web Development",
+    "price": 2499,
+    "tags": ["Portfolio", "HTML", "CSS", "JavaScript", "Bootstrap"],
+    "features": [
+      "Fully responsive layout",
+      "Animated skill bars and project gallery",
+      "Contact form with email integration",
+      "Dark and light mode toggle"
+    ],
+    "image": "/images/webdev.png"
+  },
+  {
+    "id": "scwd002",
+    "title": "E-Commerce Website",
+    "description": "A complete shopping website built using React and Node.js featuring cart, wishlist, and payment gateway integration.",
+    "category": "Web Development",
+    "price": 4999,
+    "tags": ["E-Commerce", "React", "NodeJS", "Stripe", "MongoDB"],
+    "features": [
+      "Product search and filtering",
+      "Add to cart and checkout functionality",
+      "Payment integration with Stripe or Razorpay",
+      "Admin panel for inventory and orders"
+    ],
+    "image": "/images/webdev.png"
+  },
+  {
+    "id": "scwd003",
+    "title": "Restaurant Website with Online Ordering",
+    "description": "A food ordering platform built with PHP and MySQL that allows customers to view menus, place orders, and track delivery.",
+    "category": "Web Development",
+    "price": 3999,
+    "tags": ["Restaurant", "PHP", "MySQL", "Bootstrap"],
+    "features": [
+      "Dynamic food menu and categories",
+      "Online order and payment system",
+      "Order tracking dashboard",
+      "Email/SMS order confirmation"
+    ],
+    "image": "/images/webdev.png"
+  },
+  {
+    "id": "scwd004",
+    "title": "Travel Agency Website",
+    "description": "A visually appealing website built using Django that lets users browse tour packages, book trips, and make online payments.",
+    "category": "Web Development",
+    "price": 4299,
+    "tags": ["Travel", "Django", "Bootstrap", "SQLite"],
+    "features": [
+      "Tour package listing with details",
+      "Online booking form with database storage",
+      "Admin dashboard for managing tours",
+      "Responsive design for all devices"
+    ],
+    "image": "/images/webdev.png"
+  },
+  {
+    "id": "scwd005",
+    "title": "Online Course Selling Website",
+    "description": "A learning management platform built using MERN stack that sells courses and projects to students with instant access links.",
+    "category": "Web Development",
+    "price": 5499,
+    "tags": ["MERN", "Courses", "Stripe", "JWT"],
+    "features": [
+      "User login and dashboard for students",
+      "Course purchase and payment gateway",
+      "Video lectures and PDF downloads",
+      "Admin panel for managing courses"
+    ],
+    "image": "/images/webdev.png"
+  },
+  {
+    "id": "scwd006",
+    "title": "Event Management Website",
+    "description": "A PHP + MySQL platform for scheduling and managing college or corporate events with registration and ticket generation.",
+    "category": "Web Development",
+    "price": 3799,
+    "tags": ["Event", "PHP", "MySQL", "Ticket"],
+    "features": [
+      "Event registration and attendee tracking",
+      "QR code-based ticket system",
+      "Email confirmation and reminders",
+      "Admin dashboard for analytics"
+    ],
+    "image": "/images/webdev.png"
+  },
+  {
+    "id": "scwd007",
+    "title": "Hotel Booking Website",
+    "description": "A web portal built using Laravel for booking hotel rooms with availability check, reviews, and online payment.",
+    "category": "Web Development",
+    "price": 4599,
+    "tags": ["Laravel", "Hotel", "Booking", "Payment"],
+    "features": [
+      "Room search and filters by price/rating",
+      "Booking calendar integration",
+      "Razorpay payment gateway",
+      "Admin room management panel"
+    ],
+    "image": "/images/webdev.png"
+  },
+  {
+    "id": "scwd008",
+    "title": "Online Portfolio Generator",
+    "description": "A React + Firebase app that lets users design and publish their own portfolio websites using drag-and-drop templates.",
+    "category": "Web Development",
+    "price": 3999,
+    "tags": ["React", "Firebase", "Portfolio", "Hosting"],
+    "features": [
+      "User authentication via Google",
+      "Live preview and publish option",
+      "Template customization tools",
+      "Deployed directly to Firebase Hosting"
+    ],
+    "image": "/images/webdev.png"
+  },
+  {
+    "id": "scwd009",
+    "title": "Blog Website with Admin Panel",
+    "description": "A CMS-style blog platform built using Node.js and Express allowing users to write, edit, and comment on articles.",
+    "category": "Web Development",
+    "price": 3599,
+    "tags": ["Blog", "NodeJS", "Express", "MongoDB"],
+    "features": [
+      "Admin dashboard for managing posts",
+      "User comment and like system",
+      "Image uploads via Cloudinary",
+      "SEO-friendly routing and slugs"
+    ],
+    "image": "/images/webdev.png"
+  },
+  {
+    "id": "scwd010",
+    "title": "Real Estate Listing Website",
+    "description": "A full-stack web app for property listings built using Django and Bootstrap with search and inquiry forms.",
+    "category": "Web Development",
+    "price": 4499,
+    "tags": ["Real Estate", "Django", "Bootstrap", "SQLite"],
+    "features": [
+      "Property listing with images and map",
+      "Inquiry and contact forms",
+      "Admin dashboard for property upload",
+      "Responsive, modern interface"
+    ],
+    "image": "/images/webdev.png"
+  }
+]
+
 ]
