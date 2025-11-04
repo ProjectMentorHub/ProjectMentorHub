@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiOutlineChatBubbleBottomCenterText, HiXMark, HiPaperAirplane } from 'react-icons/hi2';
+import { HiOutlineChatAlt2, HiX, HiPaperAirplane } from 'react-icons/hi';
 import chatbotFaqs, { CONTACT_EMAIL } from '../data/chatbotFaqs';
 
 const normalize = (value = '') =>
@@ -140,7 +140,7 @@ const SupportChatbot = () => {
                   className="rounded-full p-1 hover:bg-white/10 transition"
                   aria-label="Close chat"
                 >
-                  <HiXMark className="h-5 w-5" />
+                  <HiX className="h-5 w-5" />
                 </button>
               </div>
 
@@ -208,7 +208,7 @@ const SupportChatbot = () => {
           whileTap={{ scale: 0.95 }}
           aria-label="Open chat support"
         >
-          <HiOutlineChatBubbleBottomCenterText className="h-7 w-7" />
+          <HiOutlineChatAlt2 className="h-7 w-7" />
         </motion.button>
       </div>
     </>
