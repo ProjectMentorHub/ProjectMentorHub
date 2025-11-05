@@ -18,7 +18,7 @@
       "Accuracy visualization and confusion matrix analysis",
       "Web app demo using Streamlit"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML102",
@@ -38,7 +38,7 @@
       "Includes full confusion matrix and ROC curve plots",
       "Web app demo using Flask"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML103",
@@ -59,7 +59,7 @@
       "Accuracy >95% with confusion matrix",
       "Streamlit GUI for real-time prediction"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML104",
@@ -79,7 +79,7 @@
       "R² score and MSE evaluation metrics",
       "Data visualization with Plotly"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML105",
@@ -99,7 +99,7 @@
       "Real-time disease detection with webcam integration",
       "Web app demo using Streamlit"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML106",
@@ -120,7 +120,7 @@
       "Model comparison: Logistic Regression vs Random Forest",
       "Deployed Streamlit UI with animated results"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML107",
@@ -141,7 +141,7 @@
       "Displays word importance visualization",
       "Heroku-ready Flask deployment"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML108",
@@ -162,7 +162,7 @@
       "Built with TensorFlow + Keras + OpenCV",
       "Responsive UI layout and dark mode theme"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML109",
@@ -182,7 +182,7 @@
       "Dynamic R² and MSE visualization",
       "CSV upload support for batch prediction"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML110",
@@ -203,7 +203,7 @@
       "AI diagnosis + confidence scores",
       "Streamlit dashboard with tabbed layout"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML111",
@@ -223,7 +223,7 @@
       "MFCC feature extraction display",
       "Interactive UI built with HTML + Bootstrap"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML112",
@@ -243,7 +243,7 @@
       "Similarity score against job description",
       "Interactive bar chart for skill gap analysis"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML113",
@@ -263,7 +263,7 @@
       "Algorithm comparison chart",
       "Interactive confusion matrix and ROC curves"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML114",
@@ -283,7 +283,7 @@
       "LSTM model backend with Flask API",
       "Displays emojis and emotion graphs dynamically"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML115",
@@ -303,7 +303,7 @@
       "TensorFlow Lite optimization for faster inference",
       "Streamlit UI with camera toggle"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML116",
@@ -323,7 +323,7 @@
       "Switch between ARIMA and LSTM",
       "Dynamic matplotlib + Plotly visualization"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML117",
@@ -343,7 +343,7 @@
       "Histogram and segmentation mask overlay",
       "Streamlit UI with multiple tabs"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML118",
@@ -363,7 +363,7 @@
       "Real-time map marker updates with predicted prices",
       "Beautiful UI with Bootstrap and JS interactivity"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML119",
@@ -383,7 +383,7 @@
       "Response time optimization with caching",
       "Export chat logs as text files"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "CSML120",
@@ -403,7 +403,7 @@
       "Trained on German Traffic Sign dataset",
       "Responsive and attractive Streamlit interface"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD001",
@@ -424,7 +424,7 @@
       "Contact form with email integration",
       "Dark and light mode toggle"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD002",
@@ -445,7 +445,7 @@
       "Payment integration with Stripe or Razorpay",
       "Admin panel for inventory and orders"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD003",
@@ -465,7 +465,7 @@
       "Order tracking dashboard",
       "Email/SMS order confirmation"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD004",
@@ -485,7 +485,7 @@
       "Admin dashboard for managing tours",
       "Responsive design for all devices"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD005",
@@ -505,7 +505,7 @@
       "Video lectures and PDF downloads",
       "Admin panel for managing courses"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD006",
@@ -525,7 +525,7 @@
       "Email confirmation and reminders",
       "Admin dashboard for analytics"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD007",
@@ -545,7 +545,7 @@
       "Razorpay payment gateway",
       "Admin room management panel"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD008",
@@ -565,7 +565,7 @@
       "Template customization tools",
       "Deployed directly to Firebase Hosting"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD009",
@@ -585,7 +585,7 @@
       "Image uploads via Cloudinary",
       "SEO-friendly routing and slugs"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   },
   {
     "id": "SCWD010",
@@ -605,6 +605,6 @@
       "Admin dashboard for property upload",
       "Responsive, modern interface"
     ],
-    "image": "/images/cse.png"
+    "image": "/images/cse.jpeg"
   }
 ]

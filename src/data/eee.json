@@ -20,7 +20,7 @@
       "Buzzer alert for unsafe conditions",
       "16x2 I2C LCD display for real-time monitoring"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM0202",
@@ -43,7 +43,7 @@
       "Buzzer alert for abnormal readings",
       "Rechargeable power supply integration"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM0303",
@@ -66,7 +66,7 @@
       "Automatic gate control mechanism",
       "Low power consumption system design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM0404",
@@ -89,7 +89,7 @@
       "Real-time alert and monitoring system",
       "Compact and efficient design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM0505",
@@ -112,7 +112,7 @@
       "Buzzer alarm for critical warnings",
       "Low-cost safety enhancement system"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM0606",
@@ -135,7 +135,7 @@
       "Low-cost home protection solution",
       "Easy installation and expansion support"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM0707",
@@ -158,7 +158,7 @@
       "LCD display for live updates",
       "Emergency notification mechanism"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM0808",
@@ -181,7 +181,7 @@
       "Secure command verification system",
       "LCD display for status updates"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM0909",
@@ -204,7 +204,7 @@
       "LCD interface for room status display",
       "Automatic shutoff for idle conditions"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1010",
@@ -227,7 +227,7 @@
       "Student data registration system",
       "Secure and efficient identity check"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1111",
@@ -250,7 +250,7 @@
       "Buzzer alert for unauthorized access",
       "EEPROM-based data storage"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1212",
@@ -273,7 +273,7 @@
       "Buzzer for audio feedback",
       "User-friendly interface for disabled users"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1313",
@@ -296,7 +296,7 @@
       "Low-cost and easy-to-install setup",
       "Power-efficient design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1414",
@@ -319,7 +319,7 @@
       "LCD for driver status display",
       "Compact and reliable system design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1515",
@@ -342,7 +342,7 @@
       "Power-efficient embedded design",
       "Arduino UNO-based control system"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1616",
@@ -365,7 +365,7 @@
       "Low-cost and efficient design",
       "Expandable architecture for large areas"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1717",
@@ -388,7 +388,7 @@
       "Compact and efficient circuit design",
       "Suitable for domestic and industrial tanks"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1818",
@@ -411,7 +411,7 @@
       "Buzzer for overheat warning",
       "Industrial-grade reliability"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM1919",
@@ -434,7 +434,7 @@
       "Customizable design for institutions",
       "Efficient data handling"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2020",
@@ -457,7 +457,7 @@
       "Low-latency response system",
       "Compact and reliable circuit design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2121",
@@ -480,7 +480,7 @@
       "Data storage and verification system",
       "Tamper-proof hardware design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2222",
@@ -503,7 +503,7 @@
       "Rechargeable power system",
       "Compact wearable design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2323",
@@ -526,7 +526,7 @@
       "Buzzer alert for wrong password",
       "Arduino UNO-based system design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2424",
@@ -549,7 +549,7 @@
       "Arduino microcontroller-based control",
       "Energy-efficient and reliable design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2525",
@@ -572,7 +572,7 @@
       "Microcontroller-based control unit",
       "Anti-theft design with secure authentication"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2626",
@@ -595,7 +595,7 @@
       "Low-cost, low-power design",
       "Scalable for multi-zone deployment"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2727",
@@ -618,7 +618,7 @@
       "Buzzer and alert system for anomalies",
       "Scalable architecture for hospitals"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2828",
@@ -641,7 +641,7 @@
       "Buzzer alerts for abnormal conditions",
       "Secure Wi-Fi-based communication"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM2929",
@@ -664,7 +664,7 @@
       "Low-cost and scalable design",
       "Energy-efficient operation"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3030",
@@ -687,7 +687,7 @@
       "Arduino-based control logic",
       "Smart energy-saving algorithm"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3131",
@@ -710,7 +710,7 @@
       "Low power consumption gateway design",
       "Reliable short-range communication"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3232",
@@ -733,7 +733,7 @@
       "Buzzer and LED for broken wire indication",
       "Arduino UNO-based control system"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3333",
@@ -756,7 +756,7 @@
       "Arduino UNO microcontroller integration",
       "Low power, secure, and scalable design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3434",
@@ -779,7 +779,7 @@
       "Battery-powered wireless operation",
       "Simple and educational robotic system"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3535",
@@ -802,7 +802,7 @@
       "Relay for automatic device cutoff",
       "Compact Arduino UNO-based design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3636",
@@ -825,7 +825,7 @@
       "Arduino-based processing circuit",
       "Compact and lightweight design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3737",
@@ -848,7 +848,7 @@
       "LCD display for train status",
       "Improves safety and automation in rail systems"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3838",
@@ -871,7 +871,7 @@
       "Arduino microcontroller integration",
       "Secure and user-friendly design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM3939",
@@ -894,7 +894,7 @@
       "LCD for transaction status display",
       "Compact and reliable security system"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM4040",
@@ -917,7 +917,7 @@
       "Rechargeable battery support",
       "Cost-effective assistive solution"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM5151",
@@ -940,7 +940,7 @@
       "Camera module integration (optional)",
       "Strong chassis for field operation"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM5252",
@@ -963,7 +963,7 @@
       "Buzzer alert for metal presence",
       "Compact and portable robotic design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM5353",
@@ -986,7 +986,7 @@
       "LCD display for voltage monitoring",
       "Eco-friendly and efficient design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM5454",
@@ -1009,7 +1009,7 @@
       "Receiver unit for remote monitoring",
       "Reliable and low-cost design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM5555",
@@ -1032,7 +1032,7 @@
       "Automatic light timing adjustment",
       "Low-power intelligent traffic solution"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM5656",
@@ -1055,7 +1055,7 @@
       "Arduino-based operation logic",
       "Rugged design for military use"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM5757",
@@ -1078,7 +1078,7 @@
       "Low energy communication network",
       "Smart grid-compatible design"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM5858",
@@ -1101,7 +1101,7 @@
       "Buzzer and LED indicators for maintenance alerts",
       "Energy-efficient lighting automation"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM5959",
@@ -1124,7 +1124,7 @@
       "Real-time data transmission system",
       "Safe operation in hazardous zones"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   },
   {
     "id": "PECEM6060",
@@ -1147,6 +1147,6 @@
       "Low-power wireless communication",
       "Scalable and reliable architecture"
     ],
-    "image": "/images/eee.png"
+    "image": "/images/embedded.jpeg"
   }
 ]

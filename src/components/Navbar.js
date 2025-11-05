@@ -55,6 +55,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-2">
             <NavItem to="/">Home</NavItem>
             <NavItem to="/catalog">Catalog</NavItem>
+            <NavItem to="/workshops">Workshops</NavItem>
             <NavItem to="/about">About</NavItem>
             <NavItem to="/journals">Journal Services</NavItem>
             <NavItem to="/orders">Orders</NavItem>
@@ -118,6 +119,7 @@ export default function Navbar() {
             <div className="pt-3 grid gap-2">
               <NavItem to="/" onClick={() => setOpen(false)}>Home</NavItem>
               <NavItem to="/catalog" onClick={() => setOpen(false)}>Catalog</NavItem>
+              <NavItem to="/workshops" onClick={() => setOpen(false)}>Workshops</NavItem>
               <NavItem to="/about" onClick={() => setOpen(false)}>About</NavItem>
               <NavItem to="/journals" onClick={() => setOpen(false)}>Journal Services</NavItem>
               <NavItem to="/orders" onClick={() => setOpen(false)}>Orders</NavItem>

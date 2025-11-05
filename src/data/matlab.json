@@ -18,7 +18,7 @@
       "Switching strategy and waveform results",
       "Project report and IEEE paper reference"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA0262",
@@ -39,7 +39,7 @@
       "Efficiency and frequency control simulation",
       "Technical documentation and schematics"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA0363",
@@ -60,7 +60,7 @@
       "V2G mode verification and performance graphs",
       "Simulation files and detailed explanation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA0464",
@@ -81,7 +81,7 @@
       "Load balancing and scheduling logic",
       "Performance plots and detailed report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA0565",
@@ -101,7 +101,7 @@
       "Control loop and switching design",
       "Schematic and project report files"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA0666",
@@ -122,7 +122,7 @@
       "Voltage and current waveform analysis",
       "Graphs, report, and simulation guide"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA0767",
@@ -142,7 +142,7 @@
       "MPPT integrated solar system model",
       "Full documentation and test results"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA0868",
@@ -162,7 +162,7 @@
       "Motor drive test and efficiency results",
       "Simulation files and full report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA0969",
@@ -182,7 +182,7 @@
       "Power capture efficiency tests",
       "Graphs, report, and mechanical model"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1070",
@@ -203,7 +203,7 @@
       "Reactive power and MPPT implementation",
       "Simulation outputs and project report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1171",
@@ -223,7 +223,7 @@
       "Stability and resonance analysis",
       "Simulation data and report documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1272",
@@ -244,7 +244,7 @@
       "Grid voltage and current monitoring blocks",
       "IEEE-based technical report and results"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1373",
@@ -265,7 +265,7 @@
       "Voltage/frequency stability analysis",
       "Simulation plots and documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1474",
@@ -285,7 +285,7 @@
       "THD and efficiency evaluation in Simulink",
       "Circuit diagram and full documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1575",
@@ -306,7 +306,7 @@
       "Power factor and THD analysis",
       "Performance graphs and project report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1676",
@@ -327,7 +327,7 @@
       "Performance optimization and MPPT testing",
       "Technical report with comparative analysis"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1777",
@@ -348,7 +348,7 @@
       "Isolated microgrid case study",
       "Simulation results and documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1878",
@@ -368,7 +368,7 @@
       "Soft-switching performance graphs",
       "Documentation and efficiency results"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA1979",
@@ -388,7 +388,7 @@
       "Synchronization and harmonic study",
       "Waveforms, graphs, and project files"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2080",
@@ -408,7 +408,7 @@
       "Control algorithm implementation",
       "Simulation plots and performance analysis"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2181",
@@ -429,7 +429,7 @@
       "Efficiency and charging time analysis",
       "Technical report and complete documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2282",
@@ -450,7 +450,7 @@
       "Power output comparison under variable conditions",
       "Performance graphs and summary report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2383",
@@ -471,7 +471,7 @@
       "Load dispatch and generation scheduling analysis",
       "Simulation results and cost comparison charts"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2484",
@@ -491,7 +491,7 @@
       "Coil and resonant tank design parameters",
       "Simulation results and documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2585",
@@ -511,7 +511,7 @@
       "Error detection and correction analysis",
       "Comprehensive technical report and graphs"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2686",
@@ -532,7 +532,7 @@
       "Training data and adaptive learning results",
       "Simulation report and waveform outputs"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2787",
@@ -553,7 +553,7 @@
       "ACO optimization routine and convergence plots",
       "Simulation data and documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2888",
@@ -573,7 +573,7 @@
       "Simulink model and waveform results",
       "Report with comparison tables and notes"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA2989",
@@ -594,7 +594,7 @@
       "Comparison with traditional ECMS control",
       "Simulation report and algorithm flowchart"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3090",
@@ -614,7 +614,7 @@
       "Distance protection algorithm implementation",
       "Simulation results and graphs for relay response"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3191",
@@ -635,7 +635,7 @@
       "SOC balancing and dynamic response plots",
       "Technical documentation and controller tuning guide"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3292",
@@ -656,7 +656,7 @@
       "Voltage sag compensation and current control",
       "Comprehensive report with waveform analysis"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3393",
@@ -677,7 +677,7 @@
       "Wind generation simulation and stability tests",
       "Performance evaluation and report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3494",
@@ -697,7 +697,7 @@
       "Eigenvalue and modal analysis results",
       "Simulation files and detailed report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3595",
@@ -718,7 +718,7 @@
       "Efficiency and THD performance graphs",
       "Documentation and test results"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3696",
@@ -739,7 +739,7 @@
       "Load-demand and SOC graphs",
       "Simulation results and report file"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3797",
@@ -760,7 +760,7 @@
       "Dynamic response plots and comparison",
       "Simulation report with fuzzy rule base"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3898",
@@ -780,7 +780,7 @@
       "Power quality improvement graphs",
       "Full documentation and model files"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA3999",
@@ -801,7 +801,7 @@
       "Voltage and frequency stability evaluation",
       "Simulation outputs and report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4090",
@@ -822,7 +822,7 @@
       "Power sharing and efficiency tests",
       "Graphs, report, and reference data"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4191",
@@ -843,7 +843,7 @@
       "Training data and confusion matrix results",
       "Documentation and performance analysis report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4292",
@@ -864,7 +864,7 @@
       "Diesel generator backup simulation",
       "Performance graphs and system design report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4393",
@@ -885,7 +885,7 @@
       "Adaptive algorithm MATLAB implementation",
       "Simulation report with waveform analysis"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4494",
@@ -906,7 +906,7 @@
       "Dynamic response analysis and THD evaluation",
       "Graphs, documentation, and test results"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4595",
@@ -927,7 +927,7 @@
       "Grid synchronization and waveform plots",
       "Project documentation and report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4696",
@@ -947,7 +947,7 @@
       "Accuracy and delay performance tests",
       "Report with comparative analysis graphs"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4797",
@@ -968,7 +968,7 @@
       "Efficiency and transient response plots",
       "Full report and simulation files"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4898",
@@ -989,7 +989,7 @@
       "Simulink model and grid performance plots",
       "Documentation and efficiency report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA4999",
@@ -1010,7 +1010,7 @@
       "Power quality improvement graphs",
       "Full report and technical details"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA50100",
@@ -1031,7 +1031,7 @@
       "Transient waveform and THD analysis",
       "Complete report and simulation data"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA51101",
@@ -1052,7 +1052,7 @@
       "Harmonic and switching performance results",
       "Comprehensive documentation and graphs"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA52102",
@@ -1073,7 +1073,7 @@
       "MPPT simulation and efficiency plots",
       "Technical documentation with graphs"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA53103",
@@ -1094,7 +1094,7 @@
       "Charging and discharging efficiency results",
       "Project report and simulation files"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA54104",
@@ -1115,7 +1115,7 @@
       "Frequency response and transient plots",
       "Simulation data and report files"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA55105",
@@ -1136,7 +1136,7 @@
       "Grid stability and response testing",
       "Complete project documentation and graphs"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA56106",
@@ -1157,7 +1157,7 @@
       "Grid voltage and current monitoring",
       "Simulation results and design documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA57107",
@@ -1178,7 +1178,7 @@
       "Efficiency comparison plots",
       "MATLAB scripts and detailed report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA58108",
@@ -1199,7 +1199,7 @@
       "Voltage regulation performance",
       "Simulation report and waveform graphs"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA59109",
@@ -1220,7 +1220,7 @@
       "Dynamic voltage regulation plots",
       "Documentation and test data"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA60110",
@@ -1241,7 +1241,7 @@
       "THD and sag/swell test results",
       "Complete simulation report and files"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA61111",
@@ -1261,7 +1261,7 @@
       "Dynamic response and error minimization plots",
       "Documentation and controller tuning data"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA62112",
@@ -1282,7 +1282,7 @@
       "Transient voltage/current waveform plots",
       "Simulation report and hardware concept overview"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA63113",
@@ -1303,7 +1303,7 @@
       "Frequency deviation and damping analysis",
       "Simulation results and documentation report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA64114",
@@ -1324,7 +1324,7 @@
       "Power balance and grid current analysis",
       "Detailed results and technical documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA65115",
@@ -1345,7 +1345,7 @@
       "Adaptive controller design and tuning",
       "Documentation and simulation plots"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA66116",
@@ -1366,7 +1366,7 @@
       "Grid-connected performance testing",
       "MPPT and synchronization analysis report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA67117",
@@ -1387,7 +1387,7 @@
       "PV power control algorithm in MATLAB",
       "Simulation and report documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA68118",
@@ -1407,7 +1407,7 @@
       "THD comparison and efficiency plots",
       "Project report and control design explanation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA69119",
@@ -1428,7 +1428,7 @@
       "Pump performance and power analysis",
       "Simulation results and documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA70120",
@@ -1449,7 +1449,7 @@
       "Sensorless control and motor efficiency plots",
       "Complete documentation and simulation data"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA71121",
@@ -1470,7 +1470,7 @@
       "Grid synchronization and THD analysis",
       "Documentation and waveform plots"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA72122",
@@ -1491,7 +1491,7 @@
       "Adaptive controller tuning plots",
       "Simulation graphs and final report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA73123",
@@ -1512,7 +1512,7 @@
       "Dynamic performance and load sharing analysis",
       "Graphs and report documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA74124",
@@ -1533,7 +1533,7 @@
       "Power quality and harmonic compensation results",
       "Simulation data and full report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA75125",
@@ -1554,7 +1554,7 @@
       "Grid stability and efficiency analysis",
       "Graphs, data logs, and report documentation"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA76126",
@@ -1575,7 +1575,7 @@
       "Inverter-based energy storage response plots",
       "Technical report and simulation results"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA77127",
@@ -1596,7 +1596,7 @@
       "Voltage compensation and waveform plots",
       "Simulation report with control strategy details"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA78128",
@@ -1617,7 +1617,7 @@
       "THD and efficiency improvement analysis",
       "Performance report and test results"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA79129",
@@ -1638,7 +1638,7 @@
       "Vector control integration and waveform plots",
       "Simulation report and data analysis"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   },
   {
     "id": "PEEMA80130",
@@ -1659,6 +1659,6 @@
       "Torque-speed and voltage stability graphs",
       "Detailed documentation and report"
     ],
-    "image": "/images/matlab.png"
+    "image": "/images/matlab.jpeg"
   }
 ]
