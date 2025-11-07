@@ -61,7 +61,7 @@ const CartDrawer = () => {
                 <div className="flex flex-col items-center justify-center h-full text-center">
                   <p className="text-gray-500 mb-4">Your cart is empty</p>
                   <Link
-                    to="/catalog"
+                    to="/projects"
                     onClick={() => setIsOpen(false)}
                     className="btn-primary"
                   >

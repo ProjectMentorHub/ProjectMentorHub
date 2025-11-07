@@ -104,7 +104,7 @@ const chatbotFaqs = [
     id: 'faq-order-process',
     question: 'How do I place an order on ProjectMentorHub?',
     answer:
-      'Browse the catalog, add your chosen project to the cart, and proceed to checkout. Once the payment succeeds you will see an order confirmation page and receive the files via email.',
+      'Browse the projects page, add your chosen project to the cart, and proceed to checkout. Once the payment succeeds you will see an order confirmation page and receive the files via email.',
     keywords: [
       'place order',
       'how to order',

@@ -23,8 +23,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/catalog" className="text-gray-400 hover:text-white transition-colors">
-                  Catalog
+                <Link to="/projects" className="text-gray-400 hover:text-white transition-colors">
+                  Projects
                 </Link>
               </li>
               <li>
@@ -45,22 +45,22 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Categories</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/catalog?category=CSE" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/projects?category=CSE" className="text-gray-400 hover:text-white transition-colors">
                   CSE Projects
                 </Link>
               </li>
               <li>
-                <Link to="/catalog?category=EEE" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/projects?category=EEE" className="text-gray-400 hover:text-white transition-colors">
                   EEE Projects
                 </Link>
               </li>
               <li>
-                <Link to="/catalog?category=MATLAB" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/projects?category=MATLAB" className="text-gray-400 hover:text-white transition-colors">
                   MATLAB Projects
                 </Link>
               </li>
               <li>
-                <Link to="/catalog" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/projects" className="text-gray-400 hover:text-white transition-colors">
                   All Projects
                 </Link>
               </li>

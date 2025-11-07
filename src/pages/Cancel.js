@@ -39,7 +39,7 @@ const Cancel = () => {
             Return to Checkout
           </button>
           <button
-            onClick={() => navigate('/catalog')}
+            onClick={() => navigate('/projects')}
             className="w-full btn-secondary"
           >
             Continue Shopping

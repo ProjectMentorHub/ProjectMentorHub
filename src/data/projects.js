@@ -8,11 +8,11 @@ const annotateWithSource = (projects, sourceCategory) =>
     _sourceCategory: sourceCategory
   }));
 
-const catalogProjects = [
+const projects = [
   ...annotateWithSource(eeeProjects, 'EEE'),
   ...annotateWithSource(matlabProjects, 'MATLAB'),
   ...annotateWithSource(cseProjects, 'CSE')
 ];
 
-export default catalogProjects;
+export default projects;
 export { annotateWithSource };

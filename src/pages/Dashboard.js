@@ -166,7 +166,7 @@ const OrdersPage = () => {
         {orders.length === 0 ? (
           <div className="bg-white p-12 border border-black/10 text-center">
             <p className="text-gray-600 text-lg mb-4">No orders found</p>
-            <a href="/catalog" className="btn-primary inline-block">
+            <a href="/projects" className="btn-primary inline-block">
               Browse Projects
             </a>
           </div>

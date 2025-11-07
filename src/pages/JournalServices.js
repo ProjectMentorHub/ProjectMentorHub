@@ -240,7 +240,7 @@ const JournalServices = () => {
                 </div>
                 <p className="text-gray-400">{contactInfo.workingHours}</p>
               </div>
-              <Link to="/catalog" className="btn-secondary text-lg px-8 py-4 inline-block">
+              <Link to="/projects" className="btn-secondary text-lg px-8 py-4 inline-block">
                 Browse Projects
               </Link>
             </motion.div>

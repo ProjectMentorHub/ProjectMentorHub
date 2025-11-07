@@ -10,7 +10,7 @@ import SupportChatbot from './components/SupportChatbot';
 import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
-import Catalog from './pages/Catalog';
+import Projects from './pages/Projects';
 import JournalServices from './pages/JournalServices';
 import ProjectDetails from './pages/ProjectDetails';
 import Checkout from './pages/Checkout';
@@ -21,6 +21,7 @@ import AdminAnalytics from './pages/AdminAnalytics';
 import Workshops from './pages/Workshops';
 import Success from './pages/Success';
 import Cancel from './pages/Cancel';
+import NotFound from './pages/NotFound';
 import RequireAuth from './components/RequireAuth';
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
             <Route path="/journals" element={<JournalServices />} />
             <Route path="/journal-services" element={<Navigate to="/journals" replace />} />
             <Route path="/journalservices" element={<Navigate to="/journals" replace />} />
-            <Route path="/catalog" element={<Catalog />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/catalog" element={<Navigate to="/projects" replace />} />
             <Route path="/project/:id" element={<ProjectDetails />} />
             <Route path="/cart" element={<Cart />} />
             <Route
@@ -70,6 +72,7 @@ function App() {
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/success" element={<Success />} />
             <Route path="/cancel" element={<Cancel />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <SupportChatbot />
           <CartDrawer />

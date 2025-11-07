@@ -51,11 +51,11 @@ const FilterBar = ({
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div className="flex-1">
-            <label className="block text-sm font-semibold mb-2" htmlFor="catalog-search">
+            <label className="block text-sm font-semibold mb-2" htmlFor="projects-search">
               Search Projects
             </label>
             <input
-              id="catalog-search"
+              id="projects-search"
               type="search"
               value={filters.query || ''}
               onChange={handleSearchChange}

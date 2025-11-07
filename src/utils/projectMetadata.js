@@ -26,7 +26,7 @@ export const getDisplayCategory = (project = {}) => {
 };
 
 /**
- * Returns the primary bucket we use for filtering in the catalog view.
+ * Returns the primary bucket we use for filtering in the Projects view.
  * Falls back to CSE so mixed/unknown categories appear under a sensible tab.
  */
 export const getPrimaryCategory = (project = {}) => {

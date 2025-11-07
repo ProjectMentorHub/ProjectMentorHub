@@ -99,7 +99,7 @@ const Admin = () => {
     <div className="min-h-screen bg-gray-50 py-12">
       <SEO
         title="Admin Panel"
-        description="Manage ProjectMentorHub catalog entries, pricing, and content."
+        description="Manage ProjectMentorHub project entries, pricing, and content."
         canonical="https://projectmentorhub.com/admin"
         noIndex
       />

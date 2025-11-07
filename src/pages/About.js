@@ -226,7 +226,7 @@ const About = () => {
             <p className="text-xl text-gray-300 mb-8">
               Browse our collection of premium project kits designed to help you succeed
             </p>
-            <Link to="/catalog" className="bg-white text-black px-8 py-4 font-semibold hover:bg-gray-100 transition-colors inline-block">
+            <Link to="/projects" className="bg-white text-black px-8 py-4 font-semibold hover:bg-gray-100 transition-colors inline-block">
               Explore Projects
             </Link>
           </motion.div>

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import AdSidebar from '../components/AdSidebar';
 import { motion } from 'framer-motion';
-import catalogProjects from '../data/catalogProjects';
+import projects from '../data/projects';
 import SEO from '../components/SEO';
 import { getDisplayCategory } from '../utils/projectMetadata';
 
@@ -15,7 +15,7 @@ const ProjectDetails = () => {
   const { addToCart } = useCart();
 
   useEffect(() => {
-    const foundProject = catalogProjects.find(p => p.id === id);
+    const foundProject = projects.find((p) => p.id === id);
     setProject(foundProject || null);
     setLoading(false);
   }, [id]);

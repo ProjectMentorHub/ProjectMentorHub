@@ -25,7 +25,7 @@ export const getSearchEvents = () => safeRead(SEARCH_EVENTS_KEY);
 
 export const clearSearchEvents = () => safeWrite(SEARCH_EVENTS_KEY, []);
 
-export const logCatalogSearch = ({ query, category = 'All', results = [], totalResults = null }) => {
+export const logProjectsSearch = ({ query, category = 'All', results = [], totalResults = null }) => {
   if (typeof window === 'undefined') return;
 
   const trimmedQuery = String(query || '').trim();
@@ -57,9 +57,11 @@ export const ANALYTICS_STORAGE = {
   SEARCH_EVENTS_KEY
 };
 
-export default {
-  logCatalogSearch,
+const analyticsApi = {
+  logProjectsSearch,
   getSearchEvents,
   clearSearchEvents,
   ANALYTICS_STORAGE
 };
+
+export default analyticsApi;

@@ -100,7 +100,7 @@ const Cart = () => {
                 >
                   Clear Cart
                 </button>
-                <Link to="/catalog" className="text-sm text-gray-900 hover:underline">
+                <Link to="/projects" className="text-sm text-gray-900 hover:underline">
                   Continue browsing projects
                 </Link>
               </div>
@@ -133,10 +133,10 @@ const Cart = () => {
           <div className="bg-white border border-black/10 p-12 text-center">
             <h2 className="text-2xl font-semibold mb-4">Your cart is empty</h2>
             <p className="text-gray-600 mb-6">
-              Browse our catalog to discover curated academic projects crafted by experts.
+              Browse our projects to discover curated academic work crafted by experts.
             </p>
-            <Link to="/catalog" className="btn-primary inline-flex items-center gap-2">
-              Explore Catalog
+            <Link to="/projects" className="btn-primary inline-flex items-center gap-2">
+              Explore Projects
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

@@ -54,7 +54,7 @@ export default function Navbar() {
           {/* Center: Desktop links */}
           <div className="hidden md:flex items-center gap-2">
             <NavItem to="/">Home</NavItem>
-            <NavItem to="/catalog">Catalog</NavItem>
+            <NavItem to="/projects">Projects</NavItem>
             <NavItem to="/workshops">Workshops</NavItem>
             <NavItem to="/about">About</NavItem>
             <NavItem to="/journals">Journal Services</NavItem>
@@ -118,7 +118,7 @@ export default function Navbar() {
           <div className="md:hidden pb-4 border-t border-gray-200">
             <div className="pt-3 grid gap-2">
               <NavItem to="/" onClick={() => setOpen(false)}>Home</NavItem>
-              <NavItem to="/catalog" onClick={() => setOpen(false)}>Catalog</NavItem>
+              <NavItem to="/projects" onClick={() => setOpen(false)}>Projects</NavItem>
               <NavItem to="/workshops" onClick={() => setOpen(false)}>Workshops</NavItem>
               <NavItem to="/about" onClick={() => setOpen(false)}>About</NavItem>
               <NavItem to="/journals" onClick={() => setOpen(false)}>Journal Services</NavItem>

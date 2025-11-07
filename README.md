@@ -36,7 +36,7 @@ src/
 │   └── LoadingSkeleton.js
 ├── pages/            # Page components
 │   ├── Home.js
-│   ├── Catalog.js
+│   ├── Projects.js
 │   ├── ProjectDetails.js
 │   ├── Checkout.js
 │   ├── Dashboard.js
@@ -46,7 +46,7 @@ src/
 ├── context/          # React Context providers
 │   └── CartContext.js
 ├── data/             # Data and utilities
-│   └── data.js
+│   └── projects.js
 └── App.js            # Main app component
 ```
 
@@ -80,7 +80,7 @@ src/
 
 ### As a Customer
 
-1. Browse projects on the **Catalog** page
+1. Browse projects on the **Projects** page
 2. Filter by category (CSE/EEE), tags, or price range
 3. Click on a project to view details
 4. Add items to cart
@@ -105,7 +105,7 @@ All data is stored in localStorage and persists across sessions.
 ### Pages
 
 - **Home**: Hero section, features, call-to-action
-- **Catalog**: Product listing with filters
+- **Projects**: Product listing with filters
 - **Project Details**: Individual product information
 - **Checkout**: Order form
 - **Dashboard**: All orders
@@ -136,7 +136,7 @@ Typography:
 
 All data is stored in browser localStorage:
 
-- `projects`: Product catalog
+- `projects`: Project inventory
 - `cart`: Current shopping cart
 - `orders`: All orders
 

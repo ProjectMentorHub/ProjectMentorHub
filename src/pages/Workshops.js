@@ -170,7 +170,7 @@ const Workshops = () => {
                   </li>
                 </ul>
                 <Link
-                  to="/catalog"
+                  to="/projects"
                   className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-gray-900 text-sm font-medium hover:bg-gray-900 hover:text-white transition"
                 >
                   Explore Projects While You Wait

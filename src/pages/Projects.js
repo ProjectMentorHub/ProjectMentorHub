@@ -1,4 +1,4 @@
-// src/pages/Catalog.jsx
+// src/pages/Projects.jsx
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -8,9 +8,9 @@ import FilterBar from '../components/FilterBar';
 import AdSidebar from '../components/AdSidebar';
 import SEO from '../components/SEO';
 
-import catalogProjects from '../data/catalogProjects';
+import allProjects from '../data/projects';
 import { getDisplayCategory, getPrimaryCategory, getCseSubCategory } from '../utils/projectMetadata';
-import { logCatalogSearch } from '../utils/localAnalytics';
+import { logProjectsSearch } from '../utils/localAnalytics';
 const VALID_CATEGORIES = new Set(['CSE', 'EEE', 'ECE', 'MECH', 'MATLAB']);
 const VALID_SUBCATEGORIES = new Set(['ML', 'WEB']);
 const CSE_SUBCATEGORY_OPTIONS = [
@@ -151,9 +151,9 @@ const computeSuggestions = (query, keywordIndex) => {
   return suggestions.slice(0, 10);
 };
 
-const Catalog = () => {
+const Projects = () => {
   // Source data
-  const projects = catalogProjects;
+  const projects = allProjects;
   const lastLoggedSearchRef = useRef('');
 
   const location = useLocation();
@@ -329,7 +329,7 @@ const Catalog = () => {
     if (lastLoggedSearchRef.current === cacheKey) return;
     lastLoggedSearchRef.current = cacheKey;
 
-    logCatalogSearch({
+    logProjectsSearch({
       query: trimmedQuery,
       category: categoryKey,
       totalResults: searchState.topMatches.length,
@@ -356,7 +356,7 @@ const Catalog = () => {
     return {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Project Catalog',
+      name: 'Projects',
       itemListElement: filteredProjects.slice(0, 12).map((project, index) => ({
         '@type': 'Product',
         position: index + 1,
@@ -377,9 +377,9 @@ const Catalog = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <SEO
-        title="Project Catalog"
+        title="Projects"
         description="Browse ready-to-submit CSE, EEE, and MATLAB academic project kits complete with documentation, source code, and implementation guides."
-        canonical="https://projectmentorhub.com/catalog"
+        canonical="https://projectmentorhub.com/projects"
         type="website"
         schema={itemListSchema}
       />
@@ -391,7 +391,7 @@ const Catalog = () => {
             animate={{ opacity: 1, y: 0 }}
             className="mb-8"
           >
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Project Catalog</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Projects</h1>
             <p className="text-gray-600 text-lg">
               Browse our collection of premium project kits
             </p>
@@ -453,4 +453,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default Projects;

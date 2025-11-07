@@ -10,7 +10,7 @@ const Home = () => {
     url: 'https://projectmentorhub.com/',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://projectmentorhub.com/catalog?q={search_term_string}',
+      target: 'https://projectmentorhub.com/projects?q={search_term_string}',
       'query-input': 'required name=search_term_string'
     }
   };
@@ -38,8 +38,8 @@ const Home = () => {
               Discover cutting-edge CSE, EEE & MATLAB project kits with complete documentation, code, and resources
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/catalog" className="btn-primary text-lg px-8 py-4">
-                Explore Catalog
+              <Link to="/projects" className="btn-primary text-lg px-8 py-4">
+                Explore Projects
               </Link>
             </div>
           </motion.div>
@@ -118,7 +118,7 @@ const Home = () => {
               {
                 step: '01',
                 title: 'Browse Projects',
-                description: 'Explore our catalog of CSE, EEE, and MATLAB projects'
+                description: 'Explore our projects across CSE, EEE, and MATLAB domains'
               },
               {
                 step: '02',
@@ -194,8 +194,8 @@ const Home = () => {
               Browse our collection of premium project kits today
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/catalog" className="bg-black text-white px-8 py-4 font-semibold hover:bg-gray-900 transition-colors inline-block">
-                View Catalog
+              <Link to="/projects" className="bg-black text-white px-8 py-4 font-semibold hover:bg-gray-900 transition-colors inline-block">
+                View Projects
               </Link>
               <Link to="/about" className="border-2 border-black text-black px-8 py-4 font-semibold hover:bg-black hover:text-white transition-colors inline-block">
                 Learn More

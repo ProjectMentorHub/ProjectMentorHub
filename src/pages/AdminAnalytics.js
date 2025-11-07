@@ -425,19 +425,6 @@ const TrendChart = ({ data }) => {
   );
 };
 
-const StatCard = ({ label, value, helper, tone = 'dark' }) => (
-  <div
-    className={[
-      'rounded-3xl p-6 border',
-      tone === 'dark' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white border-black/10'
-    ].join(' ')}
-  >
-    <p className="text-sm uppercase tracking-wide text-white/60">{label}</p>
-    <p className="mt-3 text-3xl font-semibold text-white">{value}</p>
-    {helper && <p className="mt-2 text-sm text-white/60">{helper}</p>}
-  </div>
-);
-
 const LightStatCard = ({ label, value, helper }) => (
   <div className="rounded-3xl p-6 border bg-white border-black/10">
     <p className="text-sm uppercase tracking-wide text-gray-500">{label}</p>
@@ -640,7 +627,7 @@ const SearchQueriesTable = ({ queries, totalSearches }) => (
       <div>
         <h3 className="text-xl font-semibold text-gray-900">Top Search Queries</h3>
         <p className="text-sm text-gray-500">
-          Unique combinations of query and category captured from catalog searches.
+          Unique combinations of query and category captured from Projects page searches.
         </p>
       </div>
       <span className="inline-flex items-center justify-center px-3 py-1 rounded-xl bg-gray-100 text-xs font-semibold text-gray-700 uppercase">
@@ -650,7 +637,7 @@ const SearchQueriesTable = ({ queries, totalSearches }) => (
     <div className="mt-4 space-y-3">
       {queries.length === 0 && (
         <p className="text-sm text-gray-500">
-          Start searching in the catalog to populate this list.
+          Start searching the Projects page to populate this list.
         </p>
       )}
       {queries.map((entry, index) => (
@@ -678,7 +665,7 @@ const TopSearchedProjectsCard = ({ projects }) => (
     <h3 className="text-xl font-semibold text-gray-900 mb-4">Top Searched Projects</h3>
     {projects.length === 0 ? (
       <p className="text-sm text-gray-500">
-        Once users search the catalog, the most frequently surfaced projects appear here.
+        Once users search the Projects page, the most frequently surfaced projects appear here.
       </p>
     ) : (
       <div className="space-y-4">
@@ -912,7 +899,7 @@ const AdminAnalytics = () => {
 
   const handleClearSearchEvents = () => {
     if (typeof window === 'undefined') return;
-    if (!window.confirm('Clear catalog search history stored on this device?')) return;
+    if (!window.confirm('Clear Projects search history stored on this device?')) return;
     safeSetLocalStorage(SEARCH_EVENTS_KEY, []);
     setSearchEvents([]);
   };

@@ -70,7 +70,7 @@ const Success = () => {
             View My Orders
           </button>
           <button
-            onClick={() => navigate('/catalog')}
+            onClick={() => navigate('/projects')}
             className="w-full btn-secondary"
           >
             Continue Shopping
