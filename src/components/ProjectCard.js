@@ -31,10 +31,10 @@ const ProjectCard = ({ project }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -4 }}
-      className="group"
+      className="group h-full"
     >
-      <Link to={`/project/${project.id}`} className="block">
-        <div className="bg-white border border-black/10 overflow-hidden hover:shadow-xl transition-all duration-300">
+      <Link to={`/project/${project.id}`} className="block h-full">
+        <div className="bg-white border border-black/10 overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
           <div className="relative bg-gray-100 flex items-center justify-center overflow-hidden h-48 sm:h-52">
             {project.image ? (
               <img
@@ -48,37 +48,34 @@ const ProjectCard = ({ project }) => {
             )}
           </div>
           
-          <div className="p-6">
+          <div className="p-6 flex flex-col flex-1">
             <div className="flex items-start justify-between mb-2">
-              <h3 className="text-lg font-semibold group-hover:text-gray-600 transition-colors line-clamp-1">
+              <h3 className="text-lg font-semibold group-hover:text-gray-600 transition-colors">
                 {project.title}
               </h3>
               <span className="text-xs bg-black text-white px-2 py-1 ml-2 flex-shrink-0">
                 {displayCategory}
               </span>
             </div>
-            
-            <p className="text-sm text-gray-600 mb-4">
-              {project.description}
-            </p>
-            
-            <div className="flex items-center justify-between">
-              <span className="text-lg font-bold">₹{project.price.toLocaleString()}</span>
-            </div>
-            
-            <div className="mt-3 pt-3 border-t border-gray-100 flex flex-wrap items-center gap-2">
-              <button
-                onClick={handleAddToCart}
-                className="btn-primary px-3 py-2 text-xs"
-              >
-                Add to Cart
-              </button>
-              <button
-                onClick={handleBuyNow}
-                className="btn-secondary px-3 py-2 text-xs"
-              >
-                Buy Now
-              </button>
+            <div className="mt-auto pt-4 border-t border-gray-100">
+              <div className="flex items-center justify-between">
+                <span className="text-lg font-bold">₹{project.price.toLocaleString()}</span>
+              </div>
+              
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <button
+                  onClick={handleAddToCart}
+                  className="btn-primary px-3 py-2 text-xs"
+                >
+                  Add to Cart
+                </button>
+                <button
+                  onClick={handleBuyNow}
+                  className="btn-secondary px-3 py-2 text-xs"
+                >
+                  Buy Now
+                </button>
+              </div>
             </div>
           </div>
         </div>
