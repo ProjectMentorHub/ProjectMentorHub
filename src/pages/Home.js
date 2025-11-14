@@ -42,6 +42,21 @@ const Home = () => {
                 Explore Projects
               </Link>
             </div>
+            <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+              {[
+                { label: 'CSE Projects', category: 'CSE' },
+                { label: 'EEE Projects', category: 'EEE' },
+                { label: 'MATLAB Projects', category: 'MATLAB' }
+              ].map(({ label, category }) => (
+                <Link
+                  key={category}
+                  to={`/projects?category=${category}`}
+                  className="px-5 py-2.5 rounded-full text-sm font-semibold tracking-wide uppercase transition-all border border-black bg-white shadow-[0_6px_0_rgba(0,0,0,0.15)] hover:-translate-y-0.5 hover:shadow-[0_10px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-2 focus:ring-black"
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>

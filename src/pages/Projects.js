@@ -17,8 +17,6 @@ const CSE_SUBCATEGORY_OPTIONS = [
   { value: 'ML', label: 'Machine Learning' },
   { value: 'WEB', label: 'Web Development' }
 ];
-const CATEGORY_COLUMNS = ['CSE', 'EEE', 'MATLAB'];
-const CATEGORY_PREVIEW_COUNT = 4;
 
 const normalizeFilters = (next = {}) => {
   const rawCategory = next?.category ? String(next.category).trim().toUpperCase() : '';
@@ -71,6 +69,30 @@ const tokenise = (value = '') =>
     .map((token) => token.trim())
     .filter((token) => token.length > 1);
 
+const buildKeywordIndex = (projects) => {
+  const keywordMap = new Map();
+
+  projects.forEach((project) => {
+    const tokens = new Set([
+      ...tokenise(project.title),
+      ...tokenise(project.shortDescription),
+      ...tokenise(project.description),
+      ...(Array.isArray(project.tags)
+        ? project.tags.flatMap((tag) => tokenise(tag))
+        : [])
+    ]);
+
+    tokens.forEach((token) => {
+      if (token.length < 3) return;
+      const entry = keywordMap.get(token) || { keyword: token, count: 0 };
+      entry.count += 1;
+      keywordMap.set(token, entry);
+    });
+  });
+
+  return keywordMap;
+};
+
 const expandTokensWithSynonyms = (tokens) => {
   const expanded = new Set(tokens);
 
@@ -87,6 +109,48 @@ const expandTokensWithSynonyms = (tokens) => {
   return expanded;
 };
 
+const computeSuggestions = (query, keywordIndex) => {
+  const suggestions = [];
+  const trimmed = (query || '').toLowerCase().trim();
+
+  const pushUnique = (label, source) => {
+    const normalizedLabel = label.toLowerCase();
+    if (
+      !normalizedLabel ||
+      suggestions.some((item) => item.label.toLowerCase() === normalizedLabel)
+    ) {
+      return;
+    }
+    suggestions.push({ label, source });
+  };
+
+  if (!trimmed) {
+    const popular = Array.from(keywordIndex.values())
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 6);
+    popular.forEach((entry) => pushUnique(entry.keyword, 'popular'));
+    return suggestions;
+  }
+
+  const queryTokens = trimmed.split(/\s+/);
+  const lastFragment = queryTokens[queryTokens.length - 1] || '';
+
+  Array.from(keywordIndex.values())
+    .filter((entry) => entry.keyword.startsWith(lastFragment) && entry.keyword !== lastFragment)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 6)
+    .forEach((entry) => pushUnique(entry.keyword, 'keyword'));
+
+  const expandedTokens = expandTokensWithSynonyms([trimmed, ...queryTokens]);
+  expandedTokens.forEach((token) => {
+    if (token !== trimmed && token !== lastFragment) {
+      pushUnique(token, 'synonym');
+    }
+  });
+
+  return suggestions.slice(0, 10);
+};
+
 const Projects = () => {
   // Source data
   const projects = allProjects;
@@ -97,7 +161,6 @@ const Projects = () => {
 
   // Filters (supports category + search query)
   const [filters, setFilters] = useState(() => parseFiltersFromSearch(location.search));
-  const [expandedCategories, setExpandedCategories] = useState({});
 
   useEffect(() => {
     const next = parseFiltersFromSearch(location.search);
@@ -140,6 +203,13 @@ const Projects = () => {
       );
     }
   };
+
+  // Derived list using the canonical category and search term
+  const keywordIndex = useMemo(() => buildKeywordIndex(projects), [projects]);
+  const suggestions = useMemo(
+    () => computeSuggestions(filters.query, keywordIndex),
+    [filters.query, keywordIndex]
+  );
 
   const searchState = useMemo(() => {
     let scopedProjects = projects;
@@ -242,29 +312,6 @@ const Projects = () => {
 
   const filteredProjects = searchState.orderedProjects;
 
-  const groupedProjects = useMemo(() => {
-    const base = CATEGORY_COLUMNS.reduce((acc, key) => {
-      acc[key] = [];
-      return acc;
-    }, {});
-    const fallbackCategory = CATEGORY_COLUMNS[0];
-
-    filteredProjects.forEach((project) => {
-      const category = getPrimaryCategory(project);
-      const targetCategory = CATEGORY_COLUMNS.includes(category) ? category : fallbackCategory;
-      base[targetCategory].push(project);
-    });
-
-    return base;
-  }, [filteredProjects]);
-
-  const toggleCategoryExpansion = (category) => {
-    setExpandedCategories((prev) => ({
-      ...prev,
-      [category]: !prev[category]
-    }));
-  };
-
   useEffect(() => {
     const trimmedQuery = searchState.normalizedQuery;
     if (trimmedQuery.length < 2) {
@@ -354,6 +401,24 @@ const Projects = () => {
           <FilterBar
             filters={filters}
             onFilterChange={handleFilterChange}
+            suggestions={suggestions}
+            onSuggestionSelect={(value) => {
+              const current = String(filters.query || '').replace(/\s+$/, '');
+              if (!current) {
+                handleFilterChange({
+                  ...filters,
+                  query: value
+                });
+                return;
+              }
+
+              const parts = current.split(/\s+/);
+              parts[parts.length - 1] = value;
+              handleFilterChange({
+                ...filters,
+                query: parts.join(' ')
+              });
+            }}
             searchSummary={{
               query: filters.query,
               matching: searchState.matchingCount,
@@ -374,53 +439,10 @@ const Projects = () => {
               <p className="text-gray-500 text-lg">No projects found matching your filters</p>
             </div>
           ) : (
-            <div className="space-y-6">
-              {CATEGORY_COLUMNS.map((category) => {
-                const projectsInCategory = groupedProjects[category] || [];
-                const isExpanded = !!expandedCategories[category];
-                const visibleProjects = isExpanded
-                  ? projectsInCategory
-                  : projectsInCategory.slice(0, CATEGORY_PREVIEW_COUNT);
-                const projectCount = projectsInCategory.length;
-
-                return (
-                  <section
-                    key={category}
-                    className="bg-white border border-black/10 p-5"
-                  >
-                    <div className="flex flex-wrap items-center justify-between gap-3">
-                      <div>
-                        <h2 className="text-xl font-semibold">{category} Projects</h2>
-                        <p className="text-xs uppercase tracking-wide text-gray-400">
-                          {projectCount} project{projectCount === 1 ? '' : 's'}
-                        </p>
-                      </div>
-                      {projectCount > CATEGORY_PREVIEW_COUNT && (
-                        <button
-                          type="button"
-                          onClick={() => toggleCategoryExpansion(category)}
-                          className="text-xs font-semibold uppercase tracking-wide border border-black px-3 py-1 hover:bg-black hover:text-white transition"
-                        >
-                          {isExpanded ? 'Show Less' : 'Show All'}
-                        </button>
-                      )}
-                    </div>
-                    <div className="mt-4 flex-1">
-                      {projectCount === 0 ? (
-                        <p className="text-sm text-gray-500 border border-dashed border-gray-200 rounded p-4 text-center">
-                          No projects in this category yet.
-                        </p>
-                      ) : (
-                        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                          {visibleProjects.map((project) => (
-                            <ProjectCard key={project.id} project={project} />
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </section>
-                );
-              })}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
             </div>
           )}
         </div>

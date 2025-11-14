@@ -1,6 +1,8 @@
 const FilterBar = ({
   filters,
   onFilterChange,
+  suggestions = [],
+  onSuggestionSelect = () => {},
   searchSummary = null,
   subcategories = [],
   onSubcategoryChange = () => {}
@@ -62,6 +64,23 @@ const FilterBar = ({
             />
             {summaryMessage && (
               <p className="mt-2 text-xs text-gray-500">{summaryMessage}</p>
+            )}
+            {Array.isArray(suggestions) && suggestions.length > 0 && (
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <span className="uppercase text-[10px] tracking-widest text-gray-400">
+                  Suggested:
+                </span>
+                {suggestions.slice(0, 8).map((suggestion) => (
+                  <button
+                    key={suggestion.label}
+                    type="button"
+                    onClick={() => onSuggestionSelect(suggestion.label)}
+                    className="px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200 text-xs font-medium text-gray-700 transition"
+                  >
+                    {suggestion.label}
+                  </button>
+                ))}
+              </div>
             )}
             {filters.category === 'CSE' && subcategories.length > 0 && (
               <div className="mt-4">
