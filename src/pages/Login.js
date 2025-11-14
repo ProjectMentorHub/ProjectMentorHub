@@ -9,7 +9,14 @@ import { signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '../config/firebase';
 
 const Login = () => {
-  const [isLogin, setIsLogin] = useState(true);
+  const location = useLocation();
+  const [isLogin, setIsLogin] = useState(() => {
+    const params = new URLSearchParams(location.search);
+    const mode = (params.get('mode') || '').toLowerCase();
+    if (mode === 'signup') return false;
+    if (mode === 'signin') return true;
+    return true;
+  });
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
@@ -18,7 +25,6 @@ const Login = () => {
 
   const { signUp, logIn } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
   const from = location.state?.from?.pathname || '/';
   const loginPromptMessage =
     location.state?.from?.pathname === '/checkout'

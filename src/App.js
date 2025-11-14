@@ -7,6 +7,7 @@ import CartDrawer from './components/CartDrawer';
 import AdBanner from './components/AdBanner';
 import Footer from './components/Footer';
 import SupportChatbot from './components/SupportChatbot';
+import AuthPromptModal from './components/AuthPromptModal';
 import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
@@ -77,6 +78,7 @@ function App() {
           <SupportChatbot />
           <CartDrawer />
           <AdBanner />
+          <AuthPromptModal />
           <Footer />
         </div>
       </Router>

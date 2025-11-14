@@ -151,6 +151,13 @@ const computeSuggestions = (query, keywordIndex) => {
   return suggestions.slice(0, 10);
 };
 
+const FEATURED_CATEGORY_ORDER = ['CSE', 'EEE', 'MATLAB'];
+const FEATURED_CATEGORY_TITLES = {
+  CSE: 'CSE Projects',
+  EEE: 'EEE Projects',
+  MATLAB: 'MATLAB Projects'
+};
+
 const Projects = () => {
   // Source data
   const projects = allProjects;
@@ -312,6 +319,19 @@ const Projects = () => {
 
   const filteredProjects = searchState.orderedProjects;
 
+  const featuredCategoryProjects = useMemo(() => {
+    return FEATURED_CATEGORY_ORDER.map((category) => ({
+      category,
+      title: FEATURED_CATEGORY_TITLES[category] || `${category} Projects`,
+      projects: projects
+        .filter((project) => getPrimaryCategory(project) === category)
+        .slice(0, 3)
+    })).filter((entry) => entry.projects.length > 0);
+  }, [projects]);
+
+  const isDefaultAllView =
+    !filters.category && !(filters.query || '').trim() && !filters.subCategory;
+
   useEffect(() => {
     const trimmedQuery = searchState.normalizedQuery;
     if (trimmedQuery.length < 2) {
@@ -437,6 +457,37 @@ const Projects = () => {
           {filteredProjects.length === 0 ? (
             <div className="text-center py-20">
               <p className="text-gray-500 text-lg">No projects found matching your filters</p>
+            </div>
+          ) : isDefaultAllView ? (
+            <div className="space-y-10">
+              {featuredCategoryProjects.map((entry) => (
+                <section key={entry.category} className="bg-white/70 p-6 border border-black/5">
+                  <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-widest text-gray-400">Category</p>
+                      <h2 className="text-2xl font-semibold">{entry.title}</h2>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        handleFilterChange({
+                          ...filters,
+                          category: entry.category,
+                          subCategory: ''
+                        })
+                      }
+                      className="px-5 py-2 border border-black/20 text-sm font-semibold tracking-wide uppercase hover:bg-black hover:text-white transition"
+                    >
+                      Show All
+                    </button>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {entry.projects.map((project) => (
+                      <ProjectCard key={project.id} project={project} />
+                    ))}
+                  </div>
+                </section>
+              ))}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
